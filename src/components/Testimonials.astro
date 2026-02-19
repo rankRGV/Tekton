@@ -1,0 +1,120 @@
+---
+import { reviews, reviewSummary } from "../data/reviews";
+import { site } from "../config/site";
+
+interface Props {
+  /** Optional: filter reviews to a specific service slug */
+  service?: string;
+  /** Max reviews to display */
+  limit?: number;
+}
+
+const { service, limit = 4 } = Astro.props;
+
+const filtered = service
+  ? reviews.filter((r) => r.service === service || !r.service)
+  : reviews;
+
+const displayed = filtered.slice(0, limit);
+---
+
+<section class="py-16 md:py-20">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">
+        What Our Customers Say
+      </h2>
+      <div class="flex items-center justify-center gap-3 mb-2">
+        <div class="flex items-center gap-1">
+          {Array.from({ length: 5 }).map((_, i) => (
+            <svg
+              class:list={[
+                "w-6 h-6",
+                i < Math.floor(reviewSummary.averageRating)
+                  ? "text-gold"
+                  : "text-gold/40",
+              ]}
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
+          ))}
+        </div>
+        <span class="text-lg font-semibold text-gold">
+          {reviewSummary.averageRating}
+        </span>
+        <span class="text-text-muted">
+          out of 5 ({reviewSummary.totalReviews} Google reviews)
+        </span>
+      </div>
+      {site.social.google && (
+        <a
+          href={site.social.google}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 text-sm text-gold hover:text-gold-light transition-colors"
+        >
+          See all reviews on Google
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+          </svg>
+        </a>
+      )}
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+      {displayed.map((review) => (
+        <div class="bg-bg-surface border border-border rounded-lg p-6">
+          <div class="flex items-center gap-1 mb-3">
+            {Array.from({ length: 5 }).map((_, i) => (
+              <svg
+                class:list={[
+                  "w-5 h-5",
+                  i < review.rating ? "text-gold" : "text-gold/30",
+                ]}
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+            ))}
+          </div>
+          <blockquote class="text-text mb-4 leading-relaxed">
+            "{review.text}"
+          </blockquote>
+          <cite class="not-italic text-sm text-text-muted font-medium">
+            — {review.author}
+          </cite>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- Review schema markup -->
+<script
+  type="application/ld+json"
+  set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: site.name,
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: reviewSummary.averageRating.toString(),
+      reviewCount: reviewSummary.totalReviews.toString(),
+      bestRating: "5",
+    },
+    review: displayed.map((r) => ({
+      "@type": "Review",
+      author: { "@type": "Person", name: r.author },
+      datePublished: r.date,
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: r.rating.toString(),
+        bestRating: "5",
+      },
+      reviewBody: r.text,
+    })),
+  })}
+/>

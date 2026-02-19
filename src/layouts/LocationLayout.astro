@@ -6,6 +6,7 @@ import TrustSignals from "../components/TrustSignals.astro";
 import ServiceCard from "../components/ServiceCard.astro";
 import CTASection from "../components/CTASection.astro";
 import GoogleMap from "../components/GoogleMap.astro";
+import Testimonials from "../components/Testimonials.astro";
 import SchemaMarkup from "../components/SchemaMarkup.astro";
 import { services } from "../data/services";
 import type { Location } from "../data/locations";
@@ -51,6 +52,7 @@ const { title, description, headline, subheadline, location } = Astro.props;
     </div>
   </section>
 
+  <Testimonials />
   <GoogleMap cityName={location.name} />
 
   <CTASection />

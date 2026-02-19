@@ -19,6 +19,6 @@ export const site = {
   social: {
     facebook: "https://www.facebook.com/profile.php?id=61550995830877",
     instagram: "https://www.instagram.com/tektonhomesolutions/",
-    google: "",
+    google: "https://share.google/D7cieLrygStpZxp6h",
   },
 };

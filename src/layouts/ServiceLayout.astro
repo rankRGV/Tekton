@@ -8,6 +8,7 @@ import HowWeWork from "../components/HowWeWork.astro";
 import FAQSection from "../components/FAQSection.astro";
 import CTASection from "../components/CTASection.astro";
 import ServiceCityGrid from "../components/ServiceCityGrid.astro";
+import Testimonials from "../components/Testimonials.astro";
 import SchemaMarkup from "../components/SchemaMarkup.astro";
 
 interface FAQ {
@@ -84,6 +85,7 @@ const breadcrumbs = areaServed
 
   <PainPoints points={painPoints} />
   <HowWeWork steps={howWeWorkSteps} />
+  <Testimonials />
   <FAQSection faqs={faqs} />
   <ServiceCityGrid serviceSlug={serviceSlug} />
   <CTASection />
