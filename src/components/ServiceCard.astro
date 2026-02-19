@@ -1,0 +1,24 @@
+---
+import type { Service } from "../data/services";
+
+interface Props {
+  service: Service;
+  citySlug?: string;
+}
+
+const { service, citySlug } = Astro.props;
+const href = citySlug ? `/${citySlug}/${service.slug}/` : `/${service.slug}/`;
+---
+
+<a href={href} class="block bg-bg-surface border border-border rounded-xl p-6 hover:border-gold transition-colors group">
+  <h3 class="text-xl font-semibold group-hover:text-gold transition-colors mb-2">
+    {service.name}
+  </h3>
+  <p class="text-text-muted text-sm mb-4">{service.shortDescription}</p>
+  <span class="text-gold text-sm font-medium inline-flex items-center gap-1">
+    Learn more
+    <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+    </svg>
+  </span>
+</a>

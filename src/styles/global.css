@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0a0a0a;
+  --color-bg-surface: #141414;
+  --color-bg-elevated: #1a1a1a;
+  --color-gold: #b8963e;
+  --color-gold-light: #d4af5a;
+  --color-gold-dark: #8a6f2e;
+  --color-text: #f5f5f5;
+  --color-text-muted: #a0a0a0;
+  --color-border: #2a2a2a;
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+}
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+}
+
+/* Skip to content (accessibility) */
+.skip-to-content {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  z-index: 100;
+  padding: 0.5rem 1rem;
+  background: var(--color-gold);
+  color: #000;
+  font-weight: 700;
+}
+
+.skip-to-content:focus {
+  top: 0;
+}
+
+/* Focus states */
+:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
+}
+
+/* Tel links */
+a[href^="tel:"] {
+  white-space: nowrap;
+}

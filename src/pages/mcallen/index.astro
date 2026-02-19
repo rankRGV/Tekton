@@ -1,0 +1,34 @@
+---
+import LocationLayout from "../../layouts/LocationLayout.astro";
+import { getLocation } from "../../data/locations";
+
+const location = getLocation("mcallen")!;
+---
+
+<LocationLayout
+  title="McAllen Home Services | Roofing, Pools, Remodeling | Tekton Home Solutions"
+  description="Tekton Home Solutions in McAllen, TX — roofing, pool construction, remodeling, and custom home building. 24-hour roof replacement. Price match guarantee. Call (956) 682-7643."
+  headline={'McAllen\'s Trusted Home <span class="text-gold">Contractor</span>'}
+  subheadline="Roofing, pools, remodeling, and custom home building — all from one team you can trust. Headquartered right here in McAllen."
+  location={location}
+>
+  <!-- McAllen-specific content -->
+  <section class="py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="max-w-3xl">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">
+          Built for McAllen Homeowners
+        </h2>
+        <p class="text-text-muted text-lg mb-4">
+          McAllen is home — it's where we're headquartered, where our crew lives, and where we've built our reputation one project at a time. From the established neighborhoods of North McAllen near Nolana and Ware Road to the newer developments off Lex Luther and Lark, we know this city inside and out.
+        </p>
+        <p class="text-text-muted text-lg mb-4">
+          South Texas heat, hailstorms, and high winds take a real toll on homes. That's why McAllen homeowners need a contractor who understands local building codes, HOA requirements, and the materials that hold up in this climate — not a crew from out of town who's here today and gone tomorrow.
+        </p>
+        <p class="text-text-muted text-lg">
+          Whether you need a roof replaced after a storm, a pool built for your growing family, a kitchen remodeled to finally match your vision, or a custom home built from scratch — Tekton handles it all. One contractor, one point of contact, one team that actually picks up the phone.
+        </p>
+      </div>
+    </div>
+  </section>
+</LocationLayout>

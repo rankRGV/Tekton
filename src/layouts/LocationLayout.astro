@@ -1,0 +1,62 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
+import Hero from "../components/Hero.astro";
+import TrustSignals from "../components/TrustSignals.astro";
+import ServiceCard from "../components/ServiceCard.astro";
+import CTASection from "../components/CTASection.astro";
+import SchemaMarkup from "../components/SchemaMarkup.astro";
+import { services } from "../data/services";
+import type { Location } from "../data/locations";
+
+interface Props {
+  title: string;
+  description: string;
+  headline: string;
+  subheadline: string;
+  location: Location;
+}
+
+const { title, description, headline, subheadline, location } = Astro.props;
+---
+
+<BaseLayout title={title} description={description}>
+  <Breadcrumbs
+    items={[
+      { label: "Locations", href: "/locations/" },
+      { label: location.name, href: `/${location.slug}/` },
+    ]}
+  />
+  <Hero headline={headline} subheadline={subheadline} />
+  <TrustSignals variant="compact" />
+
+  <!-- Page-specific content slot -->
+  <slot />
+
+  <!-- Services in this city -->
+  <section class="py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">
+        Our Services in {location.name}
+      </h2>
+      <p class="text-text-muted text-center mb-10 max-w-2xl mx-auto">
+        From roofing to custom home builds — we handle it all in {location.name} and surrounding areas.
+      </p>
+      <div class="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+        {services.map((service) => (
+          <ServiceCard service={service} citySlug={location.slug} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CTASection />
+
+  <SchemaMarkup
+    type="localBusiness"
+    data={{
+      cityName: location.name,
+      coordinates: location.coordinates,
+    }}
+  />
+</BaseLayout>

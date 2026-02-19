@@ -1,0 +1,32 @@
+---
+interface Step {
+  number: number;
+  title: string;
+  description: string;
+}
+
+interface Props {
+  steps: Step[];
+  heading?: string;
+}
+
+const { steps, heading = "How We Work" } = Astro.props;
+---
+
+<section class="py-16 md:py-20 bg-bg-surface">
+  <div class="max-w-7xl mx-auto px-4">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">{heading}</h2>
+
+    <div class:list={["grid gap-8 max-w-4xl mx-auto", steps.length === 3 ? "md:grid-cols-3" : steps.length === 5 ? "md:grid-cols-5" : "md:grid-cols-4"]}>
+      {steps.map((step) => (
+        <div class="text-center">
+          <div class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-gold text-black font-bold text-xl mb-4">
+            {step.number}
+          </div>
+          <h3 class="text-xl font-semibold mb-2">{step.title}</h3>
+          <p class="text-text-muted">{step.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

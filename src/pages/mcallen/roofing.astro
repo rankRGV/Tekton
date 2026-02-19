@@ -1,0 +1,166 @@
+---
+import ServiceLayout from "../../layouts/ServiceLayout.astro";
+import { services } from "../../data/services";
+
+const faqs = [
+  {
+    question: "What roofing materials work best in McAllen's climate?",
+    answer:
+      "McAllen's intense heat, UV exposure, and occasional hailstorms demand durable materials. We recommend impact-resistant Class 4 shingles for hail protection, metal roofing for longevity and heat reflection, and concrete tile for a premium look that handles the heat. We'll help you choose based on your home, budget, and neighborhood requirements.",
+  },
+  {
+    question: "Do you work with McAllen HOAs on roofing approvals?",
+    answer:
+      "Yes — many McAllen subdivisions like Sharyland Plantation, Tres Lagos, and Palm View Estates have strict HOA guidelines on roofing materials and colors. We handle the approval process directly with your HOA, submit the required documentation, and ensure your new roof meets all community standards.",
+  },
+  {
+    question: "How quickly can you start a roof replacement in McAllen?",
+    answer:
+      "Since we're headquartered right here in McAllen, we can typically start within a few days of signing your agreement. For emergency storm damage, we prioritize local calls and can have a crew on-site even faster. Most jobs are completed in a single day.",
+  },
+  {
+    question: "Is Tekton licensed and insured to do roofing in McAllen?",
+    answer:
+      "Absolutely. We're fully licensed, bonded, and insured to perform all roofing work in McAllen and throughout Hidalgo County. We carry both general liability and workers' compensation insurance — ask us for proof anytime. We're not a fly-by-night crew; our office is at 1720 W Maple Ave Suite 4.",
+  },
+  {
+    question: "Do you offer financing for roof replacements in McAllen?",
+    answer:
+      "Yes, we offer flexible financing options so a new roof doesn't have to break the bank. We also work directly with your insurance company on storm damage claims to minimize your out-of-pocket costs. Contact us for a free estimate and we'll walk you through all your payment options.",
+  },
+];
+
+const painPoints = [
+  {
+    title: "\"Out-of-town storm chasers flooded McAllen after the last hail\"",
+    description:
+      "After every major storm, crews from Houston and Dallas flood the Valley, knock on doors, do sloppy work, and disappear. We live here. Our office is on Maple Ave. We're not going anywhere — and our warranty proves it.",
+  },
+  {
+    title: "\"My HOA rejected the last roofer's work\"",
+    description:
+      "McAllen subdivisions have strict standards. We know the requirements for Sharyland Plantation, Tres Lagos, and more. We handle your HOA paperwork so there are zero surprises after the shingles go up.",
+  },
+  {
+    title: "\"The heat destroyed my roof in under 10 years\"",
+    description:
+      "Cheap materials don't survive McAllen summers. We install heat-resistant, UV-rated roofing designed for South Texas — so you're not replacing again in 8 years.",
+  },
+  {
+    title: "\"I'm worried about the cost\"",
+    description:
+      "We offer our price match guarantee plus flexible financing options. And if you have storm damage, we'll fight your insurance company for every dollar you're owed. No one should go without a solid roof because of money.",
+  },
+];
+
+const howWeWorkSteps = [
+  {
+    number: 1,
+    title: "Free McAllen Inspection",
+    description:
+      "We come to your McAllen home, inspect the roof, and document everything with photos. If there's storm damage, we flag it for your insurance claim.",
+  },
+  {
+    number: 2,
+    title: "Detailed Estimate + HOA Help",
+    description:
+      "You get a clear, line-item quote. If your subdivision has HOA requirements, we handle that paperwork too.",
+  },
+  {
+    number: 3,
+    title: "24-Hour Installation",
+    description:
+      "Our McAllen-based crew arrives on time, replaces your roof in a single day, and cleans up completely.",
+  },
+  {
+    number: 4,
+    title: "Warranty & Walkthrough",
+    description:
+      "We walk you through the finished roof, activate your warranty, and make sure you're 100% satisfied.",
+  },
+];
+
+const siblingServices = services.filter((s) => s.slug !== "roofing");
+---
+
+<ServiceLayout
+  title="Roofing in McAllen, TX | 24-Hour Replacement | Tekton Home Solutions"
+  description="McAllen roofing contractor — full roof replacement in 24 hours. Storm damage repair, insurance claims, and free inspections. Price match guarantee. Call (956) 682-7643."
+  headline='McAllen Roofing — <span class="text-gold">Replaced in 24 Hours</span>'
+  subheadline="Headquartered in McAllen. Licensed, insured, and trusted by your neighbors. Full roof replacement, storm damage repair, and free inspections."
+  serviceSlug="roofing"
+  serviceName="Roofing in McAllen, TX"
+  serviceDescription="Professional roofing services in McAllen, Texas including full roof replacement, storm damage repair, insurance claim assistance, and free inspections. 24-hour installation available."
+  breadcrumbLabel="Roofing"
+  faqs={faqs}
+  painPoints={painPoints}
+  howWeWorkSteps={howWeWorkSteps}
+  areaServed="McAllen"
+>
+  <!-- McAllen-specific roofing content -->
+  <section class="py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            McAllen's Climate Is Tough on Roofs
+          </h2>
+          <p class="text-text-muted text-lg mb-4">
+            Triple-digit heat, UV bombardment 300+ days a year, sudden hailstorms, and hurricane-season winds — McAllen roofs take punishment that homes in cooler climates never face. The materials and installation methods that work up north fail down here.
+          </p>
+          <p class="text-text-muted text-lg mb-4">
+            That's why we install roofing systems specifically engineered for the Rio Grande Valley. We use impact-resistant shingles rated for Texas hail zones, reflective metal roofing that cuts cooling costs, and tile options that outlast the competition.
+          </p>
+          <p class="text-text-muted text-lg">
+            As McAllen's only home solutions company that also builds custom homes and does full remodels, we understand how your roof connects to everything else — insulation, ventilation, structural integrity. That big-picture thinking means a better, longer-lasting roof for you.
+          </p>
+        </div>
+        <div class="bg-bg-surface border border-border rounded-xl p-8">
+          <h3 class="text-xl font-semibold mb-4">McAllen Roofing Services</h3>
+          <ul class="space-y-3">
+            {[
+              "Full roof replacement — done in 24 hours",
+              "Hail and storm damage repair",
+              "Insurance claim assistance and adjuster meetings",
+              "Free roof inspections (pre-storm and post-storm)",
+              "HOA-compliant installations",
+              "Metal, shingle, tile, and flat roof systems",
+              "Gutter installation and repair",
+            ].map((item) => (
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-gold shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-text-muted">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Other services in McAllen -->
+  <section class="py-16 md:py-20 bg-bg-surface">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-center mb-6">
+        Other Services in McAllen
+      </h2>
+      <div class="grid sm:grid-cols-3 gap-4 max-w-2xl mx-auto">
+        {siblingServices.map((s) => (
+          <a
+            href={`/mcallen/${s.slug}/`}
+            class="bg-bg-elevated border border-border rounded-lg px-4 py-3 text-center hover:border-gold hover:text-gold transition-colors"
+          >
+            {s.name}
+          </a>
+        ))}
+      </div>
+      <p class="text-center mt-4">
+        <a href="/mcallen/" class="text-gold hover:text-gold-light text-sm">
+          ← All McAllen services
+        </a>
+      </p>
+    </div>
+  </section>
+</ServiceLayout>

@@ -1,0 +1,33 @@
+---
+import { locations } from "../data/locations";
+import { services } from "../data/services";
+
+interface Props {
+  serviceSlug: string;
+}
+
+const { serviceSlug } = Astro.props;
+const service = services.find((s) => s.slug === serviceSlug);
+---
+
+<section class="py-16 md:py-20">
+  <div class="max-w-7xl mx-auto px-4">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">
+      {service?.name} Across the RGV
+    </h2>
+    <p class="text-text-muted text-center mb-10 max-w-2xl mx-auto">
+      We serve homeowners throughout the Rio Grande Valley. Find {service?.name.toLowerCase()} services in your city.
+    </p>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
+      {locations.map((loc) => (
+        <a
+          href={`/${loc.slug}/${serviceSlug}/`}
+          class="bg-bg-surface border border-border rounded-lg px-4 py-3 text-center hover:border-gold hover:text-gold transition-colors"
+        >
+          {loc.name}
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

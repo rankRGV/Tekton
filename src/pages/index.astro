@@ -1,0 +1,39 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "../components/Hero.astro";
+import TrustSignals from "../components/TrustSignals.astro";
+import ServiceCard from "../components/ServiceCard.astro";
+import CTASection from "../components/CTASection.astro";
+import SchemaMarkup from "../components/SchemaMarkup.astro";
+import { services } from "../data/services";
+---
+
+<BaseLayout
+  title="RGV Roofing Contractor | Tekton Home Solutions"
+  description="Tekton Home Solutions — roofing, pools, remodeling & custom homes across the Rio Grande Valley. 24-hour roof replacement. Price match guarantee. Call (956) 682-7643."
+>
+  <Hero
+    headline='Your Home Deserves a Contractor <span class="text-gold">Who Shows Up</span>'
+    subheadline="Roofing, pool construction, remodeling, and custom home building across the Rio Grande Valley. 24-hour roof replacement. Price match guarantee."
+  />
+  <TrustSignals variant="compact" />
+
+  <section class="py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">
+        What We Do
+      </h2>
+      <p class="text-text-muted text-center mb-10 max-w-2xl mx-auto">
+        Four services, one team. No juggling contractors, no finger-pointing, no runaround.
+      </p>
+      <div class="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+        {services.map((service) => (
+          <ServiceCard service={service} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CTASection />
+  <SchemaMarkup type="organization" />
+</BaseLayout>

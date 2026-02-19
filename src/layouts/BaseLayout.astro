@@ -1,0 +1,92 @@
+---
+import "../styles/global.css";
+import { site } from "../config/site";
+import SEOHead from "../components/SEOHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  ogImage?: string;
+  noindex?: boolean;
+}
+
+const { title, description, canonical, ogImage, noindex } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <SEOHead
+      title={title}
+      description={description}
+      canonical={canonical}
+      ogImage={ogImage}
+      noindex={noindex}
+    />
+
+    <!-- Analytics: GA4 (config-driven) -->
+    {site.analytics.ga4Id && (
+      <>
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${site.analytics.ga4Id}`}
+        />
+        <script
+          set:html={`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${site.analytics.ga4Id}');
+          `}
+        />
+      </>
+    )}
+
+    <!-- Analytics: Meta Pixel (config-driven) -->
+    {site.analytics.metaPixelId && (
+      <script
+        set:html={`
+          !function(f,b,e,v,n,t,s)
+          {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+          n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+          if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+          n.queue=[];t=b.createElement(e);t.async=!0;
+          t.src=v;s=b.getElementsByTagName(e)[0];
+          s.parentNode.insertBefore(t,s)}(window, document,'script',
+          'https://connect.facebook.net/en_US/fbevents.js');
+          fbq('init', '${site.analytics.metaPixelId}');
+          fbq('track', 'PageView');
+        `}
+      />
+    )}
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <a href="#main-content" class="skip-to-content">Skip to content</a>
+    <Header />
+    <main id="main-content" class="flex-1">
+      <slot />
+    </main>
+    <Footer />
+
+    <!-- Event tracking: delegated listener for data-track attributes -->
+    <script>
+      document.addEventListener("click", (e) => {
+        const target = (e.target as HTMLElement).closest("[data-track]");
+        if (!target) return;
+        const action = target.getAttribute("data-track");
+        if (typeof window.gtag === "function") {
+          window.gtag("event", action, {
+            event_category: "engagement",
+            event_label: window.location.pathname,
+          });
+        }
+        if (typeof window.fbq === "function" && action?.includes("form")) {
+          window.fbq("track", "Lead");
+        }
+      });
+    </script>
+  </body>
+</html>

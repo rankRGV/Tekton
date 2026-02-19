@@ -1,0 +1,21 @@
+---
+import type { Location } from "../data/locations";
+import { services } from "../data/services";
+
+interface Props {
+  location: Location;
+}
+
+const { location } = Astro.props;
+---
+
+<a href={`/${location.slug}/`} class="block bg-bg-surface border border-border rounded-xl p-6 hover:border-gold transition-colors group">
+  <h3 class="text-xl font-semibold group-hover:text-gold transition-colors mb-1">
+    {location.name}, {location.state}
+    {location.isHQ && <span class="text-gold text-xs font-normal ml-2">HQ</span>}
+  </h3>
+  <p class="text-text-muted text-sm mb-3">{location.description}</p>
+  <p class="text-text-muted text-xs">
+    {services.length} services available
+  </p>
+</a>

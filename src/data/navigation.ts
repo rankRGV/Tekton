@@ -1,0 +1,31 @@
+import { services } from "./services";
+import { locations } from "./locations";
+
+export interface NavItem {
+  label: string;
+  href: string;
+  children?: NavItem[];
+}
+
+export const mainNav: NavItem[] = [
+  {
+    label: "Services",
+    href: "#",
+    children: services.map((s) => ({
+      label: s.name,
+      href: `/${s.slug}/`,
+    })),
+  },
+  {
+    label: "Locations",
+    href: "/locations/",
+    children: locations.map((l) => ({
+      label: l.name,
+      href: `/${l.slug}/`,
+    })),
+  },
+  {
+    label: "Contact",
+    href: "#contact",
+  },
+];

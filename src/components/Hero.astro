@@ -1,0 +1,67 @@
+---
+import { site } from "../config/site";
+
+interface Props {
+  headline: string;
+  subheadline: string;
+  ctaText?: string;
+  ctaHref?: string;
+  showPhone?: boolean;
+  backgroundImage?: string;
+}
+
+const {
+  headline,
+  subheadline,
+  ctaText = "Get a Free Estimate",
+  ctaHref = "#contact",
+  showPhone = true,
+  backgroundImage,
+} = Astro.props;
+---
+
+<section class="relative overflow-hidden bg-bg-surface">
+  {backgroundImage && (
+    <div class="absolute inset-0">
+      <img
+        src={backgroundImage}
+        alt=""
+        class="w-full h-full object-cover opacity-20"
+        loading="eager"
+      />
+      <div class="absolute inset-0 bg-gradient-to-b from-bg/60 to-bg-surface"></div>
+    </div>
+  )}
+
+  <div class="relative max-w-7xl mx-auto px-4 py-20 md:py-28 lg:py-32">
+    <div class="max-w-3xl">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight">
+        <Fragment set:html={headline} />
+      </h1>
+      <p class="mt-6 text-lg md:text-xl text-text-muted max-w-2xl">
+        {subheadline}
+      </p>
+      <div class="mt-8 flex flex-col sm:flex-row gap-4">
+        <a
+          href={ctaHref}
+          class="inline-flex items-center justify-center bg-gold hover:bg-gold-light text-black font-semibold px-8 py-4 rounded-lg text-lg transition-colors"
+          data-track="cta-hero"
+        >
+          {ctaText}
+        </a>
+        {showPhone && (
+          <a
+            href={site.phoneTel}
+            class="inline-flex items-center justify-center border-2 border-gold text-gold hover:bg-gold hover:text-black font-semibold px-8 py-4 rounded-lg text-lg transition-colors"
+            data-track="phone-hero"
+          >
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            Call {site.phoneFormatted}
+          </a>
+        )}
+      </div>
+    </div>
+  </div>
+</section>

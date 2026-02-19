@@ -1,0 +1,43 @@
+---
+import { site } from "../config/site";
+import SchemaMarkup from "./SchemaMarkup.astro";
+
+interface BreadcrumbItem {
+  label: string;
+  href: string;
+}
+
+interface Props {
+  items: BreadcrumbItem[];
+}
+
+const { items } = Astro.props;
+
+const allItems = [{ label: "Home", href: "/" }, ...items];
+
+const schemaData = {
+  breadcrumbs: allItems.map((item) => ({
+    name: item.label,
+    url: new URL(item.href, site.url).toString(),
+  })),
+};
+---
+
+<nav aria-label="Breadcrumb" class="py-4 px-4 max-w-7xl mx-auto">
+  <ol class="flex items-center gap-2 text-sm text-text-muted">
+    {allItems.map((item, i) => (
+      <li class="flex items-center gap-2">
+        {i > 0 && <span aria-hidden="true">/</span>}
+        {i === allItems.length - 1 ? (
+          <span aria-current="page" class="text-gold">{item.label}</span>
+        ) : (
+          <a href={item.href} class="hover:text-gold transition-colors">
+            {item.label}
+          </a>
+        )}
+      </li>
+    ))}
+  </ol>
+</nav>
+
+<SchemaMarkup type="breadcrumb" data={schemaData} />

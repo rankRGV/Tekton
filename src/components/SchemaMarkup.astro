@@ -1,0 +1,129 @@
+---
+import { site } from "../config/site";
+
+interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+interface Props {
+  type: "organization" | "localBusiness" | "service" | "faq" | "breadcrumb";
+  data?: {
+    serviceName?: string;
+    serviceDescription?: string;
+    areaServed?: string;
+    faqs?: FAQItem[];
+    breadcrumbs?: { name: string; url: string }[];
+    cityName?: string;
+    coordinates?: { lat: number; lng: number };
+  };
+}
+
+const { type, data = {} } = Astro.props;
+
+function buildSchema() {
+  switch (type) {
+    case "organization":
+      return {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        name: site.name,
+        url: site.url,
+        telephone: site.phone,
+        email: site.email,
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: site.address.street,
+          addressLocality: site.address.city,
+          addressRegion: site.address.state,
+          postalCode: site.address.zip,
+          addressCountry: "US",
+        },
+        sameAs: [site.social.facebook, site.social.instagram].filter(Boolean),
+      };
+
+    case "localBusiness":
+      return {
+        "@context": "https://schema.org",
+        "@type": "HomeAndConstructionBusiness",
+        name: data.cityName
+          ? `${site.name} - ${data.cityName}`
+          : site.name,
+        url: site.url,
+        telephone: site.phone,
+        email: site.email,
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: site.address.street,
+          addressLocality: data.cityName || site.address.city,
+          addressRegion: "TX",
+          postalCode: site.address.zip,
+          addressCountry: "US",
+        },
+        ...(data.coordinates && {
+          geo: {
+            "@type": "GeoCoordinates",
+            latitude: data.coordinates.lat,
+            longitude: data.coordinates.lng,
+          },
+        }),
+        sameAs: [site.social.facebook, site.social.instagram].filter(Boolean),
+      };
+
+    case "service":
+      return {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        name: data.serviceName || "",
+        description: data.serviceDescription || "",
+        provider: {
+          "@type": "HomeAndConstructionBusiness",
+          name: site.name,
+          telephone: site.phone,
+          url: site.url,
+        },
+        ...(data.areaServed && {
+          areaServed: {
+            "@type": "City",
+            name: data.areaServed,
+          },
+        }),
+      };
+
+    case "faq":
+      return {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: (data.faqs || []).map((faq) => ({
+          "@type": "Question",
+          name: faq.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: faq.answer,
+          },
+        })),
+      };
+
+    case "breadcrumb":
+      return {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: (data.breadcrumbs || []).map((crumb, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          name: crumb.name,
+          item: crumb.url,
+        })),
+      };
+
+    default:
+      return null;
+  }
+}
+
+const schema = buildSchema();
+---
+
+{schema && (
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+)}

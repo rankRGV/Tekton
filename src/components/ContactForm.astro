@@ -1,0 +1,87 @@
+---
+import { site } from "../config/site";
+import { services } from "../data/services";
+
+interface Props {
+  heading?: string;
+}
+
+const { heading } = Astro.props;
+---
+
+<form
+  action={`https://submit-form.com/${site.formsparkId}`}
+  method="POST"
+  class="bg-bg-elevated border border-border rounded-xl p-6 space-y-4"
+>
+  {heading && <h3 class="text-lg font-semibold mb-2">{heading}</h3>}
+
+  <div>
+    <label for="name" class="block text-sm text-text-muted mb-1">Name</label>
+    <input
+      type="text"
+      id="name"
+      name="name"
+      required
+      class="w-full bg-bg-surface border border-border rounded-lg px-4 py-3 text-text placeholder:text-text-muted/50 focus:border-gold focus:ring-1 focus:ring-gold transition-colors"
+      placeholder="Your name"
+    />
+  </div>
+
+  <div>
+    <label for="phone" class="block text-sm text-text-muted mb-1">Phone</label>
+    <input
+      type="tel"
+      id="phone"
+      name="phone"
+      required
+      class="w-full bg-bg-surface border border-border rounded-lg px-4 py-3 text-text placeholder:text-text-muted/50 focus:border-gold focus:ring-1 focus:ring-gold transition-colors"
+      placeholder="(956) 555-0123"
+    />
+  </div>
+
+  <div>
+    <label for="email" class="block text-sm text-text-muted mb-1">Email</label>
+    <input
+      type="email"
+      id="email"
+      name="email"
+      class="w-full bg-bg-surface border border-border rounded-lg px-4 py-3 text-text placeholder:text-text-muted/50 focus:border-gold focus:ring-1 focus:ring-gold transition-colors"
+      placeholder="you@example.com"
+    />
+  </div>
+
+  <div>
+    <label for="service" class="block text-sm text-text-muted mb-1">Service Needed</label>
+    <select
+      id="service"
+      name="service"
+      class="w-full bg-bg-surface border border-border rounded-lg px-4 py-3 text-text focus:border-gold focus:ring-1 focus:ring-gold transition-colors"
+    >
+      <option value="">Select a service</option>
+      {services.map((s) => (
+        <option value={s.name}>{s.name}</option>
+      ))}
+      <option value="Other">Other</option>
+    </select>
+  </div>
+
+  <div>
+    <label for="message" class="block text-sm text-text-muted mb-1">Message</label>
+    <textarea
+      id="message"
+      name="message"
+      rows={3}
+      class="w-full bg-bg-surface border border-border rounded-lg px-4 py-3 text-text placeholder:text-text-muted/50 focus:border-gold focus:ring-1 focus:ring-gold transition-colors resize-y"
+      placeholder="Tell us about your project..."
+    ></textarea>
+  </div>
+
+  <button
+    type="submit"
+    class="w-full bg-gold hover:bg-gold-light text-black font-semibold py-3 rounded-lg transition-colors text-lg"
+    data-track="form-submit"
+  >
+    Request Free Estimate
+  </button>
+</form>

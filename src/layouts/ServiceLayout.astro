@@ -1,0 +1,99 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
+import Hero from "../components/Hero.astro";
+import TrustSignals from "../components/TrustSignals.astro";
+import PainPoints from "../components/PainPoints.astro";
+import HowWeWork from "../components/HowWeWork.astro";
+import FAQSection from "../components/FAQSection.astro";
+import CTASection from "../components/CTASection.astro";
+import ServiceCityGrid from "../components/ServiceCityGrid.astro";
+import SchemaMarkup from "../components/SchemaMarkup.astro";
+
+interface FAQ {
+  question: string;
+  answer: string;
+}
+
+interface PainPoint {
+  title: string;
+  description: string;
+}
+
+interface Step {
+  number: number;
+  title: string;
+  description: string;
+}
+
+interface Props {
+  title: string;
+  description: string;
+  headline: string;
+  subheadline: string;
+  serviceSlug: string;
+  serviceName: string;
+  serviceDescription: string;
+  breadcrumbLabel: string;
+  faqs: FAQ[];
+  painPoints: PainPoint[];
+  howWeWorkSteps: Step[];
+  backgroundImage?: string;
+  areaServed?: string;
+}
+
+const {
+  title,
+  description,
+  headline,
+  subheadline,
+  serviceSlug,
+  serviceName,
+  serviceDescription,
+  breadcrumbLabel,
+  faqs,
+  painPoints,
+  howWeWorkSteps,
+  backgroundImage,
+  areaServed,
+} = Astro.props;
+
+// Extract city slug from the URL path (e.g., /mcallen/roofing/ → mcallen)
+const pathSegments = Astro.url.pathname.split("/").filter(Boolean);
+const citySlug = areaServed ? pathSegments[0] : null;
+
+const breadcrumbs = areaServed
+  ? [
+      { label: areaServed, href: `/${citySlug}/` },
+      { label: breadcrumbLabel, href: Astro.url.pathname },
+    ]
+  : [{ label: breadcrumbLabel, href: Astro.url.pathname }];
+---
+
+<BaseLayout title={title} description={description}>
+  <Breadcrumbs items={breadcrumbs} />
+  <Hero
+    headline={headline}
+    subheadline={subheadline}
+    backgroundImage={backgroundImage}
+  />
+  <TrustSignals variant="compact" />
+
+  <!-- Page-specific content slot -->
+  <slot />
+
+  <PainPoints points={painPoints} />
+  <HowWeWork steps={howWeWorkSteps} />
+  <FAQSection faqs={faqs} />
+  <ServiceCityGrid serviceSlug={serviceSlug} />
+  <CTASection />
+
+  <SchemaMarkup
+    type="service"
+    data={{
+      serviceName,
+      serviceDescription,
+      ...(areaServed && { areaServed }),
+    }}
+  />
+</BaseLayout>

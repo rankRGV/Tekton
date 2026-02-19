@@ -1,0 +1,147 @@
+---
+import ServiceLayout from "../layouts/ServiceLayout.astro";
+
+const faqs = [
+  {
+    question: "How long does a full roof replacement take?",
+    answer:
+      "Most residential roofs are replaced in a single day — 24 hours or less. We prep our materials in advance, arrive early, and get the job done fast so you're not living under a tarp for days. Larger or more complex roofs may take 2 days.",
+  },
+  {
+    question: "Do you handle insurance claims for storm damage?",
+    answer:
+      "Yes. We work directly with your insurance company throughout the claims process. We'll document the damage, meet with your adjuster on-site, and make sure you get everything you're entitled to. You focus on your family — we handle the paperwork.",
+  },
+  {
+    question: "What roofing materials do you offer?",
+    answer:
+      "We install asphalt shingles, metal roofing, tile (clay and concrete), and flat roof systems (TPO, modified bitumen). We'll help you pick the best material for your home, budget, and the South Texas climate. Every option comes with a manufacturer warranty.",
+  },
+  {
+    question: "What does your price match guarantee cover?",
+    answer:
+      "Bring us any written estimate from a licensed, insured roofing contractor in the RGV for the same scope of work — we'll match it. We believe you shouldn't have to choose between quality and price. Same materials, same warranty, same professionalism — guaranteed.",
+  },
+  {
+    question: "How do I know if my roof needs repair or full replacement?",
+    answer:
+      "If your roof is under 15 years old with minor damage (a few missing shingles, a small leak), a repair usually makes sense. If it's 15+ years old, has widespread damage, or you're seeing granules in your gutters, it's time for a replacement. We'll inspect it for free and give you an honest recommendation — no pressure to replace if a repair will do.",
+  },
+];
+
+const painPoints = [
+  {
+    title: "\"The last roofer disappeared mid-job\"",
+    description:
+      "We hear it all the time. Fly-by-night crews who take your deposit and vanish. We're a licensed, insured RGV company with a physical office. We don't disappear — we finish.",
+  },
+  {
+    title: "\"I got three quotes and they're all wildly different\"",
+    description:
+      "Confusing estimates mean someone's cutting corners — or inflating the price. We give you a clear, line-item estimate with no hidden fees. Plus our price match guarantee means you never overpay.",
+  },
+  {
+    title: "\"I can't afford to miss work waiting on a contractor\"",
+    description:
+      "We replace most roofs in a single day. We show up on time, work efficiently, and clean up when we're done. Your life doesn't stop — and neither do we.",
+  },
+  {
+    title: "\"What if the insurance company lowballs my claim?\"",
+    description:
+      "We've handled hundreds of insurance claims across the Valley. We document every detail, meet the adjuster on-site, and fight for the full payout you deserve.",
+  },
+  {
+    title: "\"I don't know who to trust\"",
+    description:
+      "We get it. Check our 4.6+ Google rating, our before-and-after photos, and talk to our past customers. We earned this reputation one roof at a time.",
+  },
+  {
+    title: "\"Storm season is coming and I'm not ready\"",
+    description:
+      "South Texas weather doesn't wait, and neither should you. We offer free inspections to catch problems before the next storm hits — so you're protected, not panicking.",
+  },
+];
+
+const howWeWorkSteps = [
+  {
+    number: 1,
+    title: "Free Inspection",
+    description:
+      "We inspect your roof top to bottom and give you an honest assessment — photos included. No charge, no obligation.",
+  },
+  {
+    number: 2,
+    title: "Clear Estimate",
+    description:
+      "You get a detailed, line-item quote. No surprises, no hidden costs. If you have insurance, we'll help file the claim.",
+  },
+  {
+    number: 3,
+    title: "Fast Installation",
+    description:
+      "Our crew handles your roof in as little as 24 hours. We bring everything we need and clean up completely when we're done.",
+  },
+  {
+    number: 4,
+    title: "Final Walkthrough",
+    description:
+      "We walk you through the finished roof, answer every question, and make sure you're 100% satisfied before we leave.",
+  },
+];
+---
+
+<ServiceLayout
+  title="Roofing Services | Tekton Home Solutions"
+  description="Professional roofing services across the Rio Grande Valley. Full roof replacement in 24 hours. Price match guarantee. Licensed & insured. Free inspections — call (956) 682-7643."
+  headline='RGV Roofing Done Right — <span class="text-gold">In 24 Hours</span>'
+  subheadline="Full roof replacement, repair, and storm damage restoration across the Rio Grande Valley. Licensed, insured, and backed by our price match guarantee."
+  serviceSlug="roofing"
+  serviceName="Roofing Services"
+  serviceDescription="Complete residential roofing services including roof replacement, repair, storm damage restoration, and free inspections across the Rio Grande Valley, Texas."
+  breadcrumbLabel="Roofing"
+  faqs={faqs}
+  painPoints={painPoints}
+  howWeWorkSteps={howWeWorkSteps}
+>
+  <!-- Unique service body content -->
+  <section class="py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            Your Roof Protects Everything You've Built
+          </h2>
+          <p class="text-text-muted text-lg mb-4">
+            A damaged roof isn't just a cosmetic problem — it's a threat to your home, your family, and everything inside. Water damage, mold, structural rot — it all starts with a roof that's past its prime.
+          </p>
+          <p class="text-text-muted text-lg mb-4">
+            At Tekton Home Solutions, we don't just patch problems. We solve them. Whether it's a full tear-off and replacement, storm damage repair, or a proactive inspection before hurricane season — we handle it with the urgency it deserves.
+          </p>
+          <p class="text-text-muted text-lg">
+            And because we also build custom homes, pools, and remodels, we understand how your roof fits into the bigger picture. That's expertise most roofing-only companies simply don't have.
+          </p>
+        </div>
+        <div class="bg-bg-surface border border-border rounded-xl p-8">
+          <h3 class="text-xl font-semibold mb-4">What We Handle</h3>
+          <ul class="space-y-3">
+            {[
+              "Complete roof replacement (shingle, metal, tile, flat)",
+              "Storm damage repair and insurance claims",
+              "Leak detection and emergency repair",
+              "Free roof inspections",
+              "Gutter installation and repair",
+              "Preventive maintenance programs",
+            ].map((item) => (
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-gold shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-text-muted">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</ServiceLayout>
