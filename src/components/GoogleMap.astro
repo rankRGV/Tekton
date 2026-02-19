@@ -1,0 +1,31 @@
+---
+interface Props {
+  cityName: string;
+}
+
+const { cityName } = Astro.props;
+const query = encodeURIComponent(`${cityName}, Texas`);
+---
+
+<section class="py-16 md:py-20">
+  <div class="max-w-7xl mx-auto px-4">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">
+      Serving {cityName} & Surrounding Areas
+    </h2>
+    <p class="text-text-muted text-center mb-8 max-w-2xl mx-auto">
+      Based in McAllen, we serve homeowners across {cityName} and the entire Rio Grande Valley.
+    </p>
+    <div class="rounded-lg overflow-hidden border border-border">
+      <iframe
+        title={`Map of ${cityName}, Texas`}
+        src={`https://www.google.com/maps?q=${query}&output=embed`}
+        width="100%"
+        height="400"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+  </div>
+</section>
