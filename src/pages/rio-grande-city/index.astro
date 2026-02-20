@@ -1,0 +1,46 @@
+---
+import LocationLayout from "../../layouts/LocationLayout.astro";
+import { getLocation } from "../../data/locations";
+
+const location = getLocation("rio-grande-city")!;
+---
+
+<LocationLayout
+  title="Rio Grande City Home Services | Roofing, Pools, Remodeling | Tekton Home Solutions"
+  description="Tekton Home Solutions in Rio Grande City, TX — roofing, pools, remodeling, and custom homes. 24-hour roof replacement. Price match guarantee. Call (956) 862-7643."
+  headline={'Rio Grande City Home <span class="text-gold">Contractor</span>'}
+  subheadline="Roofing, pools, remodeling, and custom home building for Rio Grande City and Starr County homeowners. McAllen-headquartered, serving the upper Valley."
+  location={location}
+  backgroundImage="/images/neighborhood-aerial.jpg"
+>
+  <section class="py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            Starr County's Contractor
+          </h2>
+          <p class="text-text-muted text-lg mb-4">
+            Rio Grande City is the heart of Starr County — and homeowners here have long been underserved by quality contractors. Most crews are based in McAllen or further east and don't want to make the drive. We do. Rio Grande City and the surrounding communities along Highway 83 West are part of our active service area.
+          </p>
+          <p class="text-text-muted text-lg mb-4">
+            The upper Valley has its own set of challenges. Homes in Rio Grande City deal with extreme heat, caliche-heavy soil that affects foundations and pool construction, and limited access to the caliber of contractors available in the McAllen metro. We bring McAllen-quality work to Starr County — same materials, same crew, same standards.
+          </p>
+          <p class="text-text-muted text-lg">
+            Whether you need a roof replaced, a pool built, a home remodeled, or a custom home constructed on your property — Tekton delivers the same level of service in Rio Grande City that we provide in McAllen. Distance doesn't change our standards.
+          </p>
+        </div>
+        <div>
+          <img
+            src="/images/construction-team.jpg"
+            alt="Tekton Home Solutions crew serving Rio Grande City, TX homeowners"
+            width="800"
+            height="530"
+            class="rounded-xl w-full"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+</LocationLayout>

@@ -1,0 +1,46 @@
+---
+import LocationLayout from "../../layouts/LocationLayout.astro";
+import { getLocation } from "../../data/locations";
+
+const location = getLocation("penitas")!;
+---
+
+<LocationLayout
+  title="Penitas Home Services | Roofing, Pools, Remodeling | Tekton Home Solutions"
+  description="Tekton Home Solutions in Penitas, TX — roofing, pool construction, remodeling, and custom homes. 24-hour roof replacement. Price match guarantee. Call (956) 862-7643."
+  headline={'Penitas Home <span class="text-gold">Contractor</span>'}
+  subheadline="Roofing, pools, remodeling, and custom home building for Penitas and western Hidalgo County homeowners. McAllen-headquartered, serving the western Valley."
+  location={location}
+  backgroundImage="/images/neighborhood-aerial.jpg"
+>
+  <section class="py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            Western Hidalgo County's Contractor
+          </h2>
+          <p class="text-text-muted text-lg mb-4">
+            Penitas and the surrounding communities in western Hidalgo County — La Joya, Sullivan City, Palmview — are growing. New homes are going up, families are putting down roots, and the demand for quality contractors has never been higher. But most builders focus on McAllen and Edinburg, leaving the western Valley underserved.
+          </p>
+          <p class="text-text-muted text-lg mb-4">
+            We're changing that. Tekton actively serves Penitas and all of western Hidalgo County. We know the area, we know the soil conditions, and we know that homeowners here deserve the same quality of work as anyone in the McAllen metro — without the markup or the runaround.
+          </p>
+          <p class="text-text-muted text-lg">
+            Roof replacement, pool construction, home remodeling, or a custom build on your property — we bring our full team and full capabilities to Penitas. Same crew, same materials, same standards as every job we do.
+          </p>
+        </div>
+        <div>
+          <img
+            src="/images/construction-team.jpg"
+            alt="Tekton Home Solutions crew serving Penitas, TX homeowners"
+            width="800"
+            height="530"
+            class="rounded-xl w-full"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+</LocationLayout>

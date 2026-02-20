@@ -1,0 +1,46 @@
+---
+import LocationLayout from "../../layouts/LocationLayout.astro";
+import { getLocation } from "../../data/locations";
+
+const location = getLocation("edinburg")!;
+---
+
+<LocationLayout
+  title="Edinburg Home Services | Roofing, Pools, Remodeling | Tekton Home Solutions"
+  description="Tekton Home Solutions in Edinburg, TX — roofing, pool construction, remodeling, and custom homes. 24-hour roof replacement. Price match guarantee. Call (956) 862-7643."
+  headline={'Edinburg\'s Trusted <span class="text-gold">Home Contractor</span>'}
+  subheadline="Roofing, pools, remodeling, and custom home building for Edinburg homeowners. McAllen-headquartered, serving Edinburg and all of north Hidalgo County."
+  location={location}
+  backgroundImage="/images/neighborhood-aerial.jpg"
+>
+  <section class="py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            Built for Edinburg Homeowners
+          </h2>
+          <p class="text-text-muted text-lg mb-4">
+            Edinburg is booming — UTRGV is driving growth, new subdivisions are popping up along Trenton Road and Closner Boulevard, and established neighborhoods near Sugar Road and Freddy Gonzalez are getting fresh investment. Whether you're a long-time homeowner or just moved in, your home needs a contractor who knows this city.
+          </p>
+          <p class="text-text-muted text-lg mb-4">
+            We're headquartered in McAllen — just 15 minutes down Expressway 281. Edinburg is one of our most active service areas. We know the local permitting process through the City of Edinburg, we understand the soil conditions in north Hidalgo County, and we've worked in neighborhoods from Canton Estates to Villanueva.
+          </p>
+          <p class="text-text-muted text-lg">
+            Storm damage roof replacement, a custom pool for your growing family, a kitchen remodel that finally matches your vision, or a custom home on your lot — Tekton handles it all. One team, one point of contact, one contractor you can actually reach.
+          </p>
+        </div>
+        <div>
+          <img
+            src="/images/construction-team.jpg"
+            alt="Tekton Home Solutions crew serving Edinburg, TX homeowners"
+            width="800"
+            height="530"
+            class="rounded-xl w-full"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+</LocationLayout>

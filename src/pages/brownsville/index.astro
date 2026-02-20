@@ -1,0 +1,46 @@
+---
+import LocationLayout from "../../layouts/LocationLayout.astro";
+import { getLocation } from "../../data/locations";
+
+const location = getLocation("brownsville")!;
+---
+
+<LocationLayout
+  title="Brownsville Home Services | Roofing, Pools, Remodeling | Tekton Home Solutions"
+  description="Tekton Home Solutions in Brownsville, TX — roofing, pools, remodeling, and custom homes. 24-hour roof replacement. Price match guarantee. Call (956) 862-7643."
+  headline={'Brownsville Home <span class="text-gold">Contractor</span>'}
+  subheadline="Roofing, pools, remodeling, and custom home building for Brownsville homeowners. Headquartered in McAllen, serving all of Cameron County."
+  location={location}
+  backgroundImage="/images/neighborhood-aerial.jpg"
+>
+  <section class="py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            Brownsville Deserves Better Contractors
+          </h2>
+          <p class="text-text-muted text-lg mb-4">
+            Brownsville is the largest city in Cameron County and one of the fastest-growing areas on the border. From the established neighborhoods near Palm Boulevard and Central Boulevard to the newer developments along Paredes Line Road and near SpaceX, homeowners here need contractors who understand the unique challenges of building and maintaining homes this close to the coast.
+          </p>
+          <p class="text-text-muted text-lg mb-4">
+            Brownsville's proximity to the Gulf means higher humidity, stronger hurricane-season winds, and salt air corrosion that accelerates wear on roofing materials and outdoor structures. We use materials and installation methods specifically rated for coastal conditions — because what works in San Antonio doesn't hold up in Brownsville.
+          </p>
+          <p class="text-text-muted text-lg">
+            Whether you need a roof replaced after a storm, a pool built for year-round use, a home remodeled to match your vision, or a custom home built from the ground up — Tekton brings McAllen-headquartered reliability to Brownsville. One team, one timeline, one contractor who answers the phone.
+          </p>
+        </div>
+        <div>
+          <img
+            src="/images/construction-team.jpg"
+            alt="Tekton Home Solutions crew serving Brownsville, TX homeowners"
+            width="800"
+            height="530"
+            class="rounded-xl w-full"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+</LocationLayout>

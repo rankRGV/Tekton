@@ -1,0 +1,46 @@
+---
+import LocationLayout from "../../layouts/LocationLayout.astro";
+import { getLocation } from "../../data/locations";
+
+const location = getLocation("pharr")!;
+---
+
+<LocationLayout
+  title="Pharr Home Services | Roofing, Pools, Remodeling | Tekton Home Solutions"
+  description="Tekton Home Solutions in Pharr, TX — roofing, pool construction, remodeling, and custom homes. 24-hour roof replacement. Price match guarantee. Call (956) 862-7643."
+  headline={'Pharr\'s Trusted Home <span class="text-gold">Contractor</span>'}
+  subheadline="Roofing, pools, remodeling, and custom home building for Pharr homeowners. McAllen-headquartered, just minutes from your door."
+  location={location}
+  backgroundImage="/images/neighborhood-aerial.jpg"
+>
+  <section class="py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            Built for Pharr Homeowners
+          </h2>
+          <p class="text-text-muted text-lg mb-4">
+            Pharr is right next door to McAllen — literally minutes from our headquarters on Maple Ave. From the neighborhoods along Cage Boulevard and Sugar Road to the newer developments near Jackson Road and the Pharr Town Center area, we know this city well. Many of our crew members live here.
+          </p>
+          <p class="text-text-muted text-lg mb-4">
+            Pharr homeowners face the same brutal South Texas conditions as the rest of the metro — 100°+ summers, hailstorms that roll through western Hidalgo County, and hurricane-season winds. But Pharr also has a mix of older homes that need significant updates and newer construction that needs quality outdoor living spaces. We handle both.
+          </p>
+          <p class="text-text-muted text-lg">
+            Roof replacement after storm damage, a custom pool for your backyard, a kitchen remodel that transforms how you live, or a custom home built on your lot — Tekton is the one contractor in Pharr that does it all. No subcontractor roulette. No finger-pointing. Just one team that gets it done.
+          </p>
+        </div>
+        <div>
+          <img
+            src="/images/construction-team.jpg"
+            alt="Tekton Home Solutions crew serving Pharr, TX homeowners"
+            width="800"
+            height="530"
+            class="rounded-xl w-full"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+</LocationLayout>

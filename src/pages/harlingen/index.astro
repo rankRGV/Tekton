@@ -1,0 +1,46 @@
+---
+import LocationLayout from "../../layouts/LocationLayout.astro";
+import { getLocation } from "../../data/locations";
+
+const location = getLocation("harlingen")!;
+---
+
+<LocationLayout
+  title="Harlingen Home Services | Roofing, Pools, Remodeling | Tekton Home Solutions"
+  description="Tekton Home Solutions in Harlingen, TX — roofing, pools, remodeling, and custom homes. 24-hour roof replacement. Price match guarantee. Call (956) 862-7643."
+  headline={'Harlingen\'s Reliable <span class="text-gold">Home Contractor</span>'}
+  subheadline="Roofing, pools, remodeling, and custom home building for Harlingen homeowners. Headquartered in McAllen, serving all of the mid-Valley."
+  location={location}
+  backgroundImage="/images/neighborhood-aerial.jpg"
+>
+  <section class="py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            Built for Harlingen Homeowners
+          </h2>
+          <p class="text-text-muted text-lg mb-4">
+            Harlingen sits at the crossroads of the Valley — centrally located between McAllen and Brownsville, with a mix of established neighborhoods near Dixieland and the Country Club, and newer growth along Ed Carey Drive and Loop 499. It's a city with deep roots and homes that reflect every era of Valley construction.
+          </p>
+          <p class="text-text-muted text-lg mb-4">
+            That mix of old and new means Harlingen homeowners face a wide range of challenges. Older homes need roofs that have been baking in the sun for decades. Mid-century homes need kitchen and bathroom updates to match modern living. Newer builds need pools and outdoor spaces designed for the climate. We handle all of it.
+          </p>
+          <p class="text-text-muted text-lg">
+            We're headquartered in McAllen — about 35 minutes west on Expressway 83. Harlingen is a core part of our service area, and we've built strong relationships with homeowners throughout the mid-Valley. From storm damage roof replacements to custom pool builds to complete home renovations — Tekton is one call away.
+          </p>
+        </div>
+        <div>
+          <img
+            src="/images/construction-team.jpg"
+            alt="Tekton Home Solutions crew serving Harlingen, TX homeowners"
+            width="800"
+            height="530"
+            class="rounded-xl w-full"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+</LocationLayout>
