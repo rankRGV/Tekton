@@ -1,0 +1,157 @@
+---
+import ServiceLayout from "../layouts/ServiceLayout.astro";
+
+const faqs = [
+  {
+    question: "How much does a home remodel cost in the RGV?",
+    answer:
+      "It depends on the scope. A kitchen remodel in the Rio Grande Valley typically ranges from $15,000 to $50,000+, and a bathroom remodel from $8,000 to $25,000+. Full-home remodels vary widely based on square footage and finishes. We provide a detailed, line-item estimate after your design consultation — no hidden fees, no surprise change orders.",
+  },
+  {
+    question: "How long does a kitchen remodel take?",
+    answer:
+      "Most kitchen remodels take 4 to 8 weeks depending on the scope — a cosmetic refresh (cabinets, countertops, backsplash) is faster, while a full gut renovation with layout changes takes longer. We give you a realistic timeline upfront and keep you updated throughout. No dragging it out for months.",
+  },
+  {
+    question: "Do I need to move out during a remodel?",
+    answer:
+      "For most kitchen and bathroom remodels, no — you can stay in your home. We section off the work area, manage dust and debris, and keep disruption to a minimum. For whole-home remodels or major structural work, we'll discuss whether temporary relocation makes sense and help you plan around it.",
+  },
+  {
+    question: "Do you handle permits for remodeling projects?",
+    answer:
+      "Yes. Any structural, electrical, or plumbing changes require permits in Hidalgo County. We handle the full permitting process — application, inspections, sign-offs — so you don't have to deal with the city. We also manage HOA approvals if your subdivision requires them.",
+  },
+  {
+    question: "Can you match a design I found on Pinterest or Instagram?",
+    answer:
+      "Absolutely. Bring us your inspiration photos and we'll work with you to recreate that look within your budget. We'll tell you honestly what's achievable in your space and suggest smart alternatives where needed. Our goal is to get you a result you love — not upsell you on things you don't need.",
+  },
+  {
+    question: "What's included in a full kitchen remodel?",
+    answer:
+      "Our full kitchen remodels typically include demolition, new cabinets, countertops (granite, quartz, or marble), backsplash tile, flooring, lighting, plumbing fixtures, painting, and appliance installation. We handle everything from design through final cleanup — one crew, one point of contact.",
+  },
+];
+
+const painPoints = [
+  {
+    title: "\"The last contractor took our deposit and ghosted\"",
+    description:
+      "It happens too often in the Valley. We're a licensed, insured company with a physical office on Maple Ave in McAllen. We don't ghost — we show up, we communicate, and we finish what we start.",
+  },
+  {
+    title: "\"The quote kept changing after they started\"",
+    description:
+      "Surprise change orders are the oldest trick. Our estimates are detailed and line-itemized before we swing a hammer. The price we quote is the price you pay — unless you decide to add features.",
+  },
+  {
+    title: "\"My kitchen was torn apart for 4 months\"",
+    description:
+      "Poor planning causes long remodels, not the work itself. We schedule dedicated crews with realistic timelines and keep your project moving. Most kitchen remodels are done in 4–8 weeks.",
+  },
+  {
+    title: "\"I don't know where to start\"",
+    description:
+      "That's exactly where we come in. Our design consultation helps you figure out what you want, what's realistic for your space, and what fits your budget. Bring your Pinterest boards — we'll handle the rest.",
+  },
+  {
+    title: "\"I'm worried the finished product won't match the design\"",
+    description:
+      "We walk you through material selections, show you samples in your space, and confirm everything before we start. No surprises when the tile goes up or the cabinets go in.",
+  },
+];
+
+const howWeWorkSteps = [
+  {
+    number: 1,
+    title: "Design Consultation",
+    description:
+      "We visit your home, discuss your vision, measure the space, and help you plan a remodel that fits your lifestyle and budget. No cost, no obligation.",
+  },
+  {
+    number: 2,
+    title: "Detailed Estimate & Design",
+    description:
+      "You get a clear, line-item quote with material selections. We handle permits, HOA approvals, and scheduling before any work begins.",
+  },
+  {
+    number: 3,
+    title: "Construction",
+    description:
+      "Our crew handles demolition, framing, electrical, plumbing, flooring, cabinetry, countertops, tile, paint — everything. One team, start to finish.",
+  },
+  {
+    number: 4,
+    title: "Final Walkthrough",
+    description:
+      "We walk you through every detail of the finished space. If anything isn't right, we fix it before we leave. Your satisfaction isn't optional — it's the standard.",
+  },
+];
+---
+
+<ServiceLayout
+  title="RGV Home Remodeling | Kitchen & Bathroom Renovation | Tekton Home Solutions"
+  description="Kitchen and bathroom remodeling across the Rio Grande Valley. Full renovations, custom designs, licensed & insured. Free consultation — call (956) 862-7643."
+  headline='Remodeling That <span class="text-gold">Transforms Your Home</span>'
+  subheadline="Kitchen remodels, bathroom renovations, and whole-home transformations across the Rio Grande Valley. One crew, one timeline, zero runaround."
+  serviceSlug="remodeling"
+  serviceName="Home Remodeling"
+  serviceDescription="Professional home remodeling services across the Rio Grande Valley, Texas. Kitchen remodels, bathroom renovations, whole-home transformations, and custom design work."
+  breadcrumbLabel="Remodeling"
+  faqs={faqs}
+  painPoints={painPoints}
+  howWeWorkSteps={howWeWorkSteps}
+  backgroundImage="/images/roofing-hero.jpg"
+>
+  <!-- Unique service body content -->
+  <section class="py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            Your Home Should Fit Your Life — Not the Other Way Around
+          </h2>
+          <p class="text-text-muted text-lg mb-4">
+            That cramped kitchen. The outdated bathroom. The layout that made sense 20 years ago but doesn't work for your family now. You've been living with it long enough. A well-planned remodel doesn't just update the look — it changes how you use your home every single day.
+          </p>
+          <p class="text-text-muted text-lg mb-4">
+            At Tekton Home Solutions, we handle everything from cosmetic refreshes to full gut renovations. New cabinets and countertops. Opening up walls to create an open floor plan. Adding a master suite. Converting a garage into living space. Whatever your home needs — we design it, permit it, build it, and clean up after it.
+          </p>
+          <p class="text-text-muted text-lg">
+            And because we also build custom homes from the ground up, we bring a level of structural knowledge that most remodeling-only companies don't have. We know what's behind your walls before we open them — and that means fewer surprises, fewer delays, and a better finished product.
+          </p>
+          <img
+            src="/images/roofing-work.jpg"
+            alt="Home remodeling project in progress"
+            width="800"
+            height="533"
+            class="rounded-xl mt-6"
+            loading="lazy"
+          />
+        </div>
+        <div class="bg-bg-surface border border-border rounded-xl p-8">
+          <h3 class="text-xl font-semibold mb-4">What We Remodel</h3>
+          <ul class="space-y-3">
+            {[
+              "Full kitchen remodels (cabinets, countertops, backsplash, flooring)",
+              "Bathroom renovations (walk-in showers, vanities, tile work)",
+              "Whole-home renovations and layout changes",
+              "Room additions and garage conversions",
+              "Flooring installation (tile, hardwood, LVP)",
+              "Interior and exterior painting",
+              "Custom built-ins, shelving, and closet systems",
+            ].map((item) => (
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-gold shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-text-muted">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</ServiceLayout>

@@ -1,0 +1,158 @@
+---
+import ServiceLayout from "../layouts/ServiceLayout.astro";
+
+const faqs = [
+  {
+    question: "How much does it cost to build a custom home in the RGV?",
+    answer:
+      "Custom home construction in the Rio Grande Valley typically ranges from $150 to $250+ per square foot, depending on the level of finish, complexity, and features. A 2,000 sq ft home might run $300,000–$500,000+, while larger or higher-end builds go higher. We provide a detailed estimate after your design consultation so you know exactly what to expect.",
+  },
+  {
+    question: "How long does it take to build a custom home?",
+    answer:
+      "Most custom homes take 8 to 14 months from breaking ground to move-in, depending on size and complexity. We also factor in 1–3 months for design, engineering, and permitting before construction begins. We give you a realistic timeline and keep you updated with regular progress reports.",
+  },
+  {
+    question: "Do you help with the design, or do I need an architect?",
+    answer:
+      "We handle the full process — from initial concept through architectural plans, engineering, and construction. We work with trusted local architects and engineers to turn your vision into buildable plans. You don't need to bring your own architect unless you want to.",
+  },
+  {
+    question: "Can I build on my own lot?",
+    answer:
+      "Absolutely — we build on your land. If you already own a lot in the RGV, we'll evaluate it for buildability (soil conditions, utilities, flood zone status, setbacks) at no cost. If you're still looking for land, we can help point you in the right direction based on what you want to build.",
+  },
+  {
+    question: "What makes Tekton different from other custom home builders in the Valley?",
+    answer:
+      "Most builders in the RGV do production homes with minimal customization. We build truly custom — your floor plan, your finishes, your layout. And because we also handle roofing, pools, and remodeling, we can build your entire property as one coordinated project: the home, the pool, the outdoor kitchen, the landscaping. One crew, one timeline, one point of contact.",
+  },
+  {
+    question: "Do you offer financing for custom home construction?",
+    answer:
+      "Custom homes are typically financed through a construction loan, which converts to a traditional mortgage upon completion. We work with several local lenders who specialize in construction financing and can connect you with the right one. We also help navigate the draw schedule so the lending process stays smooth.",
+  },
+];
+
+const painPoints = [
+  {
+    title: "\"Every builder just showed me the same three floor plans\"",
+    description:
+      "That's production building, not custom. We start with a blank page and your vision. Your floor plan, your layout, your finishes — designed around how your family actually lives. Not a cookie-cutter plan with upgraded countertops.",
+  },
+  {
+    title: "\"The last builder went way over budget\"",
+    description:
+      "Budget overruns happen when builders don't plan thoroughly or use allowances to hide real costs. We provide detailed, line-item estimates with real material selections — not vague allowances that balloon later. The price we agree on is the price you pay.",
+  },
+  {
+    title: "\"I don't trust builders to actually communicate\"",
+    description:
+      "You'll have one project manager who picks up the phone and gives you straight answers. We provide regular progress updates, walk the site with you, and make sure you know exactly where your build stands at all times.",
+  },
+  {
+    title: "\"I want a pool and outdoor kitchen too — do I need separate contractors?\"",
+    description:
+      "No. That's the whole point of Tekton. We build the home, the pool, the outdoor living space — all as one coordinated project. No scheduling conflicts, no finger-pointing between contractors, no communication gaps.",
+  },
+  {
+    title: "\"Building a home feels overwhelming\"",
+    description:
+      "It doesn't have to be. We guide you through every decision — lot evaluation, floor plan design, material selections, permitting, construction, and final walkthrough. We've done this many times. You haven't, and that's okay. That's why you hire us.",
+  },
+];
+
+const howWeWorkSteps = [
+  {
+    number: 1,
+    title: "Vision & Lot Evaluation",
+    description:
+      "We discuss your vision, evaluate your lot (or help you find one), and establish a realistic budget range. No cost, no obligation.",
+  },
+  {
+    number: 2,
+    title: "Design & Engineering",
+    description:
+      "We develop your custom floor plan with our architectural team, finalize material selections, and handle all engineering and permitting.",
+  },
+  {
+    number: 3,
+    title: "Construction",
+    description:
+      "Our crew breaks ground and builds your home from foundation to finish — framing, mechanical, interior, exterior, landscaping. Regular updates throughout.",
+  },
+  {
+    number: 4,
+    title: "Final Walkthrough & Move-In",
+    description:
+      "We walk every room with you, address any punch-list items, and hand you the keys. Your warranty kicks in the day you move in.",
+  },
+];
+---
+
+<ServiceLayout
+  title="RGV Custom Home Builder | Build Your Dream Home | Tekton Home Solutions"
+  description="Custom home builder in the Rio Grande Valley. Fully custom floor plans, premium finishes, build on your lot. Licensed & insured. Call (956) 862-7643."
+  headline='Build the Home <span class="text-gold">You Actually Want</span>'
+  subheadline="Fully custom homes built on your lot across the Rio Grande Valley. Your floor plan, your finishes, your vision — brought to life by a team that builds everything under one roof."
+  serviceSlug="custom-homes"
+  serviceName="Custom Home Building"
+  serviceDescription="Custom home design and construction across the Rio Grande Valley, Texas. Fully custom floor plans, premium finishes, and complete build management from lot evaluation to move-in."
+  breadcrumbLabel="Custom Homes"
+  faqs={faqs}
+  painPoints={painPoints}
+  howWeWorkSteps={howWeWorkSteps}
+  backgroundImage="/images/roofing-hero.jpg"
+>
+  <!-- Unique service body content -->
+  <section class="py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            Stop Settling for Someone Else's Floor Plan
+          </h2>
+          <p class="text-text-muted text-lg mb-4">
+            Most "custom" home builders in the Valley hand you a catalog and call it custom when you pick the countertop color. That's not custom — that's a production home with options. A real custom home starts with your life: how your family moves through a house, where you want natural light, how you entertain, where the kids play, what view you wake up to.
+          </p>
+          <p class="text-text-muted text-lg mb-4">
+            At Tekton, we start from a blank page. We design your floor plan around how you actually live — not around what's cheapest to frame. We work with local architects and engineers to create a home that's structurally sound, energy-efficient, and built for the South Texas climate.
+          </p>
+          <p class="text-text-muted text-lg">
+            And because we also handle roofing, pools, and remodeling, we can build your entire property as one coordinated project. The home, the pool, the outdoor kitchen, the pergola — all under one timeline, one budget, one crew. No juggling contractors. No gaps between trades. No finger-pointing.
+          </p>
+          <img
+            src="/images/roofing-work.jpg"
+            alt="Custom home construction in progress in the RGV"
+            width="800"
+            height="533"
+            class="rounded-xl mt-6"
+            loading="lazy"
+          />
+        </div>
+        <div class="bg-bg-surface border border-border rounded-xl p-8">
+          <h3 class="text-xl font-semibold mb-4">What We Build</h3>
+          <ul class="space-y-3">
+            {[
+              "Fully custom floor plans (your design, not a catalog pick)",
+              "Single-story and two-story homes",
+              "Open-concept living and modern layouts",
+              "Premium kitchens with custom cabinetry",
+              "Luxury master suites and spa bathrooms",
+              "Energy-efficient construction for South Texas heat",
+              "Integrated pools, outdoor kitchens, and landscaping",
+              "Build on your lot anywhere in the RGV",
+            ].map((item) => (
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-gold shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-text-muted">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</ServiceLayout>
