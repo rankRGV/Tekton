@@ -1,8 +1,8 @@
 export const site = {
   name: "Tekton Home Solutions",
-  phone: "956-682-7643",
-  phoneFormatted: "(956) 682-7643",
-  phoneTel: "tel:+19566827643",
+  phone: "956-862-7643",
+  phoneFormatted: "(956) 862-7643",
+  phoneTel: "tel:+19568627643",
   email: "tekton.homesolutions@gmail.com",
   url: "https://www.tektonhomesolutions.com",
   address: {
