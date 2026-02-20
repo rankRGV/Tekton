@@ -3,15 +3,39 @@ import LocationLayout from "../../layouts/LocationLayout.astro";
 import { getLocation } from "../../data/locations";
 
 const location = getLocation("rio-grande-city")!;
+
+const faqs = [
+  {
+    question: "Do you really serve Rio Grande City?",
+    answer:
+      "Yes — and we're one of the few quality contractors who actively does. Rio Grande City and Starr County are part of our regular service area. We don't charge extra for the drive from McAllen, and we bring the same crew, materials, and standards as every job we do.",
+  },
+  {
+    question: "What challenges are unique to building in Starr County?",
+    answer:
+      "Starr County has caliche-heavy soil that affects foundations, pool construction, and drainage. The extreme heat is even more intense in the upper Valley. And the limited contractor availability means homeowners often settle for less. We engineer our work specifically for these conditions.",
+  },
+  {
+    question: "Can you build a custom home on my land in Rio Grande City?",
+    answer:
+      "Absolutely. We build custom homes on your lot anywhere in the RGV, including Rio Grande City and Starr County. We'll evaluate your lot for buildability — soil conditions, utilities, flood zone status, setbacks — and design a home that fits your vision and the land.",
+  },
+  {
+    question: "How do I get started on a project in Rio Grande City?",
+    answer:
+      "Call us at (956) 862-7643 or fill out our contact form. We'll schedule a free on-site consultation at your Rio Grande City property, assess the scope of work, and provide a detailed estimate. We make the drive — you don't have to come to us.",
+  },
+];
 ---
 
 <LocationLayout
-  title="Rio Grande City Home Services | Roofing, Pools, Remodeling | Tekton Home Solutions"
-  description="Tekton Home Solutions in Rio Grande City, TX — roofing, pools, remodeling, and custom homes. 24-hour roof replacement. Price match guarantee. Call (956) 862-7643."
+  title="Rio Grande City Contractor | Roofing & More | Tekton Home Solutions"
+  description="Tekton Home Solutions in Rio Grande City, TX — roofing, pools, remodeling & custom homes. Serving Starr County. Call (956) 862-7643."
   headline={'Rio Grande City Home <span class="text-gold">Contractor</span>'}
   subheadline="Roofing, pools, remodeling, and custom home building for Rio Grande City and Starr County homeowners. McAllen-headquartered, serving the upper Valley."
   location={location}
   backgroundImage="/images/neighborhood-aerial.jpg"
+  faqs={faqs}
 >
   <section class="py-16 md:py-20">
     <div class="max-w-7xl mx-auto px-4">
@@ -20,6 +44,11 @@ const location = getLocation("rio-grande-city")!;
           <h2 class="text-3xl md:text-4xl font-bold mb-6">
             Starr County's Contractor
           </h2>
+          <div class="bg-bg-surface border border-border rounded-lg p-4 mb-6">
+            <p class="text-text-muted text-sm">
+              <strong class="text-text">Rio Grande City at a glance:</strong> Population 15,000+ | Starr County seat | Historic border town founded in 1848 | Underserved by quality contractors despite growing residential demand
+            </p>
+          </div>
           <p class="text-text-muted text-lg mb-4">
             Rio Grande City is the heart of Starr County — and homeowners here have long been underserved by quality contractors. Most crews are based in McAllen or further east and don't want to make the drive. We do. Rio Grande City and the surrounding communities along Highway 83 West are part of our active service area.
           </p>

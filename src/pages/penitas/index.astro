@@ -3,15 +3,39 @@ import LocationLayout from "../../layouts/LocationLayout.astro";
 import { getLocation } from "../../data/locations";
 
 const location = getLocation("penitas")!;
+
+const faqs = [
+  {
+    question: "Do you serve Penitas and the surrounding area?",
+    answer:
+      "Yes — we actively serve Penitas, La Joya, Sullivan City, and Palmview in western Hidalgo County. Our McAllen headquarters is about 20 minutes east on Expressway 83. We don't charge extra for the drive and bring the same crew and standards as every other job.",
+  },
+  {
+    question: "Is it hard to find good contractors in western Hidalgo County?",
+    answer:
+      "It is — most contractors focus on McAllen, Edinburg, and the east side of the metro. Western Hidalgo County often gets overlooked. That's exactly why we actively serve Penitas and surrounding cities. You shouldn't have to settle for a lesser contractor just because of geography.",
+  },
+  {
+    question: "Can you build a pool in Penitas?",
+    answer:
+      "Absolutely. We build custom gunite pools throughout western Hidalgo County. We evaluate your property's soil conditions, handle all permitting, and engineer the pool for the specific ground conditions on your lot. Free design consultations available.",
+  },
+  {
+    question: "Do you offer free estimates in Penitas?",
+    answer:
+      "Yes. We provide free on-site inspections and estimates for all services — roofing, pools, remodeling, and custom homes. Call (956) 862-7643 or use our contact form to schedule. We come to you.",
+  },
+];
 ---
 
 <LocationLayout
-  title="Penitas Home Services | Roofing, Pools, Remodeling | Tekton Home Solutions"
-  description="Tekton Home Solutions in Penitas, TX — roofing, pool construction, remodeling, and custom homes. 24-hour roof replacement. Price match guarantee. Call (956) 862-7643."
+  title="Penitas Home Services | Roofing & More | Tekton Home Solutions"
+  description="Tekton Home Solutions in Penitas, TX — roofing, pools, remodeling & custom homes. Serving western Hidalgo County. Call (956) 862-7643."
   headline={'Penitas Home <span class="text-gold">Contractor</span>'}
   subheadline="Roofing, pools, remodeling, and custom home building for Penitas and western Hidalgo County homeowners. McAllen-headquartered, serving the western Valley."
   location={location}
   backgroundImage="/images/neighborhood-aerial.jpg"
+  faqs={faqs}
 >
   <section class="py-16 md:py-20">
     <div class="max-w-7xl mx-auto px-4">
@@ -20,6 +44,11 @@ const location = getLocation("penitas")!;
           <h2 class="text-3xl md:text-4xl font-bold mb-6">
             Western Hidalgo County's Contractor
           </h2>
+          <div class="bg-bg-surface border border-border rounded-lg p-4 mb-6">
+            <p class="text-text-muted text-sm">
+              <strong class="text-text">Penitas at a glance:</strong> Population 5,000+ | One of the fastest-growing small cities in western Hidalgo County | Gateway to La Joya, Sullivan City, and Palmview | Underserved by quality contractors
+            </p>
+          </div>
           <p class="text-text-muted text-lg mb-4">
             Penitas and the surrounding communities in western Hidalgo County — La Joya, Sullivan City, Palmview — are growing. New homes are going up, families are putting down roots, and the demand for quality contractors has never been higher. But most builders focus on McAllen and Edinburg, leaving the western Valley underserved.
           </p>

@@ -3,15 +3,39 @@ import LocationLayout from "../../layouts/LocationLayout.astro";
 import { getLocation } from "../../data/locations";
 
 const location = getLocation("pharr")!;
+
+const faqs = [
+  {
+    question: "How close is Tekton to Pharr?",
+    answer:
+      "Our McAllen office is at 1720 W Maple Ave Suite 4 — literally minutes from Pharr. Pharr and McAllen share a border, so we can have a crew at your Pharr home faster than almost any other city we serve.",
+  },
+  {
+    question: "Do you work in both old and new Pharr neighborhoods?",
+    answer:
+      "Yes. We work across all of Pharr — from the older homes near Cage Boulevard and Sugar Road that need roof replacements and remodels, to the newer construction near Jackson Road and the Pharr Town Center area that need pools and outdoor living spaces.",
+  },
+  {
+    question: "Can you handle storm damage claims for Pharr homeowners?",
+    answer:
+      "Absolutely. Pharr gets hit by the same hailstorms and hurricane-season weather as the rest of western Hidalgo County. We document damage, file insurance claims, meet with your adjuster on-site, and fight for the full payout you're owed.",
+  },
+  {
+    question: "Do I need a permit for home improvements in Pharr?",
+    answer:
+      "Most structural work, roofing, pool construction, and electrical/plumbing changes require permits in Pharr. We handle the entire permitting process through the City of Pharr — applications, inspections, and final sign-offs. You don't have to deal with city hall.",
+  },
+];
 ---
 
 <LocationLayout
-  title="Pharr Home Services | Roofing, Pools, Remodeling | Tekton Home Solutions"
-  description="Tekton Home Solutions in Pharr, TX — roofing, pool construction, remodeling, and custom homes. 24-hour roof replacement. Price match guarantee. Call (956) 862-7643."
+  title="Pharr Home Services | Roofing & More | Tekton Home Solutions"
+  description="Tekton Home Solutions in Pharr, TX — roofing, pools, remodeling & custom homes. Minutes from our McAllen HQ. Call (956) 862-7643."
   headline={'Pharr\'s Trusted Home <span class="text-gold">Contractor</span>'}
   subheadline="Roofing, pools, remodeling, and custom home building for Pharr homeowners. McAllen-headquartered, just minutes from your door."
   location={location}
   backgroundImage="/images/neighborhood-aerial.jpg"
+  faqs={faqs}
 >
   <section class="py-16 md:py-20">
     <div class="max-w-7xl mx-auto px-4">
@@ -20,6 +44,11 @@ const location = getLocation("pharr")!;
           <h2 class="text-3xl md:text-4xl font-bold mb-6">
             Built for Pharr Homeowners
           </h2>
+          <div class="bg-bg-surface border border-border rounded-lg p-4 mb-6">
+            <p class="text-text-muted text-sm">
+              <strong class="text-text">Pharr at a glance:</strong> Population 80,000+ | Home to the Pharr International Bridge (major trade hub) | Directly east of McAllen | Mix of established and new-build neighborhoods
+            </p>
+          </div>
           <p class="text-text-muted text-lg mb-4">
             Pharr is right next door to McAllen — literally minutes from our headquarters on Maple Ave. From the neighborhoods along Cage Boulevard and Sugar Road to the newer developments near Jackson Road and the Pharr Town Center area, we know this city well. Many of our crew members live here.
           </p>

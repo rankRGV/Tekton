@@ -3,17 +3,40 @@ import LocationLayout from "../../layouts/LocationLayout.astro";
 import { getLocation } from "../../data/locations";
 
 const location = getLocation("mission")!;
+
+const faqs = [
+  {
+    question: "How far is Tekton from Mission?",
+    answer:
+      "Our office is in McAllen at 1720 W Maple Ave Suite 4 — about 10 minutes west of Mission on Expressway 83. Mission is one of our most active service areas. We can typically have a crew on-site within a day of scheduling.",
+  },
+  {
+    question: "Do you handle permits in Mission?",
+    answer:
+      "Yes. We manage the full permitting process through the City of Mission for any work that requires it — roofing, pools, structural remodels, and new construction. We also handle HOA approvals for subdivisions like Cimarron Country Club and Sharyland.",
+  },
+  {
+    question: "What services do you offer in Mission?",
+    answer:
+      "We provide full-service roofing (replacement, repair, storm damage), custom pool construction, kitchen and bathroom remodeling, whole-home renovations, and custom home building. All services are available in Mission and surrounding areas like Palmhurst and La Joya.",
+  },
+  {
+    question: "Can I get a free estimate for my Mission home?",
+    answer:
+      "Absolutely. We offer free inspections and estimates for all services in Mission. We'll come to your home, assess the scope of work, and provide a detailed, line-item quote with no obligation. Call (956) 862-7643 or fill out our contact form.",
+  },
+];
 ---
 
 <LocationLayout
-  title="Mission Home Services | Roofing, Pools, Remodeling | Tekton Home Solutions"
-  description="Tekton Home Solutions in Mission, TX — roofing, pool construction, remodeling, and custom home building. 24-hour roof replacement. Price match guarantee. Call (956) 862-7643."
+  title="Mission Home Services | Roofing & More | Tekton Home Solutions"
+  description="Tekton Home Solutions in Mission, TX — roofing, pools, remodeling & custom homes. 10 min from our McAllen HQ. Call (956) 862-7643."
   headline={'Mission\'s Go-To Home <span class="text-gold">Contractor</span>'}
   subheadline="Roofing, pools, remodeling, and custom home building for Mission homeowners. McAllen-headquartered, Mission-trusted."
   location={location}
   backgroundImage="/images/neighborhood-aerial.jpg"
+  faqs={faqs}
 >
-  <!-- Mission-specific content -->
   <section class="py-16 md:py-20">
     <div class="max-w-7xl mx-auto px-4">
       <div class="grid md:grid-cols-2 gap-12 items-start">
@@ -21,6 +44,11 @@ const location = getLocation("mission")!;
           <h2 class="text-3xl md:text-4xl font-bold mb-6">
             Built for Mission Homeowners
           </h2>
+          <div class="bg-bg-surface border border-border rounded-lg p-4 mb-6">
+            <p class="text-text-muted text-sm">
+              <strong class="text-text">Mission at a glance:</strong> Population 85,000+ | Known as the "Home of the Grapefruit" | Growing subdivisions west of McAllen | 10 minutes from our headquarters
+            </p>
+          </div>
           <p class="text-text-muted text-lg mb-4">
             Mission is growing fast — new subdivisions off Conway, established neighborhoods near Shary Road, and everything in between. Whether you bought in Cimarron Country Club or you're building from scratch south of Expressway 83, your home needs a contractor who understands this city.
           </p>

@@ -7,9 +7,15 @@ import ServiceCard from "../components/ServiceCard.astro";
 import CTASection from "../components/CTASection.astro";
 import GoogleMap from "../components/GoogleMap.astro";
 import Testimonials from "../components/Testimonials.astro";
+import FAQSection from "../components/FAQSection.astro";
 import SchemaMarkup from "../components/SchemaMarkup.astro";
 import { services } from "../data/services";
 import type { Location } from "../data/locations";
+
+interface FAQ {
+  question: string;
+  answer: string;
+}
 
 interface Props {
   title: string;
@@ -18,9 +24,10 @@ interface Props {
   subheadline: string;
   location: Location;
   backgroundImage?: string;
+  faqs?: FAQ[];
 }
 
-const { title, description, headline, subheadline, location, backgroundImage } = Astro.props;
+const { title, description, headline, subheadline, location, backgroundImage, faqs } = Astro.props;
 ---
 
 <BaseLayout title={title} description={description}>
@@ -53,6 +60,7 @@ const { title, description, headline, subheadline, location, backgroundImage } =
     </div>
   </section>
 
+  {faqs && faqs.length > 0 && <FAQSection faqs={faqs} />}
   <Testimonials />
   <GoogleMap cityName={location.name} />
 

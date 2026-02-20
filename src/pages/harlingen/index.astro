@@ -3,15 +3,39 @@ import LocationLayout from "../../layouts/LocationLayout.astro";
 import { getLocation } from "../../data/locations";
 
 const location = getLocation("harlingen")!;
+
+const faqs = [
+  {
+    question: "How far is Tekton from Harlingen?",
+    answer:
+      "Our McAllen headquarters is about 35 minutes west of Harlingen on Expressway 83. Harlingen is a core part of our service area — we have crews working in the mid-Valley regularly. We don't charge extra for the drive.",
+  },
+  {
+    question: "What unique challenges do Harlingen homes face?",
+    answer:
+      "Harlingen has a mix of older homes (some built in the 1950s–70s) and newer construction. Older homes often need full roof replacements, updated plumbing and electrical for remodels, and structural assessments before renovation. We have experience working with both eras of Valley construction.",
+  },
+  {
+    question: "Do you handle insurance claims for Harlingen storm damage?",
+    answer:
+      "Yes. Harlingen and the mid-Valley get hit by the same hailstorms and hurricane-season weather as the rest of the RGV. We document damage, file claims, meet with your adjuster, and fight for the full payout. You focus on your family — we handle the rest.",
+  },
+  {
+    question: "Can you build a pool in Harlingen?",
+    answer:
+      "Absolutely. We build custom gunite pools across the mid-Valley including Harlingen, San Benito, and surrounding areas. We handle design, permitting through the City of Harlingen, construction, and startup. Free design consultations available.",
+  },
+];
 ---
 
 <LocationLayout
-  title="Harlingen Home Services | Roofing, Pools, Remodeling | Tekton Home Solutions"
-  description="Tekton Home Solutions in Harlingen, TX — roofing, pools, remodeling, and custom homes. 24-hour roof replacement. Price match guarantee. Call (956) 862-7643."
+  title="Harlingen Home Services | Roofing & More | Tekton Home Solutions"
+  description="Tekton Home Solutions in Harlingen, TX — roofing, pools, remodeling & custom homes. Serving the mid-Valley. Call (956) 862-7643."
   headline={'Harlingen\'s Reliable <span class="text-gold">Home Contractor</span>'}
   subheadline="Roofing, pools, remodeling, and custom home building for Harlingen homeowners. Headquartered in McAllen, serving all of the mid-Valley."
   location={location}
   backgroundImage="/images/neighborhood-aerial.jpg"
+  faqs={faqs}
 >
   <section class="py-16 md:py-20">
     <div class="max-w-7xl mx-auto px-4">
@@ -20,6 +44,11 @@ const location = getLocation("harlingen")!;
           <h2 class="text-3xl md:text-4xl font-bold mb-6">
             Built for Harlingen Homeowners
           </h2>
+          <div class="bg-bg-surface border border-border rounded-lg p-4 mb-6">
+            <p class="text-text-muted text-sm">
+              <strong class="text-text">Harlingen at a glance:</strong> Population 75,000+ | Home to Valley International Airport | Mid-Valley hub between McAllen and Brownsville | Mix of historic and new-build homes
+            </p>
+          </div>
           <p class="text-text-muted text-lg mb-4">
             Harlingen sits at the crossroads of the Valley — centrally located between McAllen and Brownsville, with a mix of established neighborhoods near Dixieland and the Country Club, and newer growth along Ed Carey Drive and Loop 499. It's a city with deep roots and homes that reflect every era of Valley construction.
           </p>
