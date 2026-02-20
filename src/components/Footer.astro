@@ -1,7 +1,6 @@
 ---
 import { site } from "../config/site";
-import { services } from "../data/services";
-import { locations } from "../data/locations";
+import { builtServices, builtLocations } from "../data/navigation";
 ---
 
 <footer class="bg-bg-elevated border-t border-border mt-20">
@@ -45,7 +44,7 @@ import { locations } from "../data/locations";
           Services
         </h3>
         <ul class="space-y-2">
-          {services.map((s) => (
+          {builtServices.map((s) => (
             <li>
               <a
                 href={`/${s.slug}/`}
@@ -64,7 +63,7 @@ import { locations } from "../data/locations";
           Locations
         </h3>
         <ul class="space-y-2">
-          {locations.map((l) => (
+          {builtLocations.map((l) => (
             <li>
               <a
                 href={`/${l.slug}/`}
