@@ -42,7 +42,7 @@ import { site } from "../config/site";
   <!-- Our Story -->
   <section class="py-16 md:py-20">
     <div class="max-w-7xl mx-auto px-4">
-      <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
         <div>
           <h2 class="text-3xl md:text-4xl font-bold mb-6">Real Service. <span class="text-gold">Strong Values.</span></h2>
           <p class="text-text-muted text-lg mb-4">
@@ -57,16 +57,19 @@ import { site } from "../config/site";
           <p class="text-text-muted text-lg">
             One company, one standard, one team that handles everything under one roof — roofing, pools, remodeling, and custom homes — with a single point of contact and zero runaround.
           </p>
-          <img
-            src="/images/about-arturo.png"
-            alt="Arturo, founder of Tekton Home Solutions"
-            width="424"
-            height="524"
-            class="rounded-xl mt-8"
-            loading="lazy"
-          />
         </div>
-        <div class="bg-bg-surface border border-border rounded-xl p-8">
+        <div class="space-y-8">
+          <div class="flex justify-center">
+            <img
+              src="/images/about-arturo.png"
+              alt="Arturo, founder of Tekton Home Solutions"
+              width="424"
+              height="524"
+              class="rounded-xl"
+              loading="lazy"
+            />
+          </div>
+          <div class="bg-bg-surface border border-border rounded-xl p-8">
           <h3 class="text-xl font-semibold mb-6 text-gold">Tekton by the Numbers</h3>
           <div class="space-y-6">
             <div class="flex items-center gap-4">
@@ -88,6 +91,7 @@ import { site } from "../config/site";
               <div class="text-3xl font-bold text-gold w-20">1</div>
               <p class="text-text-muted">Team, one point of contact, one standard — every project</p>
             </div>
+          </div>
           </div>
         </div>
       </div>
