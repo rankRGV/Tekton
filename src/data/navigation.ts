@@ -9,6 +9,10 @@ export interface NavItem {
 
 export const mainNav: NavItem[] = [
   {
+    label: "Home",
+    href: "/",
+  },
+  {
     label: "Services",
     href: "#",
     children: services.map((s) => ({
