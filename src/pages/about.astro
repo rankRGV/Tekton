@@ -1,0 +1,212 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
+import TrustSignals from "../components/TrustSignals.astro";
+import Testimonials from "../components/Testimonials.astro";
+import CTASection from "../components/CTASection.astro";
+import SchemaMarkup from "../components/SchemaMarkup.astro";
+import { site } from "../config/site";
+---
+
+<BaseLayout
+  title="About Us | McAllen's Trusted Home Contractor | Tekton Home Solutions"
+  description="Tekton Home Solutions is a McAllen-based contractor specializing in roofing, pools, remodeling, and custom homes across the RGV."
+>
+  <Breadcrumbs items={[{ label: "About Us", href: "/about/" }]} />
+
+  <!-- Hero -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="max-w-3xl">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">
+          Built in McAllen. <span class="text-gold">Built to Last.</span>
+        </h1>
+        <p class="text-text-muted text-xl leading-relaxed">
+          Tekton Home Solutions isn't a franchise. We're not a national chain that sends different crews to different cities and hopes for the best. We're a McAllen-based team that lives here, works here, and stakes our reputation on every single project we take on.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <TrustSignals variant="compact" />
+
+  <!-- Our Story -->
+  <section class="py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">Why We Started Tekton</h2>
+          <p class="text-text-muted text-lg mb-4">
+            We started Tekton because we saw the same problem over and over in the Rio Grande Valley: homeowners getting bounced between contractors, overpaying for subpar work, and dealing with crews that vanish after the first check clears.
+          </p>
+          <p class="text-text-muted text-lg mb-4">
+            We knew the Valley deserved better. So we built a company that handles everything under one roof — roofing, pools, remodeling, and custom homes — with one team, one point of contact, and one standard of quality.
+          </p>
+          <p class="text-text-muted text-lg">
+            The name "Tekton" comes from the Greek word for builder and craftsman. It's not just a name — it's a promise. Every project we take on gets the same attention to detail, the same materials quality, and the same crew accountability, whether it's a roof repair in Pharr or a custom home build in McAllen.
+          </p>
+        </div>
+        <div class="bg-bg-surface border border-border rounded-xl p-8">
+          <h3 class="text-xl font-semibold mb-6 text-gold">Tekton by the Numbers</h3>
+          <div class="space-y-6">
+            <div class="flex items-center gap-4">
+              <div class="text-3xl font-bold text-gold w-20">4.5★</div>
+              <p class="text-text-muted">Google rating from verified customers</p>
+            </div>
+            <div class="border-t border-border"></div>
+            <div class="flex items-center gap-4">
+              <div class="text-3xl font-bold text-gold w-20">24hr</div>
+              <p class="text-text-muted">Roof replacement turnaround — most completed in a single day</p>
+            </div>
+            <div class="border-t border-border"></div>
+            <div class="flex items-center gap-4">
+              <div class="text-3xl font-bold text-gold w-20">8</div>
+              <p class="text-text-muted">RGV cities served from our McAllen headquarters</p>
+            </div>
+            <div class="border-t border-border"></div>
+            <div class="flex items-center gap-4">
+              <div class="text-3xl font-bold text-gold w-20">1</div>
+              <p class="text-text-muted">Team, one point of contact, one standard — every project</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What Makes Us Different -->
+  <section class="py-16 md:py-20 bg-bg-surface">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">
+        What Makes Tekton Different
+      </h2>
+      <p class="text-text-muted text-center mb-12 max-w-2xl mx-auto">
+        We don't just say we're different — we prove it on every job site. Here's how we operate.
+      </p>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div class="bg-bg border border-border rounded-xl p-6">
+          <div class="w-12 h-12 bg-gold/10 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold mb-2">One Contractor, All Services</h3>
+          <p class="text-text-muted">
+            Roofing, pools, remodeling, and custom homes — all handled by one company. No subcontractor juggling, no finger-pointing when something goes wrong. One team owns the entire project from start to finish.
+          </p>
+        </div>
+
+        <div class="bg-bg border border-border rounded-xl p-6">
+          <div class="w-12 h-12 bg-gold/10 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold mb-2">Licensed, Insured, Accountable</h3>
+          <p class="text-text-muted">
+            We carry full insurance, hold proper licensing, and pull permits for every job that requires them. When you hire Tekton, you're hiring a legitimate operation — not a truck and a handshake.
+          </p>
+        </div>
+
+        <div class="bg-bg border border-border rounded-xl p-6">
+          <div class="w-12 h-12 bg-gold/10 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold mb-2">Price Match Guarantee</h3>
+          <p class="text-text-muted">
+            Get a lower written quote from a licensed, insured competitor for the same scope of work? We'll match it. We believe in earning your business on value, not on being the cheapest bidder who cuts corners.
+          </p>
+        </div>
+
+        <div class="bg-bg border border-border rounded-xl p-6">
+          <div class="w-12 h-12 bg-gold/10 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold mb-2">24-Hour Roof Replacement</h3>
+          <p class="text-text-muted">
+            Most roof replacements are completed within a single day. We know that a torn-up roof means stress, exposure, and risk — so we don't drag it out. Fast execution, clean job site, done right.
+          </p>
+        </div>
+
+        <div class="bg-bg border border-border rounded-xl p-6">
+          <div class="w-12 h-12 bg-gold/10 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold mb-2">Local to the RGV</h3>
+          <p class="text-text-muted">
+            Headquartered in McAllen, serving 8 cities across the Valley. We understand South Texas weather, local building codes, HOA requirements, and the materials that actually hold up in this climate.
+          </p>
+        </div>
+
+        <div class="bg-bg border border-border rounded-xl p-6">
+          <div class="w-12 h-12 bg-gold/10 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold mb-2">We Actually Answer the Phone</h3>
+          <p class="text-text-muted">
+            No automated menus. No call centers. No waiting three days for a callback. When you call Tekton, you talk to someone who knows your project, your timeline, and your concerns. That's not marketing — it's how we operate.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Services -->
+  <section class="py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">
+        What We Build
+      </h2>
+      <p class="text-text-muted text-center mb-12 max-w-2xl mx-auto">
+        Four core services, each backed by the same commitment to craftsmanship and accountability.
+      </p>
+      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div class="border-l-4 border-gold pl-6">
+          <h3 class="text-xl font-semibold mb-2">
+            <a href="/roofing/" class="hover:text-gold transition-colors">Roofing</a>
+          </h3>
+          <p class="text-text-muted">
+            Full roof replacements, storm damage repair, insurance claim support, and preventive maintenance. We use materials rated for South Texas conditions and complete most replacements within 24 hours.
+          </p>
+        </div>
+        <div class="border-l-4 border-gold pl-6">
+          <h3 class="text-xl font-semibold mb-2">
+            <a href="/pools/" class="hover:text-gold transition-colors">Pool Construction</a>
+          </h3>
+          <p class="text-text-muted">
+            Custom pool design and construction, from gunite and plaster to full outdoor living spaces. We handle permits, engineering, and everything in between — you just pick the design.
+          </p>
+        </div>
+        <div class="border-l-4 border-gold pl-6">
+          <h3 class="text-xl font-semibold mb-2">
+            <a href="/remodeling/" class="hover:text-gold transition-colors">Remodeling</a>
+          </h3>
+          <p class="text-text-muted">
+            Kitchen and bathroom remodels, room additions, patio enclosures, and full interior renovations. We work with your vision and budget to deliver results that transform how you use your home.
+          </p>
+        </div>
+        <div class="border-l-4 border-gold pl-6">
+          <h3 class="text-xl font-semibold mb-2">
+            <a href="/custom-homes/" class="hover:text-gold transition-colors">Custom Home Building</a>
+          </h3>
+          <p class="text-text-muted">
+            Ground-up custom home construction on your lot. From architectural planning through final walkthrough, Tekton manages the entire build so you don't have to coordinate a dozen different contractors.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Testimonials />
+  <CTASection />
+  <SchemaMarkup type="organization" />
+</BaseLayout>

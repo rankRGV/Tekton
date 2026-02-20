@@ -25,7 +25,11 @@ export const mainNav: NavItem[] = [
     })),
   },
   {
+    label: "About",
+    href: "/about/",
+  },
+  {
     label: "Contact",
-    href: "#contact",
+    href: "/contact/",
   },
 ];
