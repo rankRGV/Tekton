@@ -17,9 +17,10 @@ interface Props {
   headline: string;
   subheadline: string;
   location: Location;
+  backgroundImage?: string;
 }
 
-const { title, description, headline, subheadline, location } = Astro.props;
+const { title, description, headline, subheadline, location, backgroundImage } = Astro.props;
 ---
 
 <BaseLayout title={title} description={description}>
@@ -29,7 +30,7 @@ const { title, description, headline, subheadline, location } = Astro.props;
       { label: location.name, href: `/${location.slug}/` },
     ]}
   />
-  <Hero headline={headline} subheadline={subheadline} />
+  <Hero headline={headline} subheadline={subheadline} backgroundImage={backgroundImage} />
   <TrustSignals variant="compact" />
 
   <!-- Page-specific content slot -->

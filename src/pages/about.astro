@@ -15,8 +15,17 @@ import { site } from "../config/site";
   <Breadcrumbs items={[{ label: "About Us", href: "/about/" }]} />
 
   <!-- Hero -->
-  <section class="py-16 md:py-24">
-    <div class="max-w-7xl mx-auto px-4">
+  <section class="relative overflow-hidden bg-bg-surface">
+    <div class="absolute inset-0">
+      <img
+        src="/images/construction-team.jpg"
+        alt=""
+        class="w-full h-full object-cover opacity-20"
+        loading="eager"
+      />
+      <div class="absolute inset-0 bg-gradient-to-b from-bg/60 to-bg-surface"></div>
+    </div>
+    <div class="relative max-w-7xl mx-auto px-4 py-20 md:py-28">
       <div class="max-w-3xl">
         <h1 class="text-4xl md:text-5xl font-bold mb-6">
           Built in McAllen. <span class="text-gold">Built to Last.</span>
@@ -45,6 +54,14 @@ import { site } from "../config/site";
           <p class="text-text-muted text-lg">
             The name "Tekton" comes from the Greek word for builder and craftsman. It's not just a name — it's a promise. Every project we take on gets the same attention to detail, the same materials quality, and the same crew accountability, whether it's a roof repair in Pharr or a custom home build in McAllen.
           </p>
+          <img
+            src="/images/about-builder.jpg"
+            alt="Tekton Home Solutions craftsmanship and attention to detail"
+            width="800"
+            height="533"
+            class="rounded-xl mt-8 w-full"
+            loading="lazy"
+          />
         </div>
         <div class="bg-bg-surface border border-border rounded-xl p-8">
           <h3 class="text-xl font-semibold mb-6 text-gold">Tekton by the Numbers</h3>

@@ -11,11 +11,12 @@ const location = getLocation("mcallen")!;
   headline={'McAllen\'s Trusted Home <span class="text-gold">Contractor</span>'}
   subheadline="Roofing, pools, remodeling, and custom home building — all from one team you can trust. Headquartered right here in McAllen."
   location={location}
+  backgroundImage="/images/neighborhood-aerial.jpg"
 >
   <!-- McAllen-specific content -->
   <section class="py-16 md:py-20">
     <div class="max-w-7xl mx-auto px-4">
-      <div class="max-w-3xl">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
         <h2 class="text-3xl md:text-4xl font-bold mb-6">
           Built for McAllen Homeowners
         </h2>
@@ -28,6 +29,16 @@ const location = getLocation("mcallen")!;
         <p class="text-text-muted text-lg">
           Whether you need a roof replaced after a storm, a pool built for your growing family, a kitchen remodeled to finally match your vision, or a custom home built from scratch — Tekton handles it all. One contractor, one point of contact, one team that actually picks up the phone.
         </p>
+      </div>
+      <div>
+        <img
+          src="/images/construction-team.jpg"
+          alt="Tekton Home Solutions crew on a residential job site in McAllen"
+          width="800"
+          height="530"
+          class="rounded-xl w-full"
+          loading="lazy"
+        />
       </div>
     </div>
   </section>
