@@ -1,0 +1,175 @@
+---
+import ServiceLayout from "../../layouts/ServiceLayout.astro";
+import { services } from "../../data/services";
+
+const faqs = [
+  {
+    question: "Can you build a pool in Mission's clay soil?",
+    answer:
+      "Yes — and this is exactly why you need a builder who knows the RGV. Mission's expansive clay soil shifts with moisture changes, which can crack a poorly built pool shell. We engineer our gunite pools with the proper steel reinforcement and drainage to handle Valley soil conditions. We've built pools across Hidalgo County and know how to do it right.",
+  },
+  {
+    question: "How much does a pool cost in Mission, TX?",
+    answer:
+      "Custom gunite pools in Mission typically range from $35,000 to $80,000+ depending on size, shape, features, and decking. We provide a detailed, line-item estimate after visiting your property — no surprises. We also offer financing options so you can start enjoying your pool sooner.",
+  },
+  {
+    question: "Do I need HOA approval for a pool in Mission?",
+    answer:
+      "Many Mission subdivisions — including Cimarron Country Club, Sharyland, and newer developments off Conway — have rules about pool placement, fencing, and equipment screening. We check your HOA requirements before design and handle the approval process for you.",
+  },
+  {
+    question: "What's the best time of year to start building a pool in Mission?",
+    answer:
+      "Fall through early spring is ideal — you'll beat the summer rush, construction moves faster in cooler weather, and your pool will be ready by the time it heats up. But we build year-round. The RGV climate means there's no true off-season for pool construction.",
+  },
+  {
+    question: "Do you build pools with outdoor kitchens or pergolas?",
+    answer:
+      "Absolutely. Because we're a full home solutions company — not just a pool company — we can build your pool, outdoor kitchen, pergola, and decking as one coordinated project. One crew, one timeline, one point of contact. That's a huge advantage over hiring separate contractors.",
+  },
+];
+
+const painPoints = [
+  {
+    title: "\"The pool builder took our deposit and dragged it out for months\"",
+    description:
+      "We hear it all the time in Mission. Builders who start strong and then juggle five jobs at once. Our crews are dedicated to your project with realistic timelines. Most pools are complete in 6–10 weeks — and we keep you updated every step.",
+  },
+  {
+    title: "\"I'm worried the pool will crack in this soil\"",
+    description:
+      "Valid concern — Mission's clay soil is notorious. We engineer every pool for Valley soil conditions with proper steel reinforcement, drainage, and compaction. Our pools don't crack because we build them for the ground they sit in.",
+  },
+  {
+    title: "\"My yard is small — can I still get a pool?\"",
+    description:
+      "Gunite pools can be built to any shape and size. We've put pools in tight Mission backyards that other builders turned down. A smaller pool with smart design can still transform your outdoor space.",
+  },
+  {
+    title: "\"I don't even know where to start\"",
+    description:
+      "Start with a free design consultation. We visit your Mission property, measure the yard, talk about what you want, and design something that works. No cost, no pressure, no obligation.",
+  },
+];
+
+const howWeWorkSteps = [
+  {
+    number: 1,
+    title: "Free Design Consultation",
+    description:
+      "We visit your Mission home, measure the yard, discuss your vision, and design a pool that fits your property and budget.",
+  },
+  {
+    number: 2,
+    title: "Permits & HOA Approval",
+    description:
+      "We handle city permits and HOA paperwork. You sign off on the final design and we lock in your build schedule.",
+  },
+  {
+    number: 3,
+    title: "Construction",
+    description:
+      "Our crew handles excavation, steel, plumbing, gunite, tile, coping, decking, and equipment — all coordinated by our Mission-area project manager.",
+  },
+  {
+    number: 4,
+    title: "Startup & Walkthrough",
+    description:
+      "We fill your pool, balance the chemistry, test all equipment, and walk you through maintenance. You're swim-ready.",
+  },
+];
+
+const siblingServices = services.filter((s) => s.slug !== "pools");
+---
+
+<ServiceLayout
+  title="Pool Construction in Mission, TX | Custom Gunite Pools | Tekton Home Solutions"
+  description="Custom pool builder in Mission, TX — gunite inground pools, spas, and outdoor living. Free design consultation. Licensed & insured. Call (956) 862-7643."
+  headline='Mission Pool Builder — <span class="text-gold">Custom Gunite Pools</span>'
+  subheadline="Built for Mission backyards and Valley soil. Custom inground pools, spas, and outdoor living spaces. Licensed, insured, and designed to last."
+  serviceSlug="pools"
+  serviceName="Pool Construction in Mission, TX"
+  serviceDescription="Custom inground pool design and construction in Mission, Texas. Gunite pools, spas, water features, outdoor kitchens, and complete backyard transformations."
+  breadcrumbLabel="Pool Construction"
+  faqs={faqs}
+  painPoints={painPoints}
+  howWeWorkSteps={howWeWorkSteps}
+  backgroundImage="/images/roofing-hero.jpg"
+  areaServed="Mission"
+>
+  <!-- Mission-specific pool content -->
+  <section class="py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            Mission Backyards Deserve Better
+          </h2>
+          <p class="text-text-muted text-lg mb-4">
+            With 8+ months of pool weather every year, a backyard pool in Mission isn't a luxury — it's how you actually enjoy your home. Kids playing, family gathering on weekends, cooling off after a long day — that's what a pool is really about.
+          </p>
+          <p class="text-text-muted text-lg mb-4">
+            But building a pool in Mission takes more than digging a hole. The Valley's expansive clay soil shifts with every rain cycle. Cheap builders who don't account for soil conditions end up with cracked shells and warranty nightmares. We engineer every pool for the specific ground conditions on your property — proper steel, proper drainage, proper compaction.
+          </p>
+          <p class="text-text-muted text-lg">
+            And because Tekton also builds custom homes and handles full remodels, we coordinate your pool with the rest of your property — drainage, electrical, gas, landscaping grading. No surprises, no conflicts between contractors, no finger-pointing.
+          </p>
+          <img
+            src="/images/roofing-work.jpg"
+            alt="Pool construction in progress at a Mission, TX home"
+            width="800"
+            height="533"
+            class="rounded-xl mt-6"
+            loading="lazy"
+          />
+        </div>
+        <div class="bg-bg-surface border border-border rounded-xl p-8">
+          <h3 class="text-xl font-semibold mb-4">Mission Pool Services</h3>
+          <ul class="space-y-3">
+            {[
+              "Custom gunite (concrete) inground pools",
+              "Spas and hot tubs (standalone or attached)",
+              "Tanning ledges and sun shelves",
+              "Water features — waterfalls, bubblers, scuppers",
+              "Pool decking and coping",
+              "Outdoor kitchens and pergolas",
+              "LED lighting and automation systems",
+            ].map((item) => (
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-gold shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-text-muted">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Other services in Mission -->
+  <section class="py-16 md:py-20 bg-bg-surface">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-center mb-6">
+        Other Services in Mission
+      </h2>
+      <div class="grid sm:grid-cols-3 gap-4 max-w-2xl mx-auto">
+        {siblingServices.map((s) => (
+          <a
+            href={`/mission/${s.slug}/`}
+            class="bg-bg-elevated border border-border rounded-lg px-4 py-3 text-center hover:border-gold hover:text-gold transition-colors"
+          >
+            {s.name}
+          </a>
+        ))}
+      </div>
+      <p class="text-center mt-4">
+        <a href="/mission/" class="text-gold hover:text-gold-light text-sm">
+          ← All Mission services
+        </a>
+      </p>
+    </div>
+  </section>
+</ServiceLayout>

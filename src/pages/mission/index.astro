@@ -1,0 +1,47 @@
+---
+import LocationLayout from "../../layouts/LocationLayout.astro";
+import { getLocation } from "../../data/locations";
+
+const location = getLocation("mission")!;
+---
+
+<LocationLayout
+  title="Mission Home Services | Roofing, Pools, Remodeling | Tekton Home Solutions"
+  description="Tekton Home Solutions in Mission, TX — roofing, pool construction, remodeling, and custom home building. 24-hour roof replacement. Price match guarantee. Call (956) 862-7643."
+  headline={'Mission\'s Go-To Home <span class="text-gold">Contractor</span>'}
+  subheadline="Roofing, pools, remodeling, and custom home building for Mission homeowners. McAllen-headquartered, Mission-trusted."
+  location={location}
+  backgroundImage="/images/neighborhood-aerial.jpg"
+>
+  <!-- Mission-specific content -->
+  <section class="py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            Built for Mission Homeowners
+          </h2>
+          <p class="text-text-muted text-lg mb-4">
+            Mission is growing fast — new subdivisions off Conway, established neighborhoods near Shary Road, and everything in between. Whether you bought in Cimarron Country Club or you're building from scratch south of Expressway 83, your home needs a contractor who understands this city.
+          </p>
+          <p class="text-text-muted text-lg mb-4">
+            We're headquartered just minutes away in McAllen, and Mission is one of the cities we serve most. We know the local permitting process, we know which HOAs are strict about materials and colors, and we know what holds up in this climate. That local knowledge matters when your roof, pool, or remodel is on the line.
+          </p>
+          <p class="text-text-muted text-lg">
+            From storm damage roof replacements to custom pool builds to full kitchen remodels — Tekton handles it all. One contractor, one point of contact, one team that actually follows through.
+          </p>
+        </div>
+        <div>
+          <img
+            src="/images/construction-team.jpg"
+            alt="Tekton Home Solutions crew serving Mission, TX homeowners"
+            width="800"
+            height="530"
+            class="rounded-xl w-full"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+</LocationLayout>

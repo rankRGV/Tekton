@@ -1,0 +1,175 @@
+---
+import ServiceLayout from "../../layouts/ServiceLayout.astro";
+import { services } from "../../data/services";
+
+const faqs = [
+  {
+    question: "Do you serve all of Mission, TX for roofing?",
+    answer:
+      "Yes — we serve all of Mission, from the neighborhoods near Shary Road and Conway Ave to the newer developments south of Expressway 83. We also cover surrounding areas like Palmhurst and La Joya. As a McAllen-headquartered company, Mission is just minutes from our office.",
+  },
+  {
+    question: "How do Mission's hail and wind patterns affect my roof?",
+    answer:
+      "Mission sits in the same hail corridor as the rest of western Hidalgo County. Spring storms can bring golf ball-sized hail, and hurricane season brings sustained winds that test every roof. We install impact-resistant shingles rated for Texas hail zones and wind-rated systems designed for Gulf Coast conditions.",
+  },
+  {
+    question: "Can you help with insurance claims for storm damage in Mission?",
+    answer:
+      "Absolutely. We've handled hundreds of insurance claims across Hidalgo County. We document every detail of the damage, meet with your adjuster on-site at your Mission home, and fight for the full payout. Many Mission homeowners don't realize how much their policy actually covers until we get involved.",
+  },
+  {
+    question: "What roofing materials do you recommend for Mission homes?",
+    answer:
+      "For most Mission homes, we recommend Class 4 impact-resistant shingles — they handle hail, they reflect heat, and many insurance companies offer premium discounts for them. For Mission homeowners wanting maximum longevity, standing seam metal roofing is an excellent choice that lasts 40+ years in our climate.",
+  },
+  {
+    question: "Do you work with Mission HOAs like Cimarron or Sharyland?",
+    answer:
+      "Yes — we're familiar with the requirements for Mission's major subdivisions. We handle HOA paperwork, submit material and color samples for approval, and make sure your new roof meets all community standards before we start work.",
+  },
+];
+
+const painPoints = [
+  {
+    title: "\"Storm chasers knocked on my door before the rain even stopped\"",
+    description:
+      "After every hailstorm, out-of-town crews flood Mission with door-to-door pitches. They do fast, cheap work and disappear. We're based in McAllen — 10 minutes away. Our warranty is backed by a local company with a physical office.",
+  },
+  {
+    title: "\"My Mission HOA has strict roof requirements\"",
+    description:
+      "We know the drill. Cimarron, Sharyland, and other Mission subdivisions have specific material and color rules. We handle the approval paperwork so your new roof passes inspection the first time.",
+  },
+  {
+    title: "\"My roof is only 8 years old and it's already failing\"",
+    description:
+      "Cheap materials and poor installation don't survive Mission summers. 100°+ heat, UV exposure, and thermal cycling destroy budget shingles fast. We install premium, heat-rated materials that actually last.",
+  },
+  {
+    title: "\"I don't want to deal with my insurance company\"",
+    description:
+      "You don't have to. We document the damage, file the claim, meet the adjuster, and negotiate on your behalf. You focus on your life — we handle the paperwork and the roof.",
+  },
+];
+
+const howWeWorkSteps = [
+  {
+    number: 1,
+    title: "Free Mission Inspection",
+    description:
+      "We come to your Mission home, inspect the roof top to bottom, and document everything with photos. If there's storm damage, we flag it for your insurance claim.",
+  },
+  {
+    number: 2,
+    title: "Detailed Estimate + HOA Help",
+    description:
+      "You get a clear, line-item quote. If your subdivision requires HOA approval, we handle that paperwork too.",
+  },
+  {
+    number: 3,
+    title: "24-Hour Installation",
+    description:
+      "Our crew arrives on time, replaces your roof in a single day, and cleans up completely. Your Mission neighbors won't even know we were there — except for the new roof.",
+  },
+  {
+    number: 4,
+    title: "Warranty & Walkthrough",
+    description:
+      "We walk you through the finished roof, activate your manufacturer warranty, and make sure you're 100% satisfied.",
+  },
+];
+
+const siblingServices = services.filter((s) => s.slug !== "roofing");
+---
+
+<ServiceLayout
+  title="Roofing in Mission, TX | Storm Damage & Replacement | Tekton Home Solutions"
+  description="Mission, TX roofing contractor — full roof replacement in 24 hours. Storm damage repair, insurance claims, HOA-compliant installations. Price match guarantee. Call (956) 862-7643."
+  headline='Mission Roofing — <span class="text-gold">Replaced in 24 Hours</span>'
+  subheadline="10 minutes from our McAllen headquarters. Licensed, insured, and trusted by Mission homeowners. Full roof replacement, storm damage repair, and free inspections."
+  serviceSlug="roofing"
+  serviceName="Roofing in Mission, TX"
+  serviceDescription="Professional roofing services in Mission, Texas including full roof replacement, storm damage repair, insurance claim assistance, and free inspections. 24-hour installation available."
+  breadcrumbLabel="Roofing"
+  faqs={faqs}
+  painPoints={painPoints}
+  howWeWorkSteps={howWeWorkSteps}
+  backgroundImage="/images/roofing-hero.jpg"
+  areaServed="Mission"
+>
+  <!-- Mission-specific roofing content -->
+  <section class="py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            Mission Roofs Take Serious Punishment
+          </h2>
+          <p class="text-text-muted text-lg mb-4">
+            Mission homeowners face the same brutal conditions as the rest of western Hidalgo County — triple-digit heat from May through October, UV bombardment that breaks down cheap shingles, spring hailstorms that can total a roof in minutes, and hurricane-season winds that test every fastener.
+          </p>
+          <p class="text-text-muted text-lg mb-4">
+            The difference between a roof that lasts 10 years and one that lasts 25 comes down to materials and installation. We use impact-resistant shingles rated for Texas hail zones, reflective metal roofing that cuts cooling costs, and tile options built for extreme heat. Every roof we install is engineered for the conditions right here in Mission.
+          </p>
+          <p class="text-text-muted text-lg">
+            And because we also build custom homes, pools, and do full remodels, we understand how your roof connects to insulation, ventilation, and structural integrity. That big-picture expertise means a better, longer-lasting roof.
+          </p>
+          <img
+            src="/images/roofing-work.jpg"
+            alt="Roof replacement in progress on a Mission, TX home"
+            width="800"
+            height="533"
+            class="rounded-xl mt-6"
+            loading="lazy"
+          />
+        </div>
+        <div class="bg-bg-surface border border-border rounded-xl p-8">
+          <h3 class="text-xl font-semibold mb-4">Mission Roofing Services</h3>
+          <ul class="space-y-3">
+            {[
+              "Full roof replacement — done in 24 hours",
+              "Hail and storm damage repair",
+              "Insurance claim assistance and adjuster meetings",
+              "Free roof inspections (pre-storm and post-storm)",
+              "HOA-compliant installations",
+              "Metal, shingle, tile, and flat roof systems",
+              "Gutter installation and repair",
+            ].map((item) => (
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-gold shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-text-muted">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Other services in Mission -->
+  <section class="py-16 md:py-20 bg-bg-surface">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-center mb-6">
+        Other Services in Mission
+      </h2>
+      <div class="grid sm:grid-cols-3 gap-4 max-w-2xl mx-auto">
+        {siblingServices.map((s) => (
+          <a
+            href={`/mission/${s.slug}/`}
+            class="bg-bg-elevated border border-border rounded-lg px-4 py-3 text-center hover:border-gold hover:text-gold transition-colors"
+          >
+            {s.name}
+          </a>
+        ))}
+      </div>
+      <p class="text-center mt-4">
+        <a href="/mission/" class="text-gold hover:text-gold-light text-sm">
+          ← All Mission services
+        </a>
+      </p>
+    </div>
+  </section>
+</ServiceLayout>

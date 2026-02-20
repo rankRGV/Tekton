@@ -8,8 +8,8 @@ export interface NavItem {
 }
 
 // Pages that are built and ready to show. Add slugs here as pages are completed.
-const builtServiceSlugs = ["roofing"];
-const builtLocationSlugs = ["mcallen"];
+const builtServiceSlugs = ["roofing", "pools"];
+const builtLocationSlugs = ["mcallen", "mission"];
 
 const builtServices = services.filter((s) => builtServiceSlugs.includes(s.slug));
 const builtLocations = locations.filter((l) => builtLocationSlugs.includes(l.slug));

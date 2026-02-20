@@ -1,0 +1,152 @@
+---
+import ServiceLayout from "../layouts/ServiceLayout.astro";
+
+const faqs = [
+  {
+    question: "How long does it take to build a pool in the RGV?",
+    answer:
+      "Most custom inground pools take 6 to 10 weeks from dig to swim-ready, depending on size, features, and permitting. We give you a realistic timeline upfront — no bait-and-switch on completion dates. We also coordinate with the city for permits so you're not chasing paperwork.",
+  },
+  {
+    question: "What types of pools do you build?",
+    answer:
+      "We build gunite (concrete) pools — the gold standard for custom shapes, durability, and long-term value. Gunite handles South Texas heat and soil conditions better than fiberglass or vinyl. We do everything from simple rectangle plunge pools to full resort-style builds with spas, tanning ledges, and water features.",
+  },
+  {
+    question: "How much does a pool cost in the Rio Grande Valley?",
+    answer:
+      "Custom gunite pools in the RGV typically range from $35,000 to $80,000+ depending on size, depth, features, and decking. We provide a detailed, line-item estimate after your design consultation — no hidden fees, no surprise change orders. We also offer financing options to make it work for your budget.",
+  },
+  {
+    question: "Do you handle permits and HOA approvals?",
+    answer:
+      "Yes. We handle the full permitting process with local municipalities and work directly with your HOA if your subdivision has guidelines on pool placement, fencing, or equipment screening. You don't have to deal with any of that — we manage it start to finish.",
+  },
+  {
+    question: "What kind of warranty do your pools come with?",
+    answer:
+      "Our pools come with a structural warranty on the gunite shell plus warranties on equipment, plumbing, and finish. We also walk you through maintenance best practices so your pool stays in great shape for decades. We're local — if something comes up, we're a phone call away.",
+  },
+];
+
+const painPoints = [
+  {
+    title: "\"The last pool builder ghosted us mid-project\"",
+    description:
+      "We hear this constantly. Crews who take a deposit, dig a hole, and vanish for weeks. We're a licensed, insured RGV company with a physical office. We don't disappear — we finish what we start.",
+  },
+  {
+    title: "\"I got quoted $40K, then the price ballooned to $65K\"",
+    description:
+      "Surprise change orders are the oldest trick in the book. Our estimates are detailed and line-itemized. The price we quote is the price you pay — unless you decide to add features.",
+  },
+  {
+    title: "\"My neighbor's pool took 6 months\"",
+    description:
+      "Delays happen when builders juggle too many jobs or don't plan ahead. We schedule your build with dedicated crews and realistic timelines. Most pools are complete in 6–10 weeks.",
+  },
+  {
+    title: "\"I don't know what I want — I just want a nice pool\"",
+    description:
+      "That's exactly where we start. Our design consultation helps you figure out what works for your yard, your family, and your budget. We bring the ideas — you pick what you love.",
+  },
+  {
+    title: "\"What about the maintenance?\"",
+    description:
+      "We design pools with low-maintenance equipment and efficient circulation systems. Before we hand you the keys, we walk you through everything — chemicals, filters, pumps — so you're confident from day one.",
+  },
+];
+
+const howWeWorkSteps = [
+  {
+    number: 1,
+    title: "Design Consultation",
+    description:
+      "We visit your property, discuss your vision, and design a pool that fits your yard, lifestyle, and budget. No obligation.",
+  },
+  {
+    number: 2,
+    title: "Permits & Planning",
+    description:
+      "We handle city permits, HOA approvals, and utility locates. You sign off on the final design and we schedule your build.",
+  },
+  {
+    number: 3,
+    title: "Construction",
+    description:
+      "Our crew handles excavation, steel, plumbing, gunite, tile, coping, decking, and equipment installation — all coordinated in-house.",
+  },
+  {
+    number: 4,
+    title: "Startup & Walkthrough",
+    description:
+      "We fill your pool, balance the chemicals, test all equipment, and walk you through everything. You're swim-ready.",
+  },
+];
+---
+
+<ServiceLayout
+  title="Pool Construction | Tekton Home Solutions"
+  description="Custom inground pool construction across the Rio Grande Valley. Gunite pools, spas, and water features. Licensed & insured. Free design consultation — call (956) 862-7643."
+  headline='Custom Pools Built for <span class="text-gold">South Texas Living</span>'
+  subheadline="From simple plunge pools to full resort-style builds — designed for your yard, your family, and the RGV climate. Licensed, insured, and built to last."
+  serviceSlug="pools"
+  serviceName="Pool Construction"
+  serviceDescription="Custom inground pool design and construction across the Rio Grande Valley, Texas. Gunite pools, spas, water features, and complete backyard transformations."
+  breadcrumbLabel="Pool Construction"
+  faqs={faqs}
+  painPoints={painPoints}
+  howWeWorkSteps={howWeWorkSteps}
+  backgroundImage="/images/roofing-hero.jpg"
+>
+  <!-- Unique service body content -->
+  <section class="py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            Your Backyard Should Work as Hard as You Do
+          </h2>
+          <p class="text-text-muted text-lg mb-4">
+            A pool isn't just a luxury — it's where your kids grow up, where you unwind after work, where family gathers on weekends. In the Rio Grande Valley, where it's pool weather 8+ months a year, it's one of the best investments you can make in your home and your quality of life.
+          </p>
+          <p class="text-text-muted text-lg mb-4">
+            At Tekton Home Solutions, we build gunite pools — the strongest, most customizable option available. Unlike fiberglass shells or vinyl liners, gunite lets us build any shape, any depth, any feature you want. And it handles the RGV's extreme heat and expansive clay soil better than any other material.
+          </p>
+          <p class="text-text-muted text-lg">
+            Because we also do roofing, remodeling, and custom home builds, we understand how your pool fits into your entire property. Drainage, grading, electrical, gas lines — we see the big picture so your pool doesn't create problems for the rest of your home.
+          </p>
+          <img
+            src="/images/roofing-work.jpg"
+            alt="Custom pool construction in progress"
+            width="800"
+            height="533"
+            class="rounded-xl mt-6"
+            loading="lazy"
+          />
+        </div>
+        <div class="bg-bg-surface border border-border rounded-xl p-8">
+          <h3 class="text-xl font-semibold mb-4">What We Build</h3>
+          <ul class="space-y-3">
+            {[
+              "Custom gunite (concrete) inground pools",
+              "Spas and hot tubs (standalone or attached)",
+              "Tanning ledges and sun shelves",
+              "Water features — waterfalls, bubblers, scuppers",
+              "Pool decking and coping (travertine, pavers, cool deck)",
+              "Outdoor kitchens and pergolas",
+              "LED pool lighting and automation systems",
+            ].map((item) => (
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-gold shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-text-muted">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</ServiceLayout>
