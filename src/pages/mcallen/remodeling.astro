@@ -1,0 +1,175 @@
+---
+import ServiceLayout from "../../layouts/ServiceLayout.astro";
+import { services } from "../../data/services";
+
+const faqs = [
+  {
+    question: "How long does a kitchen remodel take in McAllen?",
+    answer:
+      "A typical McAllen kitchen remodel takes 4–8 weeks depending on scope. A cosmetic refresh (cabinets, countertops, backsplash) is on the shorter end. A full gut-and-rebuild with layout changes, new plumbing, and electrical takes longer. We give you a detailed timeline before work starts — and we stick to it.",
+  },
+  {
+    question: "Do I need permits for remodeling in McAllen?",
+    answer:
+      "Any work that involves structural changes, electrical, plumbing, or gas lines requires a City of McAllen building permit. We handle all permitting for you — we know exactly what McAllen inspectors look for and make sure everything passes the first time.",
+  },
+  {
+    question: "Can you remodel my home while I still live in it?",
+    answer:
+      "Yes — most McAllen homeowners stay in their homes during a remodel. We phase the work to minimize disruption, contain dust, and keep at least one functional bathroom or kitchen area available when possible. We'll plan the logistics with you before day one.",
+  },
+  {
+    question: "Do you handle McAllen HOA approval for exterior remodels?",
+    answer:
+      "Absolutely. Subdivisions like Sharyland Plantation, Tres Lagos, and Palm View Estates all have exterior modification rules. We prepare the HOA submission with material specs, color samples, and project details so your remodel gets approved without delays.",
+  },
+  {
+    question: "What's the average cost of a bathroom remodel in McAllen?",
+    answer:
+      "McAllen bathroom remodels typically range from $12,000 for a standard update to $35,000+ for a full master bath transformation with walk-in shower, freestanding tub, and custom tile. We provide a line-item estimate after measuring your space — no surprises halfway through the project.",
+  },
+];
+
+const painPoints = [
+  {
+    title: "\"Our last contractor stopped showing up halfway through\"",
+    description:
+      "It's the number-one remodeling complaint in McAllen. A contractor starts your kitchen demo and then vanishes for weeks chasing other jobs. Our dedicated crews are assigned to your project start-to-finish. You get a project manager with a phone number that actually answers.",
+  },
+  {
+    title: "\"The final bill was way more than the estimate\"",
+    description:
+      "Budget surprises usually come from contractors who quote low to win the job, then hit you with change orders. We provide detailed, line-item estimates before work starts. If something unexpected comes up — old plumbing, hidden water damage — we discuss it with you before spending a dollar.",
+  },
+  {
+    title: "\"It was supposed to take six weeks — it took five months\"",
+    description:
+      "Delays happen when contractors don't plan. We schedule materials, subcontractors, and inspections before demo day. Our McAllen remodels stay on timeline because we front-load the planning most contractors skip.",
+  },
+  {
+    title: "\"I don't even know where to start with my remodel\"",
+    description:
+      "That's completely normal. Most McAllen homeowners know what they don't like about their home but need help turning that into a plan. Our design consultation walks you through options, materials, and realistic budgets — so you can make confident decisions.",
+  },
+];
+
+const howWeWorkSteps = [
+  {
+    number: 1,
+    title: "Free In-Home Consultation",
+    description:
+      "We visit your McAllen home, walk the space, listen to what you want, and discuss realistic budgets and timelines. No sales pressure.",
+  },
+  {
+    number: 2,
+    title: "Design & Detailed Estimate",
+    description:
+      "You get a design plan with material selections and a line-item estimate. We handle McAllen permits and HOA approvals if needed.",
+  },
+  {
+    number: 3,
+    title: "Build Phase",
+    description:
+      "Demo, framing, electrical, plumbing, tile, cabinetry, countertops, paint — all managed by your dedicated project manager with regular progress updates.",
+  },
+  {
+    number: 4,
+    title: "Final Walkthrough",
+    description:
+      "We walk every detail with you, fix any punch-list items on the spot, and don't consider the job done until you're completely satisfied.",
+  },
+];
+
+const siblingServices = services.filter((s) => s.slug !== "remodeling");
+---
+
+<ServiceLayout
+  title="Remodeling in McAllen, TX | Kitchen & Bath | Tekton Home Solutions"
+  description="McAllen remodeling contractor — kitchens, bathrooms, and whole-home renovations. Detailed estimates, no surprises. Free consultation. Call (956) 862-7643."
+  headline='McAllen Remodeling — <span class="text-gold">Kitchen, Bath & More</span>'
+  subheadline="Headquartered in McAllen. From outdated kitchens to full home renovations — detailed estimates, dedicated crews, and zero ghost jobs."
+  serviceSlug="remodeling"
+  serviceName="Remodeling in McAllen, TX"
+  serviceDescription="Professional home remodeling in McAllen, Texas including kitchen remodels, bathroom renovations, whole-home updates, and interior transformations. Licensed, insured, and locally owned."
+  breadcrumbLabel="Remodeling"
+  faqs={faqs}
+  painPoints={painPoints}
+  howWeWorkSteps={howWeWorkSteps}
+  backgroundImage="/images/roofing-hero.jpg"
+  areaServed="McAllen"
+>
+  <!-- McAllen-specific remodeling content -->
+  <section class="py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            McAllen Homes Are Ready for an Upgrade
+          </h2>
+          <p class="text-text-muted text-lg mb-4">
+            Many of McAllen's most desirable neighborhoods — along Nolana, around Ware Road, and throughout the 10th Street corridor — are full of solid homes built in the 1990s and early 2000s. Great bones, but dated kitchens with laminate counters, builder-grade bathrooms, and floor plans that don't match how families live today.
+          </p>
+          <p class="text-text-muted text-lg mb-4">
+            Meanwhile, newer McAllen developments like Tres Lagos and north Sharyland are setting the bar with open-concept layouts, quartz countertops, and spa-style master baths. If your home doesn't keep up, it shows — in your daily comfort and in resale value.
+          </p>
+          <p class="text-text-muted text-lg">
+            As a company that also builds custom homes from the ground up, we bring new-construction quality to every remodel. We understand structural systems, mechanical layouts, and how to open up walls safely — not just cosmetic fixes that look good for six months.
+          </p>
+          <img
+            src="/images/roofing-work.jpg"
+            alt="Kitchen remodel in progress in a McAllen, TX home"
+            width="800"
+            height="533"
+            class="rounded-xl mt-6"
+            loading="lazy"
+          />
+        </div>
+        <div class="bg-bg-surface border border-border rounded-xl p-8">
+          <h3 class="text-xl font-semibold mb-4">McAllen Remodeling Services</h3>
+          <ul class="space-y-3">
+            {[
+              "Full kitchen remodels — layout, cabinets, countertops",
+              "Bathroom renovations — master, guest, and hall baths",
+              "Open-concept conversions (wall removal)",
+              "Flooring replacement — tile, LVP, hardwood",
+              "Interior and exterior painting",
+              "Garage conversions and room additions",
+              "HOA-compliant exterior modifications",
+            ].map((item) => (
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-gold shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-text-muted">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Other services in McAllen -->
+  <section class="py-16 md:py-20 bg-bg-surface">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-center mb-6">
+        Other Services in McAllen
+      </h2>
+      <div class="grid sm:grid-cols-3 gap-4 max-w-2xl mx-auto">
+        {siblingServices.map((s) => (
+          <a
+            href={`/mcallen/${s.slug}/`}
+            class="bg-bg-elevated border border-border rounded-lg px-4 py-3 text-center hover:border-gold hover:text-gold transition-colors"
+          >
+            {s.name}
+          </a>
+        ))}
+      </div>
+      <p class="text-center mt-4">
+        <a href="/mcallen/" class="text-gold hover:text-gold-light text-sm">
+          ← All McAllen services
+        </a>
+      </p>
+    </div>
+  </section>
+</ServiceLayout>

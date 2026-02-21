@@ -1,0 +1,175 @@
+---
+import ServiceLayout from "../../layouts/ServiceLayout.astro";
+import { services } from "../../data/services";
+
+const faqs = [
+  {
+    question: "Do you provide roofing services across all of Pharr, TX?",
+    answer:
+      "Yes — we serve every part of Pharr, from the older neighborhoods along Cage Blvd and near the International Bridge to the newer homes along Sugar Road and south Pharr. As a Hidalgo County-based company, Pharr is minutes from our operations.",
+  },
+  {
+    question: "How do Pharr storms compare to the rest of the Valley?",
+    answer:
+      "Pharr gets the same hail and wind events that hit McAllen and Edinburg — it's all one storm system across central Hidalgo County. After major hail events, Pharr neighborhoods along Cage Blvd and Sugar Road often see significant roof damage. We recommend impact-resistant Class 4 shingles for maximum protection.",
+  },
+  {
+    question: "Can you replace my Pharr roof in one day?",
+    answer:
+      "Most Pharr residential roofs are completed in 24 hours — tear-off to cleanup in a single day. We bring the right crew size for your roof so you're not left with a tarped house overnight. Larger commercial or multi-story roofs may take two days.",
+  },
+  {
+    question: "Do you handle Pharr insurance claims for roof damage?",
+    answer:
+      "Yes — we handle the entire insurance process for Pharr homeowners. We inspect and photograph all damage, file the claim documentation, meet your adjuster at your property, and negotiate for the full payout. You don't have to deal with the insurance company directly.",
+  },
+  {
+    question: "What makes your roofing different from the door-knockers that show up after storms in Pharr?",
+    answer:
+      "We're a local Hidalgo County company — not a traveling crew that follows storm paths. We have a physical presence here, our warranty is backed by a real business, and we'll still be here in 10 years. Storm chasers do fast, cheap work and move to the next city. We do it right because our reputation depends on it.",
+  },
+];
+
+const painPoints = [
+  {
+    title: "\"Storm chasers were knocking on doors in Pharr before the hail even stopped\"",
+    description:
+      "Out-of-town roofing crews flood Pharr after every storm. They offer cheap quotes, do fast work, and disappear before you notice the problems. We're local. Our office is in Hidalgo County. When you need warranty work, we answer the phone.",
+  },
+  {
+    title: "\"My Pharr home is right next to McAllen but the roofers all say they only serve McAllen\"",
+    description:
+      "Pharr is part of our core service area — not an afterthought. We treat Pharr homeowners with the same priority as McAllen. Your proximity to the city line doesn't change the quality of service you deserve.",
+  },
+  {
+    title: "\"The roofer said my roof was fine, then it leaked during the next rain\"",
+    description:
+      "A quick visual check isn't an inspection. We get on your roof, check every section, document damage with photos, and test vulnerable areas. If there's a problem, we find it before the next storm does.",
+  },
+  {
+    title: "\"I'm worried about the cost of a full roof replacement\"",
+    description:
+      "If you have storm damage, your insurance likely covers most or all of the replacement. We help Pharr homeowners navigate the claims process and fight for the maximum payout. Many are surprised to find they owe little to nothing out of pocket after the claim.",
+  },
+];
+
+const howWeWorkSteps = [
+  {
+    number: 1,
+    title: "Free Pharr Roof Inspection",
+    description:
+      "We come to your Pharr home, inspect every inch of the roof, and document all findings with photos. If there's storm damage, we flag it for your insurance.",
+  },
+  {
+    number: 2,
+    title: "Estimate & Insurance Coordination",
+    description:
+      "You get a detailed, line-item quote. If you're filing a claim, we work directly with your adjuster at your Pharr property to maximize your payout.",
+  },
+  {
+    number: 3,
+    title: "24-Hour Roof Replacement",
+    description:
+      "Our crew arrives on schedule, removes the old roof, installs premium materials, and leaves your Pharr property spotless — most homes done in a single day.",
+  },
+  {
+    number: 4,
+    title: "Warranty Activation & Walkthrough",
+    description:
+      "We walk you through the completed roof, activate manufacturer and workmanship warranties, and make sure you're fully satisfied before we leave.",
+  },
+];
+
+const siblingServices = services.filter((s) => s.slug !== "roofing");
+---
+
+<ServiceLayout
+  title="Roofing in Pharr, TX | 24-Hour Replacement | Tekton Home Solutions"
+  description="Pharr, TX roofing contractor — full roof replacement in 24 hours. Storm damage repair, insurance claims, free inspections. Call (956) 862-7643."
+  headline='Pharr Roofing — <span class="text-gold">Replaced in 24 Hours</span>'
+  subheadline="From Cage Blvd to Sugar Road — full roof replacement, storm damage repair, and insurance claim help for every Pharr neighborhood. Licensed, insured, and local to Hidalgo County."
+  serviceSlug="roofing"
+  serviceName="Roofing in Pharr, TX"
+  serviceDescription="Professional roofing services in Pharr, Texas including full roof replacement, storm damage repair, insurance claim assistance, and free inspections. 24-hour installation available."
+  breadcrumbLabel="Roofing"
+  faqs={faqs}
+  painPoints={painPoints}
+  howWeWorkSteps={howWeWorkSteps}
+  backgroundImage="/images/roofing-hero.jpg"
+  areaServed="Pharr"
+>
+  <!-- Pharr-specific roofing content -->
+  <section class="py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            Pharr Roofs Take the Same Beating as McAllen — They Deserve the Same Quality
+          </h2>
+          <p class="text-text-muted text-lg mb-4">
+            Pharr sits right next to McAllen, sharing the same storm systems, the same hail corridors, and the same brutal summer heat. Homes along Cage Blvd, near the International Bridge commerce area, and throughout the Sugar Road corridor face the full force of Valley weather — hail that damages shingles, 100-degree heat that cracks cheap materials, and hurricane-season winds that test every fastener.
+          </p>
+          <p class="text-text-muted text-lg mb-4">
+            The difference between a roof that lasts and one that fails early is materials and installation. We use impact-resistant shingles rated for Texas hail zones, standing seam metal roofing that lasts 40+ years, and tile systems engineered for extreme heat. Every roof we install in Pharr is built for the conditions right outside your door.
+          </p>
+          <p class="text-text-muted text-lg">
+            And because Tekton also builds custom homes, pools, and handles full remodels, we understand how your roof connects to the rest of your home — insulation, ventilation, structural integrity. That complete-home expertise means a better, longer-lasting roof for your Pharr property.
+          </p>
+          <img
+            src="/images/roofing-work.jpg"
+            alt="Roof replacement in progress on a Pharr, TX home"
+            width="800"
+            height="533"
+            class="rounded-xl mt-6"
+            loading="lazy"
+          />
+        </div>
+        <div class="bg-bg-surface border border-border rounded-xl p-8">
+          <h3 class="text-xl font-semibold mb-4">Pharr Roofing Services</h3>
+          <ul class="space-y-3">
+            {[
+              "Full roof replacement — done in 24 hours",
+              "Hail and wind damage repair",
+              "Insurance claim assistance and adjuster meetings",
+              "Free roof inspections (pre-storm and post-storm)",
+              "Impact-resistant shingle installations",
+              "Metal, shingle, tile, and flat roof systems",
+              "Gutter installation and repair",
+            ].map((item) => (
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-gold shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-text-muted">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Other services in Pharr -->
+  <section class="py-16 md:py-20 bg-bg-surface">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-center mb-6">
+        Other Services in Pharr
+      </h2>
+      <div class="grid sm:grid-cols-3 gap-4 max-w-2xl mx-auto">
+        {siblingServices.map((s) => (
+          <a
+            href={`/pharr/${s.slug}/`}
+            class="bg-bg-elevated border border-border rounded-lg px-4 py-3 text-center hover:border-gold hover:text-gold transition-colors"
+          >
+            {s.name}
+          </a>
+        ))}
+      </div>
+      <p class="text-center mt-4">
+        <a href="/pharr/" class="text-gold hover:text-gold-light text-sm">
+          ← All Pharr services
+        </a>
+      </p>
+    </div>
+  </section>
+</ServiceLayout>

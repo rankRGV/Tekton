@@ -1,0 +1,175 @@
+---
+import ServiceLayout from "../../layouts/ServiceLayout.astro";
+import { services } from "../../data/services";
+
+const faqs = [
+  {
+    question: "Where are people building custom homes in Mission?",
+    answer:
+      "The most active custom home areas in Mission right now are south of Expressway 83 toward the La Joya corridor, the Palmhurst area along Taylor Road, and scattered lots near Bryan Road and Conway. Some homeowners are also building on larger tracts closer to the river. We'll help you evaluate any Mission-area lot before you commit.",
+  },
+  {
+    question: "How long does it take to build a custom home in Mission?",
+    answer:
+      "Most custom homes in the Mission area take 8–12 months from foundation to move-in, depending on size and complexity. Smaller homes (under 2,500 sq ft) can be faster; larger estate-style homes with pools and outdoor kitchens may take 14+ months. We lock in a schedule before breaking ground.",
+  },
+  {
+    question: "Does Mission have different building codes than McAllen?",
+    answer:
+      "Yes — the City of Mission has its own permitting department and inspection requirements that differ from McAllen and Hidalgo County. Properties in the Palmhurst area may fall under different jurisdiction as well. We handle all permitting and know exactly which authority has jurisdiction over your lot.",
+  },
+  {
+    question: "Can you build the pool at the same time as the house?",
+    answer:
+      "Absolutely — and that's one of our biggest advantages. Most builders outsource pool work to a separate contractor, which means competing timelines and torn-up yards. We build your home, pool, outdoor kitchen, and patio as one integrated project. Your backyard is finished when you move in, not six months later.",
+  },
+  {
+    question: "What does a custom home cost in Mission compared to McAllen?",
+    answer:
+      "Land costs in Mission are generally lower than north McAllen, which means more of your budget goes toward the actual home. Construction costs run $140 to $230+ per square foot depending on finishes. We provide a full cost breakdown during design so you know exactly where every dollar goes before committing.",
+  },
+];
+
+const painPoints = [
+  {
+    title: "\"Production homes all look the same — we want something different\"",
+    description:
+      "The tract homes going up along the Mission-McAllen corridor use the same handful of floor plans with minor cosmetic swaps. A custom build means your home is designed around your family — your kitchen layout, your master suite, your outdoor living vision. No compromises.",
+  },
+  {
+    title: "\"Our last builder's final price was $60K over the original estimate\"",
+    description:
+      "Budget blowups happen when builders don't detail costs upfront. We lock in a comprehensive, line-item budget during design. Every material, every fixture, every finish is specified and priced before construction starts. If something unexpected comes up, we talk about it first.",
+  },
+  {
+    title: "\"We could never get our builder on the phone\"",
+    description:
+      "Communication breakdowns are the most stressful part of building a home. Our Mission-area project managers provide weekly photo updates, answer calls and texts, and keep you informed on every milestone. You'll never wonder what's happening with your build.",
+  },
+  {
+    title: "\"We had to hire a pool company, a landscaper, and a patio guy separately\"",
+    description:
+      "That's three contracts, three schedules, and three companies blaming each other when things don't align. Tekton builds homes, pools, outdoor kitchens, and full outdoor living spaces under one roof. Your entire property is planned and built together.",
+  },
+];
+
+const howWeWorkSteps = [
+  {
+    number: 1,
+    title: "Free Lot Evaluation",
+    description:
+      "We visit your Mission-area lot, evaluate soil conditions, drainage, utility access, and any jurisdiction or HOA requirements. If you're still lot shopping, we can advise on what to look for.",
+  },
+  {
+    number: 2,
+    title: "Custom Design & Budget Lock",
+    description:
+      "Our team designs your floor plan and elevations from scratch. You get a complete, line-item budget with all finishes specified. No guesswork, no allowance-based surprises.",
+  },
+  {
+    number: 3,
+    title: "Permits & Construction",
+    description:
+      "We handle City of Mission permits (or Palmhurst/county, depending on your lot). Construction proceeds with weekly updates, progress photos, and a dedicated project manager.",
+  },
+  {
+    number: 4,
+    title: "Walkthrough & Keys",
+    description:
+      "Comprehensive walkthrough covering every system, every finish, every detail. We handle punch-list items, activate warranties, and hand you the keys to your new Mission home.",
+  },
+];
+
+const siblingServices = services.filter((s) => s.slug !== "custom-homes");
+---
+
+<ServiceLayout
+  title="Custom Homes in Mission, TX | Build Your Dream | Tekton Home Solutions"
+  description="Custom home builder in Mission, TX — build on your lot. La Joya corridor, Palmhurst, south Expressway 83. Transparent pricing. Call (956) 862-7643."
+  headline='Mission Custom Homes — <span class="text-gold">Your Lot, Your Vision</span>'
+  subheadline="Just minutes from our McAllen headquarters. Fully custom homes designed for Mission lots, Valley climate, and how your family actually lives. Pool and outdoor living integration available."
+  serviceSlug="custom-homes"
+  serviceName="Custom Home Building in Mission, TX"
+  serviceDescription="Custom home design and construction in Mission, Texas. Build on your lot with personalized floor plans, transparent pricing, and integrated pool and outdoor living options."
+  breadcrumbLabel="Custom Home Building"
+  faqs={faqs}
+  painPoints={painPoints}
+  howWeWorkSteps={howWeWorkSteps}
+  backgroundImage="/images/roofing-hero.jpg"
+  areaServed="Mission"
+>
+  <!-- Mission-specific custom homes content -->
+  <section class="py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            Mission Has the Land — We Build the Home
+          </h2>
+          <p class="text-text-muted text-lg mb-4">
+            Mission offers something hard to find in the rest of the McAllen metro — affordable lots with room to build. South of Expressway 83, along the La Joya corridor, and throughout the Palmhurst area, families are finding half-acre and full-acre tracts at prices that make custom building realistic. You get the space, the privacy, and a home designed exactly the way you want it.
+          </p>
+          <p class="text-text-muted text-lg mb-4">
+            But building in Mission requires a contractor who understands the local landscape. Soil conditions vary significantly — sandy loam near the river, heavy clay further north. The City of Mission has its own permitting process that's different from McAllen. And properties in the Palmhurst ETJ have yet another set of requirements. We've built across all these jurisdictions and know how to navigate each one.
+          </p>
+          <p class="text-text-muted text-lg">
+            The biggest advantage of building custom in Mission is value. Lower land costs mean more of your budget goes into the house itself — better cabinets, better countertops, a bigger outdoor living area. And because we also build pools and outdoor kitchens, your backyard can be move-in ready the same day as your home. No waiting months for a separate pool contractor to squeeze you into their schedule.
+          </p>
+          <img
+            src="/images/roofing-work.jpg"
+            alt="Custom home construction in the Mission, TX area"
+            width="800"
+            height="533"
+            class="rounded-xl mt-6"
+            loading="lazy"
+          />
+        </div>
+        <div class="bg-bg-surface border border-border rounded-xl p-8">
+          <h3 class="text-xl font-semibold mb-4">Mission Custom Home Services</h3>
+          <ul class="space-y-3">
+            {[
+              "Fully custom floor plans and elevations",
+              "Build on your lot — Mission, Palmhurst, La Joya area",
+              "City of Mission and county permitting",
+              "Energy-efficient construction for South Texas",
+              "Integrated pool, patio, and outdoor kitchen builds",
+              "Premium finish selections with showroom access",
+              "Transparent, line-item budgets — no allowance games",
+            ].map((item) => (
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-gold shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-text-muted">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Other services in Mission -->
+  <section class="py-16 md:py-20 bg-bg-surface">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-center mb-6">
+        Other Services in Mission
+      </h2>
+      <div class="grid sm:grid-cols-3 gap-4 max-w-2xl mx-auto">
+        {siblingServices.map((s) => (
+          <a
+            href={`/mission/${s.slug}/`}
+            class="bg-bg-elevated border border-border rounded-lg px-4 py-3 text-center hover:border-gold hover:text-gold transition-colors"
+          >
+            {s.name}
+          </a>
+        ))}
+      </div>
+      <p class="text-center mt-4">
+        <a href="/mission/" class="text-gold hover:text-gold-light text-sm">
+          ← All Mission services
+        </a>
+      </p>
+    </div>
+  </section>
+</ServiceLayout>

@@ -1,0 +1,175 @@
+---
+import ServiceLayout from "../../layouts/ServiceLayout.astro";
+import { services } from "../../data/services";
+
+const faqs = [
+  {
+    question: "Do you handle roofing across all of Edinburg, TX?",
+    answer:
+      "Yes — we cover every part of Edinburg, from the older neighborhoods near the courthouse downtown to the fast-growing subdivisions north of Trenton Road and along Sugar Road. As a Hidalgo County-based company, Edinburg is central to our service area.",
+  },
+  {
+    question: "Is Edinburg in a hail-prone zone?",
+    answer:
+      "Edinburg sits right in the north Hidalgo County hail corridor. Spring storms regularly bring damaging hail, and the 2024 and 2025 seasons hit Edinburg neighborhoods especially hard. We install Class 4 impact-resistant shingles rated specifically for Texas hail zones — and many insurance companies offer premium discounts for them.",
+  },
+  {
+    question: "How fast can you replace a roof in Edinburg?",
+    answer:
+      "Most Edinburg residential roofs are completed in a single day — 24 hours from tear-off to final cleanup. Larger or more complex roofs may take two days. We schedule efficiently so your Edinburg home isn't exposed to weather any longer than absolutely necessary.",
+  },
+  {
+    question: "Do you work with insurance companies for Edinburg storm claims?",
+    answer:
+      "Absolutely. We've handled hundreds of insurance claims in the Edinburg area. We photograph and document all damage, meet your adjuster at your Edinburg property, and advocate for the full payout your policy allows. Many Edinburg homeowners are surprised how much their claim actually covers once we get involved.",
+  },
+  {
+    question: "What roofing options work best near UTRGV in Edinburg?",
+    answer:
+      "Homes in the UTRGV area — especially rental properties and investor-owned homes — benefit from durable, low-maintenance roofing. We recommend impact-resistant architectural shingles or standing seam metal for longevity. Both handle Edinburg's heat and hail while keeping long-term costs down.",
+  },
+];
+
+const painPoints = [
+  {
+    title: "\"After the hailstorm, five different guys knocked on my door in one day\"",
+    description:
+      "Edinburg gets swarmed by out-of-town storm chasers after every major hail event. They do fast work, collect the insurance check, and vanish. We're a local Hidalgo County company with a physical office. Our warranty means something because we're still here.",
+  },
+  {
+    title: "\"My Edinburg roof is barely 10 years old and shingles are already curling\"",
+    description:
+      "Budget materials don't survive north Hidalgo County summers. Triple-digit heat, relentless UV, and thermal cycling destroy cheap shingles fast. We install premium, heat-rated materials engineered for the conditions right here in Edinburg.",
+  },
+  {
+    title: "\"I don't know if my roof damage is bad enough to file a claim\"",
+    description:
+      "That's exactly what our free inspection is for. We come to your Edinburg home, document every issue with photos, and give you an honest assessment. If it's claimable, we walk you through the process. If it's not, we tell you that too — no pressure.",
+  },
+  {
+    title: "\"The last roofer left a mess in my yard and never came back to fix the flashing\"",
+    description:
+      "Sloppy work and disappearing contractors are why Edinburg homeowners are skeptical. We do a full walkthrough with you after every job, clean up completely, and don't consider the project done until you sign off.",
+  },
+];
+
+const howWeWorkSteps = [
+  {
+    number: 1,
+    title: "Free Edinburg Roof Inspection",
+    description:
+      "We inspect your Edinburg roof top to bottom, document all damage with photos, and identify anything your insurance should cover.",
+  },
+  {
+    number: 2,
+    title: "Clear Estimate & Insurance Help",
+    description:
+      "You get a line-item quote with no hidden fees. If you're filing a claim, we coordinate directly with your insurance adjuster at your Edinburg home.",
+  },
+  {
+    number: 3,
+    title: "24-Hour Roof Replacement",
+    description:
+      "Our crew arrives on schedule, tears off the old roof, installs premium materials, and cleans up completely — most Edinburg homes done in a single day.",
+  },
+  {
+    number: 4,
+    title: "Final Walkthrough & Warranty",
+    description:
+      "We walk you through the finished roof, activate your manufacturer warranty, and make sure every detail meets your expectations.",
+  },
+];
+
+const siblingServices = services.filter((s) => s.slug !== "roofing");
+---
+
+<ServiceLayout
+  title="Roofing in Edinburg, TX | Storm Damage Experts | Tekton Home Solutions"
+  description="Edinburg, TX roofing contractor — full roof replacement in 24 hours. Storm damage repair, insurance claims, free inspections. Call (956) 862-7643."
+  headline='Edinburg Roofing — <span class="text-gold">Storm Damage Experts</span>'
+  subheadline="Serving every Edinburg neighborhood from downtown to north Trenton Road. Licensed, insured, and built for north Hidalgo County's hail corridor. Full roof replacement, storm repair, and free inspections."
+  serviceSlug="roofing"
+  serviceName="Roofing in Edinburg, TX"
+  serviceDescription="Professional roofing services in Edinburg, Texas including full roof replacement, storm damage repair, insurance claim assistance, and free inspections. 24-hour installation available."
+  breadcrumbLabel="Roofing"
+  faqs={faqs}
+  painPoints={painPoints}
+  howWeWorkSteps={howWeWorkSteps}
+  backgroundImage="/images/roofing-hero.jpg"
+  areaServed="Edinburg"
+>
+  <!-- Edinburg-specific roofing content -->
+  <section class="py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            Edinburg Roofs Face the Hail Corridor Head-On
+          </h2>
+          <p class="text-text-muted text-lg mb-4">
+            Edinburg sits in the heart of north Hidalgo County's hail corridor. Spring storms roll through with damaging hail, summer heat cracks and curls cheap shingles, and hurricane season tests every fastener on your roof. The UTRGV area and neighborhoods along Sugar Road and Trenton Road have seen some of the worst storm damage in recent years.
+          </p>
+          <p class="text-text-muted text-lg mb-4">
+            The difference between a roof that survives and one that doesn't comes down to materials and workmanship. We install impact-resistant shingles rated for Texas hail zones, reflective metal roofing that cuts cooling costs in Edinburg's brutal summers, and tile systems built for extreme heat. Every roof is engineered for the conditions right here in the county seat.
+          </p>
+          <p class="text-text-muted text-lg">
+            Edinburg is growing fast — new subdivisions are going up north of Trenton and around the UTRGV campus. Whether your home is a newer build that took storm damage or an older downtown Edinburg property that needs a full replacement, we handle it the same way: premium materials, one-day installation, and a warranty backed by a local company.
+          </p>
+          <img
+            src="/images/roofing-work.jpg"
+            alt="Roof replacement in progress on an Edinburg, TX home"
+            width="800"
+            height="533"
+            class="rounded-xl mt-6"
+            loading="lazy"
+          />
+        </div>
+        <div class="bg-bg-surface border border-border rounded-xl p-8">
+          <h3 class="text-xl font-semibold mb-4">Edinburg Roofing Services</h3>
+          <ul class="space-y-3">
+            {[
+              "Full roof replacement — done in 24 hours",
+              "Hail and storm damage repair",
+              "Insurance claim assistance and adjuster meetings",
+              "Free roof inspections (pre-storm and post-storm)",
+              "Impact-resistant shingle upgrades",
+              "Metal, shingle, tile, and flat roof systems",
+              "Gutter installation and repair",
+            ].map((item) => (
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-gold shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-text-muted">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Other services in Edinburg -->
+  <section class="py-16 md:py-20 bg-bg-surface">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-center mb-6">
+        Other Services in Edinburg
+      </h2>
+      <div class="grid sm:grid-cols-3 gap-4 max-w-2xl mx-auto">
+        {siblingServices.map((s) => (
+          <a
+            href={`/edinburg/${s.slug}/`}
+            class="bg-bg-elevated border border-border rounded-lg px-4 py-3 text-center hover:border-gold hover:text-gold transition-colors"
+          >
+            {s.name}
+          </a>
+        ))}
+      </div>
+      <p class="text-center mt-4">
+        <a href="/edinburg/" class="text-gold hover:text-gold-light text-sm">
+          ← All Edinburg services
+        </a>
+      </p>
+    </div>
+  </section>
+</ServiceLayout>

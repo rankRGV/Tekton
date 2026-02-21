@@ -1,0 +1,175 @@
+---
+import ServiceLayout from "../../layouts/ServiceLayout.astro";
+import { services } from "../../data/services";
+
+const faqs = [
+  {
+    question: "Can you build on my lot in McAllen?",
+    answer:
+      "Yes — we build on owner-provided lots throughout McAllen and Hidalgo County. Whether you've purchased land in north McAllen near Trenton Road, have a lot in Sharyland, or are looking at acreage off Military Highway, we'll evaluate your site for soil conditions, utilities, and drainage before design begins.",
+  },
+  {
+    question: "How long does it take to build a custom home in McAllen?",
+    answer:
+      "Most custom homes in McAllen take 8–14 months from foundation pour to move-in, depending on size, complexity, and feature selections. We provide a detailed construction schedule before breaking ground and keep you updated weekly throughout the build.",
+  },
+  {
+    question: "Do you handle Sharyland Plantation architectural reviews?",
+    answer:
+      "Absolutely. Sharyland Plantation has one of the most detailed architectural review processes in the Valley — specific requirements for elevations, materials, landscaping, and even mailbox styles. We've navigated this process multiple times and prepare submissions that get approved without back-and-forth delays.",
+  },
+  {
+    question: "What does it cost to build a custom home in McAllen?",
+    answer:
+      "Custom homes in McAllen typically range from $150 to $250+ per square foot depending on finishes, features, and lot conditions. A 2,500 sq ft home might start around $375,000, while a 4,000+ sq ft home with premium finishes can exceed $800,000. We give you a detailed cost breakdown during the design phase — no surprises at closing.",
+  },
+  {
+    question: "Can you also build our pool and outdoor living area?",
+    answer:
+      "That's one of our biggest advantages. Most custom home builders subcontract pool work to a separate company, which means separate timelines, separate budgets, and finger-pointing when things don't line up. We build the home, the pool, the outdoor kitchen, and the landscaping as one integrated project.",
+  },
+];
+
+const painPoints = [
+  {
+    title: "\"Every house in this subdivision looks exactly the same\"",
+    description:
+      "Production builders use the same five floor plans across every McAllen subdivision. If you want a home that fits how your family actually lives — not a cookie-cutter layout — a custom build is the answer. We design from scratch based on your needs, your lot, and your budget.",
+  },
+  {
+    title: "\"The builder kept hitting us with change orders\"",
+    description:
+      "Surprise costs are the number-one complaint in custom home building. We lock in a detailed, line-item budget during the design phase. You approve every material and finish selection before construction starts. If something comes up, we discuss it — we don't just send a bill.",
+  },
+  {
+    title: "\"We never knew what was happening with our build\"",
+    description:
+      "Radio silence from your builder is unacceptable. Our McAllen project managers provide weekly updates with photos, schedule milestones, and clear communication about what's next. You'll always know exactly where your home stands.",
+  },
+  {
+    title: "\"We had to hire separate people for the pool, landscaping, and patio\"",
+    description:
+      "Coordinating multiple contractors is a nightmare — and things fall through the cracks. Because Tekton handles homes, pools, and outdoor living, your entire property is built under one roof. One timeline, one budget, one team accountable for everything.",
+  },
+];
+
+const howWeWorkSteps = [
+  {
+    number: 1,
+    title: "Free Lot Evaluation & Consultation",
+    description:
+      "We visit your McAllen lot (or help you find one), assess soil conditions, utilities, and HOA requirements, and discuss your vision, needs, and budget.",
+  },
+  {
+    number: 2,
+    title: "Custom Design & Budgeting",
+    description:
+      "Our design team creates floor plans and elevations tailored to your family. You get a detailed cost breakdown with every material and finish specified before committing.",
+  },
+  {
+    number: 3,
+    title: "Permits & Construction",
+    description:
+      "We handle City of McAllen permits and HOA architectural reviews. Construction begins with weekly progress updates, photos, and a dedicated project manager.",
+  },
+  {
+    number: 4,
+    title: "Walkthrough & Move-In",
+    description:
+      "We do a comprehensive walkthrough, address every punch-list item, activate all warranties, and hand you the keys to your new McAllen home.",
+  },
+];
+
+const siblingServices = services.filter((s) => s.slug !== "custom-homes");
+---
+
+<ServiceLayout
+  title="Custom Homes in McAllen, TX | Build on Your Lot | Tekton Home Solutions"
+  description="Custom home builder in McAllen, TX — build on your lot. Sharyland, Tres Lagos, north McAllen. Transparent pricing, no surprises. Call (956) 862-7643."
+  headline='McAllen Custom Homes — <span class="text-gold">Built Around Your Life</span>'
+  subheadline="Headquartered in McAllen. Fully custom homes designed for your lot, your family, and the Valley climate. Transparent budgets, weekly updates, and zero cookie-cutter plans."
+  serviceSlug="custom-homes"
+  serviceName="Custom Home Building in McAllen, TX"
+  serviceDescription="Custom home design and construction in McAllen, Texas. Build on your lot with fully personalized floor plans, premium materials, and transparent pricing. Also offering pool and outdoor living integration."
+  breadcrumbLabel="Custom Home Building"
+  faqs={faqs}
+  painPoints={painPoints}
+  howWeWorkSteps={howWeWorkSteps}
+  backgroundImage="/images/roofing-hero.jpg"
+  areaServed="McAllen"
+>
+  <!-- McAllen-specific custom homes content -->
+  <section class="py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            McAllen Is Growing — Build It Your Way
+          </h2>
+          <p class="text-text-muted text-lg mb-4">
+            North McAllen is one of the fastest-growing corridors in the Rio Grande Valley. New lots are opening up around Trenton Road, Tres Lagos continues to expand, and Sharyland Plantation still has premium homesites available. But the production builders filling those lots are stamping out the same five floor plans over and over.
+          </p>
+          <p class="text-text-muted text-lg mb-4">
+            A custom home means your kitchen faces the direction you want, your master suite has the layout that fits your life, and your outdoor living area connects to your pool and patio exactly the way you envisioned it. It means a home that's built around how your family actually lives — not how a developer's spreadsheet says you should.
+          </p>
+          <p class="text-text-muted text-lg">
+            And because Tekton also builds pools and handles full remodels, we can integrate your outdoor living space, swimming pool, and landscaping into the original build — not as afterthought add-ons that require tearing up a brand-new backyard. One project, one team, one budget.
+          </p>
+          <img
+            src="/images/roofing-work.jpg"
+            alt="Custom home under construction in McAllen, TX"
+            width="800"
+            height="533"
+            class="rounded-xl mt-6"
+            loading="lazy"
+          />
+        </div>
+        <div class="bg-bg-surface border border-border rounded-xl p-8">
+          <h3 class="text-xl font-semibold mb-4">McAllen Custom Home Services</h3>
+          <ul class="space-y-3">
+            {[
+              "Fully custom floor plans and elevations",
+              "Build on your lot — any McAllen location",
+              "HOA and architectural review management",
+              "Energy-efficient construction for Valley heat",
+              "Integrated pool and outdoor living design",
+              "Premium material selections with showroom access",
+              "Transparent, line-item budgeting",
+            ].map((item) => (
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-gold shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-text-muted">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Other services in McAllen -->
+  <section class="py-16 md:py-20 bg-bg-surface">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-center mb-6">
+        Other Services in McAllen
+      </h2>
+      <div class="grid sm:grid-cols-3 gap-4 max-w-2xl mx-auto">
+        {siblingServices.map((s) => (
+          <a
+            href={`/mcallen/${s.slug}/`}
+            class="bg-bg-elevated border border-border rounded-lg px-4 py-3 text-center hover:border-gold hover:text-gold transition-colors"
+          >
+            {s.name}
+          </a>
+        ))}
+      </div>
+      <p class="text-center mt-4">
+        <a href="/mcallen/" class="text-gold hover:text-gold-light text-sm">
+          ← All McAllen services
+        </a>
+      </p>
+    </div>
+  </section>
+</ServiceLayout>

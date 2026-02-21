@@ -1,0 +1,175 @@
+---
+import ServiceLayout from "../../layouts/ServiceLayout.astro";
+import { services } from "../../data/services";
+
+const faqs = [
+  {
+    question: "Can you build a pool in Rio Grande City's caliche soil?",
+    answer:
+      "Yes — and this is exactly why you need a builder who understands Starr County ground conditions. Caliche is a hard, calcium-rich layer that requires specialized excavation equipment and engineering. We've built pools in caliche-heavy areas throughout the upper Valley and know how to engineer the shell, drainage, and steel reinforcement to handle it properly.",
+  },
+  {
+    question: "Are there pool builders that actually serve Rio Grande City?",
+    answer:
+      "Very few. Most pool companies focus on McAllen, Edinburg, and the metro area. Rio Grande City homeowners often get told it's 'too far' or get quoted a premium for the drive. We serve Starr County at the same pricing as our McAllen builds — no distance surcharge.",
+  },
+  {
+    question: "What permits do I need for a pool in Starr County?",
+    answer:
+      "Pool construction in Starr County requires building permits, electrical permits, and compliance with local setback requirements. We handle all Starr County permitting for you — from application to final inspection. You don't have to set foot in a government office.",
+  },
+  {
+    question: "How long does it take to build a pool in Rio Grande City?",
+    answer:
+      "Most custom gunite pools take 6 to 10 weeks from excavation to swim day. Caliche soil can add a few days to the excavation phase, but we plan for that upfront. We keep you updated throughout the build with regular progress reports.",
+  },
+  {
+    question: "Is a pool worth it in Rio Grande City with the extreme heat?",
+    answer:
+      "Rio Grande City is one of the hottest spots in the Valley — summer temperatures regularly exceed 105°F. A pool isn't a luxury here, it's practically a necessity. You get 9+ months of swim weather, and a well-built pool adds real value to your property in Starr County's growing market.",
+  },
+];
+
+const painPoints = [
+  {
+    title: "\"Every pool builder I called said Rio Grande City is too far\"",
+    description:
+      "We hear this constantly from Starr County homeowners. Most builders won't make the drive. We will — and we won't charge you extra for it. Rio Grande City is part of our service area, period.",
+  },
+  {
+    title: "\"I'm worried about building in this rocky caliche ground\"",
+    description:
+      "Caliche is tough to dig through, but it's not a problem when you plan for it. We use the right excavation equipment and engineer every pool shell for Starr County's specific soil conditions. No cracking, no settling, no shortcuts.",
+  },
+  {
+    title: "\"The last contractor took our money and never finished\"",
+    description:
+      "Underserved areas attract unreliable contractors. We're a licensed, insured company with a physical McAllen office. We don't disappear — we finish the job and stand behind it with a real warranty.",
+  },
+  {
+    title: "\"I don't know if my property can even support a pool\"",
+    description:
+      "That's what our free site consultation is for. We visit your Rio Grande City property, evaluate the soil, measure the space, and tell you exactly what's possible — before you spend a dime.",
+  },
+];
+
+const howWeWorkSteps = [
+  {
+    number: 1,
+    title: "Free Site Consultation in RGC",
+    description:
+      "We visit your Rio Grande City property, evaluate the soil and yard, discuss your vision, and design a pool that works for your lot and budget.",
+  },
+  {
+    number: 2,
+    title: "Permits & Engineering",
+    description:
+      "We handle all Starr County permits and engineer the pool shell for caliche soil conditions. You approve the final design and we lock in your build date.",
+  },
+  {
+    number: 3,
+    title: "Construction",
+    description:
+      "Our crew handles excavation, steel, plumbing, gunite, tile, coping, decking, and equipment — managed by our project team with regular updates to you.",
+  },
+  {
+    number: 4,
+    title: "Startup & Swim Day",
+    description:
+      "We fill your pool, balance the water chemistry, test all equipment, and walk you through maintenance. You're ready to swim.",
+  },
+];
+
+const siblingServices = services.filter((s) => s.slug !== "pools");
+---
+
+<ServiceLayout
+  title="Pool Builder in Rio Grande City | Tekton Home Solutions"
+  description="Custom pool builder in Rio Grande City, TX — gunite inground pools engineered for caliche soil. Free design consultation. Call (956) 862-7643."
+  headline='Rio Grande City Pool Builder — <span class="text-gold">Custom Gunite Pools</span>'
+  subheadline="Engineered for Starr County's caliche soil and extreme heat. Custom inground pools, spas, and outdoor living spaces. Licensed, insured, and built to last."
+  serviceSlug="pools"
+  serviceName="Pool Construction in Rio Grande City, TX"
+  serviceDescription="Custom inground pool design and construction in Rio Grande City, Texas. Gunite pools engineered for caliche soil, spas, water features, and complete backyard transformations."
+  breadcrumbLabel="Pool Construction"
+  faqs={faqs}
+  painPoints={painPoints}
+  howWeWorkSteps={howWeWorkSteps}
+  backgroundImage="/images/roofing-hero.jpg"
+  areaServed="Rio Grande City"
+>
+  <!-- Rio Grande City-specific pool content -->
+  <section class="py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            Pools Built for Starr County Ground and Heat
+          </h2>
+          <p class="text-text-muted text-lg mb-4">
+            Rio Grande City is one of the hottest places in the Rio Grande Valley — and that makes a backyard pool more than a nice-to-have. With 9+ months of swim weather and summer temperatures regularly exceeding 105°F, a pool is how you and your family actually enjoy your property.
+          </p>
+          <p class="text-text-muted text-lg mb-4">
+            But building a pool in Starr County takes specialized knowledge. The caliche-heavy soil requires extra excavation engineering that most Valley pool builders don't bother with. Cut corners on caliche, and you end up with a cracked shell and expensive repairs. We engineer every pool for the exact ground conditions on your lot — proper steel reinforcement, proper drainage, proper compaction.
+          </p>
+          <p class="text-text-muted text-lg">
+            Rio Grande City homeowners have been underserved by pool builders who won't make the drive from McAllen. We're here to change that. Same quality, same pricing, same warranty — no matter where you are in the Valley.
+          </p>
+          <img
+            src="/images/roofing-work.jpg"
+            alt="Pool construction in progress at a Rio Grande City, TX property"
+            width="800"
+            height="533"
+            class="rounded-xl mt-6"
+            loading="lazy"
+          />
+        </div>
+        <div class="bg-bg-surface border border-border rounded-xl p-8">
+          <h3 class="text-xl font-semibold mb-4">Rio Grande City Pool Services</h3>
+          <ul class="space-y-3">
+            {[
+              "Custom gunite (concrete) inground pools",
+              "Caliche soil excavation and engineering",
+              "Spas and hot tubs (standalone or attached)",
+              "Tanning ledges and sun shelves",
+              "Water features — waterfalls, bubblers, scuppers",
+              "Pool decking and coping",
+              "LED lighting and automation systems",
+            ].map((item) => (
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-gold shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-text-muted">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Other services in Rio Grande City -->
+  <section class="py-16 md:py-20 bg-bg-surface">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-center mb-6">
+        Other Services in Rio Grande City
+      </h2>
+      <div class="grid sm:grid-cols-3 gap-4 max-w-2xl mx-auto">
+        {siblingServices.map((s) => (
+          <a
+            href={`/rio-grande-city/${s.slug}/`}
+            class="bg-bg-elevated border border-border rounded-lg px-4 py-3 text-center hover:border-gold hover:text-gold transition-colors"
+          >
+            {s.name}
+          </a>
+        ))}
+      </div>
+      <p class="text-center mt-4">
+        <a href="/rio-grande-city/" class="text-gold hover:text-gold-light text-sm">
+          ← All Rio Grande City services
+        </a>
+      </p>
+    </div>
+  </section>
+</ServiceLayout>

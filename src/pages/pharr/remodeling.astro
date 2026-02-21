@@ -1,0 +1,175 @@
+---
+import ServiceLayout from "../../layouts/ServiceLayout.astro";
+import { services } from "../../data/services";
+
+const faqs = [
+  {
+    question: "What remodeling services do you offer in Pharr?",
+    answer:
+      "We handle kitchen remodels, bathroom renovations, whole-home updates, room additions, and interior refreshes for Pharr homes. Whether it's modernizing an older home near Cage Blvd or upgrading builder-grade finishes in a newer property, we do it all — design through completion.",
+  },
+  {
+    question: "How much does a bathroom remodel cost in Pharr, TX?",
+    answer:
+      "Bathroom remodels in Pharr typically range from $8,000 for a basic update (new tile, vanity, fixtures) to $30,000+ for a full master bathroom renovation with custom shower, freestanding tub, and premium finishes. We provide a detailed estimate after seeing your space — no guesswork.",
+  },
+  {
+    question: "Are older Pharr homes worth remodeling or should we just move?",
+    answer:
+      "Many older Pharr homes — especially those near Cage Blvd and in established neighborhoods — have solid construction and great locations. A well-executed remodel costs significantly less than buying new and lets you stay in the neighborhood you know. With Pharr property values rising, remodeling is also a strong investment.",
+  },
+  {
+    question: "Can you remodel my Pharr kitchen without gutting it completely?",
+    answer:
+      "Yes — not every kitchen needs a full gut renovation. We offer phased approaches: new countertops and backsplash, cabinet refacing, updated appliances, or a combination. We'll evaluate your Pharr kitchen and recommend the scope that gets the biggest impact for your budget.",
+  },
+  {
+    question: "Do you pull permits for Pharr remodeling work?",
+    answer:
+      "Yes — we handle all City of Pharr permits for structural, electrical, and plumbing work. We also coordinate all inspections. Permits protect you as the homeowner and ensure the work is done to code. We never skip this step.",
+  },
+];
+
+const painPoints = [
+  {
+    title: "\"Our Pharr contractor did half the bathroom and then stopped returning calls\"",
+    description:
+      "Disappearing contractors are the number one complaint from Pharr homeowners. Our project manager is your single point of contact throughout the entire remodel. You'll never wonder what's happening or when the crew is coming back.",
+  },
+  {
+    title: "\"This house is 25 years old and everything looks dated\"",
+    description:
+      "Older Pharr homes along Cage Blvd and in established neighborhoods have good bones but tired interiors. We modernize kitchens, open up floor plans, update bathrooms, and bring these homes into 2026 — without losing the square footage and lot sizes that made them great in the first place.",
+  },
+  {
+    title: "\"We remodeled once before and the quality was terrible\"",
+    description:
+      "Crooked tile, cabinets that don't close, paint drips on the trim — we've seen the aftermath of cheap remodels across Pharr. Every Tekton project has a detailed final walkthrough. We don't collect final payment until every detail meets your standards.",
+  },
+  {
+    title: "\"We want to remodel but the quotes we're getting are all over the place\"",
+    description:
+      "Wildly different quotes usually mean different scopes of work. Our estimates are line-item and detailed — you see exactly what's included: materials, labor, permits, timeline. Compare apples to apples and the decision gets easier.",
+  },
+];
+
+const howWeWorkSteps = [
+  {
+    number: 1,
+    title: "Free In-Home Consultation",
+    description:
+      "We visit your Pharr home, evaluate the space, discuss your goals and budget, and give you an honest assessment of what's possible.",
+  },
+  {
+    number: 2,
+    title: "Design & Line-Item Estimate",
+    description:
+      "You get a complete design plan and a transparent quote covering materials, labor, permits, and timeline. No ambiguity, no hidden costs.",
+  },
+  {
+    number: 3,
+    title: "Construction & Communication",
+    description:
+      "Our crew handles demo, framing, mechanical, finishes, and cleanup. Your project manager keeps you informed with regular updates and a clear schedule.",
+  },
+  {
+    number: 4,
+    title: "Walkthrough & Sign-Off",
+    description:
+      "We go through every detail together — touch-ups, final adjustments, deep cleaning. The project isn't done until you say it's done.",
+  },
+];
+
+const siblingServices = services.filter((s) => s.slug !== "remodeling");
+---
+
+<ServiceLayout
+  title="Remodeling in Pharr, TX | Kitchen & Bath | Tekton Home Solutions"
+  description="Pharr, TX home remodeling — kitchens, bathrooms, whole-home renovations. Rising property values, quality upgrades. Free estimates. Call (956) 862-7643."
+  headline='Pharr Remodeling — <span class="text-gold">Kitchen & Bath Experts</span>'
+  subheadline="From established Cage Blvd homes to growing neighborhoods across Pharr. Kitchen remodels, bathroom renovations, and whole-home updates that match your home's potential."
+  serviceSlug="remodeling"
+  serviceName="Remodeling in Pharr, TX"
+  serviceDescription="Professional home remodeling services in Pharr, Texas including kitchen remodels, bathroom renovations, whole-home updates, and room additions. Licensed and insured."
+  breadcrumbLabel="Remodeling"
+  faqs={faqs}
+  painPoints={painPoints}
+  howWeWorkSteps={howWeWorkSteps}
+  backgroundImage="/images/roofing-hero.jpg"
+  areaServed="Pharr"
+>
+  <!-- Pharr-specific remodeling content -->
+  <section class="py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            Pharr Property Values Are Rising — Your Home Should Keep Pace
+          </h2>
+          <p class="text-text-muted text-lg mb-4">
+            Pharr is in the middle of real growth. Adjacent to McAllen, connected to international commerce through the Pharr-Reynosa Bridge, and seeing new development across the city. Property values are climbing — and homeowners who invest in quality remodeling now are positioned to benefit the most.
+          </p>
+          <p class="text-text-muted text-lg mb-4">
+            Older Pharr homes along the Cage Blvd area have solid construction and generous lot sizes, but interiors that haven't been touched in decades. Dated kitchens, cramped bathrooms, and closed-off floor plans drag down both your daily experience and your property value. A strategic remodel changes both — a modern kitchen, an updated master bath, or an opened-up living space can transform how your home feels and what it's worth.
+          </p>
+          <p class="text-text-muted text-lg">
+            Because Tekton also builds custom homes from scratch, we bring a builder's understanding to every Pharr remodel. We know which walls are load-bearing, how to reroute plumbing efficiently, and how to maximize space in ways that typical remodelers can't — or won't — attempt.
+          </p>
+          <img
+            src="/images/roofing-work.jpg"
+            alt="Kitchen remodel in progress at a Pharr, TX home"
+            width="800"
+            height="533"
+            class="rounded-xl mt-6"
+            loading="lazy"
+          />
+        </div>
+        <div class="bg-bg-surface border border-border rounded-xl p-8">
+          <h3 class="text-xl font-semibold mb-4">Pharr Remodeling Services</h3>
+          <ul class="space-y-3">
+            {[
+              "Full kitchen remodels — layout, cabinets, countertops",
+              "Bathroom renovations — tile, vanities, walk-in showers",
+              "Whole-home interior renovations",
+              "Room additions and expansions",
+              "Flooring replacement (tile, LVP, hardwood)",
+              "Interior and exterior painting",
+              "Open floor plan conversions",
+            ].map((item) => (
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-gold shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-text-muted">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Other services in Pharr -->
+  <section class="py-16 md:py-20 bg-bg-surface">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-center mb-6">
+        Other Services in Pharr
+      </h2>
+      <div class="grid sm:grid-cols-3 gap-4 max-w-2xl mx-auto">
+        {siblingServices.map((s) => (
+          <a
+            href={`/pharr/${s.slug}/`}
+            class="bg-bg-elevated border border-border rounded-lg px-4 py-3 text-center hover:border-gold hover:text-gold transition-colors"
+          >
+            {s.name}
+          </a>
+        ))}
+      </div>
+      <p class="text-center mt-4">
+        <a href="/pharr/" class="text-gold hover:text-gold-light text-sm">
+          ← All Pharr services
+        </a>
+      </p>
+    </div>
+  </section>
+</ServiceLayout>

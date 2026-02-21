@@ -1,0 +1,175 @@
+---
+import ServiceLayout from "../../layouts/ServiceLayout.astro";
+import { services } from "../../data/services";
+
+const faqs = [
+  {
+    question: "Do you serve all of Mission for remodeling work?",
+    answer:
+      "Yes — we cover all of Mission, from the established neighborhoods near Shary Road and Bryan Road to the newer developments along the Conway corridor and south of Expressway 83. We also serve Palmhurst and surrounding areas. Our McAllen headquarters is just 10 minutes away.",
+  },
+  {
+    question: "How much does a kitchen remodel cost in Mission, TX?",
+    answer:
+      "Kitchen remodels in Mission typically range from $18,000 for a cosmetic refresh (new countertops, cabinets, backsplash) to $55,000+ for a full gut-and-rebuild with layout changes. We provide a detailed, line-item estimate after seeing your space — not a vague guess over the phone.",
+  },
+  {
+    question: "Can you update an older Mission home without gutting it?",
+    answer:
+      "Absolutely. Many Mission homes near Shary Road and the downtown area have great bones but dated finishes. We can resurface cabinets, replace countertops, update fixtures, install new flooring, and modernize the layout without tearing everything down to the studs. It depends on the condition — we'll tell you honestly what needs full replacement and what can be refreshed.",
+  },
+  {
+    question: "Do I need a permit for remodeling in Mission?",
+    answer:
+      "Any work involving structural changes, electrical, plumbing, or gas in the City of Mission requires a permit. We handle all permitting — we know what Mission inspectors require and schedule inspections to keep the project moving without delays.",
+  },
+  {
+    question: "Will you work with my Mission HOA on exterior changes?",
+    answer:
+      "Yes — subdivisions like Cimarron Country Club and other Mission communities have specific rules about exterior modifications, paint colors, and material choices. We prepare all HOA paperwork and submit for approval before starting exterior work.",
+  },
+];
+
+const painPoints = [
+  {
+    title: "\"The contractor started our bathroom and then disappeared\"",
+    description:
+      "Mission homeowners are tired of contractors who take a deposit, demo the bathroom, and then vanish for weeks. Our crews are dedicated to your project with a set schedule. You get a project manager who answers the phone and shows up when promised.",
+  },
+  {
+    title: "\"We got hit with $8,000 in surprise costs\"",
+    description:
+      "That happens when contractors low-ball the estimate to win the job. We give you a detailed, line-item quote with all costs spelled out. If we find hidden water damage or outdated wiring during demo, we discuss it with you before adding a single dollar to the bill.",
+  },
+  {
+    title: "\"They said four weeks — it took four months\"",
+    description:
+      "Timelines blow up when contractors don't plan ahead. We order materials, schedule trades, and line up inspections before your demo day. That front-loaded planning is why our Mission remodels finish on schedule.",
+  },
+  {
+    title: "\"We want to update but don't know what's realistic for our budget\"",
+    description:
+      "Most Mission homeowners have a number in mind but no idea what it buys. Our free consultation walks you through what's possible at your price point — from a targeted kitchen refresh to a full master suite transformation. No pressure, just honest answers.",
+  },
+];
+
+const howWeWorkSteps = [
+  {
+    number: 1,
+    title: "Free Mission Home Consultation",
+    description:
+      "We visit your Mission home, walk the rooms you want to remodel, and discuss your goals, style preferences, and budget. No cost, no sales pitch.",
+  },
+  {
+    number: 2,
+    title: "Design Plan & Estimate",
+    description:
+      "You receive a detailed design plan with material selections and a line-item estimate. We handle City of Mission permits and any HOA approvals.",
+  },
+  {
+    number: 3,
+    title: "Construction",
+    description:
+      "Demo through final finishes — all managed by a dedicated project manager. We contain dust, protect your home, and keep you informed with regular updates.",
+  },
+  {
+    number: 4,
+    title: "Final Walkthrough",
+    description:
+      "We walk every inch of the finished work with you, handle any punch-list items immediately, and make sure you love the result before we call it done.",
+  },
+];
+
+const siblingServices = services.filter((s) => s.slug !== "remodeling");
+---
+
+<ServiceLayout
+  title="Remodeling in Mission, TX | Kitchen & Bath | Tekton Home Solutions"
+  description="Mission, TX remodeling contractor — kitchens, bathrooms, whole-home renovations. Honest estimates, dedicated crews. Free consultation. Call (956) 862-7643."
+  headline='Mission Remodeling — <span class="text-gold">Kitchen, Bath & More</span>'
+  subheadline="10 minutes from our McAllen office. Honest estimates, dedicated crews, and no disappearing acts. Kitchen remodels, bathroom renovations, and whole-home updates."
+  serviceSlug="remodeling"
+  serviceName="Remodeling in Mission, TX"
+  serviceDescription="Professional home remodeling in Mission, Texas including kitchen remodels, bathroom renovations, whole-home updates, and interior transformations. Licensed, insured, and locally owned."
+  breadcrumbLabel="Remodeling"
+  faqs={faqs}
+  painPoints={painPoints}
+  howWeWorkSteps={howWeWorkSteps}
+  backgroundImage="/images/roofing-hero.jpg"
+  areaServed="Mission"
+>
+  <!-- Mission-specific remodeling content -->
+  <section class="py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            Mission Homes Deserve Modern Living
+          </h2>
+          <p class="text-text-muted text-lg mb-4">
+            Mission has a mix of housing stock that tells the story of the city's growth. Older homes near Shary Road and the downtown area — built in the '80s and '90s — have solid construction but cramped kitchens, small bathrooms, and finishes that belong in another decade. Neighborhoods along the Conway corridor and near Cimarron are newer but already showing their age with builder-grade materials that wore out fast.
+          </p>
+          <p class="text-text-muted text-lg mb-4">
+            A smart remodel doesn't just make your Mission home look better — it changes how you live in it. Opening up a kitchen wall transforms how your family cooks and gathers. A master bath with a walk-in shower and proper ventilation means no more fighting mold in the Valley humidity. New flooring that can handle the sand and dirt that comes with South Texas living.
+          </p>
+          <p class="text-text-muted text-lg">
+            Because Tekton also builds custom homes and pools, we bring structural expertise to every remodel. When we open a wall, we know if it's load-bearing. When we move plumbing, we understand the whole system. That building-science knowledge is the difference between a remodel that lasts and one that causes problems down the road.
+          </p>
+          <img
+            src="/images/roofing-work.jpg"
+            alt="Bathroom remodel in progress in a Mission, TX home"
+            width="800"
+            height="533"
+            class="rounded-xl mt-6"
+            loading="lazy"
+          />
+        </div>
+        <div class="bg-bg-surface border border-border rounded-xl p-8">
+          <h3 class="text-xl font-semibold mb-4">Mission Remodeling Services</h3>
+          <ul class="space-y-3">
+            {[
+              "Kitchen remodels — cabinets, countertops, layout changes",
+              "Bathroom renovations — showers, tubs, vanities, tile",
+              "Whole-home interior updates",
+              "Flooring replacement — tile, LVP, wood-look options",
+              "Open-concept conversions",
+              "Garage conversions and additions",
+              "Exterior updates (HOA-compliant)",
+            ].map((item) => (
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-gold shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-text-muted">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Other services in Mission -->
+  <section class="py-16 md:py-20 bg-bg-surface">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-center mb-6">
+        Other Services in Mission
+      </h2>
+      <div class="grid sm:grid-cols-3 gap-4 max-w-2xl mx-auto">
+        {siblingServices.map((s) => (
+          <a
+            href={`/mission/${s.slug}/`}
+            class="bg-bg-elevated border border-border rounded-lg px-4 py-3 text-center hover:border-gold hover:text-gold transition-colors"
+          >
+            {s.name}
+          </a>
+        ))}
+      </div>
+      <p class="text-center mt-4">
+        <a href="/mission/" class="text-gold hover:text-gold-light text-sm">
+          ← All Mission services
+        </a>
+      </p>
+    </div>
+  </section>
+</ServiceLayout>

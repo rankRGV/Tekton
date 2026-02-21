@@ -1,0 +1,175 @@
+---
+import ServiceLayout from "../../layouts/ServiceLayout.astro";
+import { services } from "../../data/services";
+
+const faqs = [
+  {
+    question: "Do you take on remodeling projects in Rio Grande City?",
+    answer:
+      "Yes — Rio Grande City is part of our regular service area. We handle kitchen remodels, bathroom renovations, whole-home updates, and everything in between throughout Starr County. Our McAllen headquarters is a straight shot down Highway 83, and we treat RGC projects with the same priority as local jobs.",
+  },
+  {
+    question: "How old are most homes in Rio Grande City that need remodeling?",
+    answer:
+      "Many Rio Grande City homes were built in the 1970s through 1990s and haven't had a major update since. Outdated kitchens, cramped bathrooms, old wiring, and inefficient layouts are common. We specialize in modernizing older Starr County homes while preserving their character and working within realistic budgets.",
+  },
+  {
+    question: "Can you remodel older historic buildings in downtown Rio Grande City?",
+    answer:
+      "Yes. Downtown Rio Grande City has some beautiful older structures that deserve thoughtful renovation. We've worked with older building types throughout the Valley and understand how to modernize interiors while respecting existing architecture. We handle any structural surprises — old wiring, outdated plumbing, load-bearing walls — that come with older buildings.",
+  },
+  {
+    question: "What does a kitchen remodel cost in Rio Grande City?",
+    answer:
+      "Kitchen remodels in Rio Grande City typically range from $15,000 for a cosmetic refresh to $60,000+ for a full gut-and-rebuild with new cabinets, countertops, appliances, and layout changes. We provide a detailed, line-item estimate after visiting your home — no surprise costs and no distance surcharges.",
+  },
+  {
+    question: "Do I need permits for a remodel in Starr County?",
+    answer:
+      "Most remodels that involve structural changes, electrical work, or plumbing modifications require Starr County permits. We handle all permitting for you — from application through final inspection. You don't have to navigate the process on your own.",
+  },
+];
+
+const painPoints = [
+  {
+    title: "\"There aren't any good remodeling contractors in Rio Grande City\"",
+    description:
+      "The upper Valley has been underserved by quality contractors for years. Most remodelers focus on McAllen and won't drive to Starr County. We do — same quality, same pricing, same accountability.",
+  },
+  {
+    title: "\"My kitchen hasn't been updated since the house was built in '85\"",
+    description:
+      "Outdated layouts, worn cabinets, and old appliances drag down your daily life and your property value. We transform dated Starr County kitchens into modern, functional spaces that actually work for how you live today.",
+  },
+  {
+    title: "\"I'm afraid of what we'll find behind the walls\"",
+    description:
+      "Older Rio Grande City homes can hide surprises — old wiring, galvanized pipes, termite damage. We budget for the unexpected and communicate transparently if we find issues. No panic, no inflated change orders.",
+  },
+  {
+    title: "\"The last contractor left our project half-finished\"",
+    description:
+      "Abandoned projects are heartbreaking and common in underserved areas. We're a licensed, insured company with a permanent McAllen office. We finish what we start — every time.",
+  },
+];
+
+const howWeWorkSteps = [
+  {
+    number: 1,
+    title: "Free In-Home Consultation",
+    description:
+      "We visit your Rio Grande City home, listen to what you want, assess the space, and start planning your remodel based on your goals and budget.",
+  },
+  {
+    number: 2,
+    title: "Design & Detailed Estimate",
+    description:
+      "You get a clear, line-item quote with material selections, timeline, and scope. No hidden fees, no vague allowances — you know exactly what you're paying for.",
+  },
+  {
+    number: 3,
+    title: "Permits & Construction",
+    description:
+      "We pull all Starr County permits, then our crew handles demo, framing, electrical, plumbing, finishes, and cleanup — managed by a dedicated project lead.",
+  },
+  {
+    number: 4,
+    title: "Final Walkthrough",
+    description:
+      "We walk through every detail with you, fix any punch-list items on the spot, and make sure you're 100% happy before we call it done.",
+  },
+];
+
+const siblingServices = services.filter((s) => s.slug !== "remodeling");
+---
+
+<ServiceLayout
+  title="Remodeling in Rio Grande City, TX | Tekton Home Solutions"
+  description="Rio Grande City remodeling contractor — kitchens, bathrooms, and whole-home renovations. Serving Starr County. Free estimates. Call (956) 862-7643."
+  headline='Rio Grande City Remodeling — <span class="text-gold">Transform Your Home</span>'
+  subheadline="Bringing McAllen-quality remodeling to Starr County. Kitchens, bathrooms, and whole-home renovations. Licensed, insured, and built to last."
+  serviceSlug="remodeling"
+  serviceName="Remodeling in Rio Grande City, TX"
+  serviceDescription="Professional home remodeling services in Rio Grande City, Texas including kitchen remodeling, bathroom renovation, whole-home updates, and modernization of older Starr County homes."
+  breadcrumbLabel="Remodeling"
+  faqs={faqs}
+  painPoints={painPoints}
+  howWeWorkSteps={howWeWorkSteps}
+  backgroundImage="/images/roofing-hero.jpg"
+  areaServed="Rio Grande City"
+>
+  <!-- Rio Grande City-specific remodeling content -->
+  <section class="py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            Older Starr County Homes Deserve a Modern Update
+          </h2>
+          <p class="text-text-muted text-lg mb-4">
+            Many Rio Grande City homes were built decades ago with layouts that don't match how families live today. Small kitchens, cramped bathrooms, dark hallways, and worn-out finishes are the norm in neighborhoods across Starr County. These homes have good bones — they just need someone who knows how to bring them into the present.
+          </p>
+          <p class="text-text-muted text-lg mb-4">
+            The problem has always been access to quality contractors. Most remodeling companies focus on McAllen and the metro area, leaving Rio Grande City homeowners with limited options. We're changing that. We bring the same materials, craftsmanship, and project management to Starr County that our McAllen clients expect — at the same prices.
+          </p>
+          <p class="text-text-muted text-lg">
+            Whether it's a downtown building that needs thoughtful modernization or a 1980s ranch house that needs a complete kitchen overhaul, we handle it. And because we also build custom homes, we understand structure, systems, and code at a level most remodelers don't.
+          </p>
+          <img
+            src="/images/roofing-work.jpg"
+            alt="Home remodeling project in Rio Grande City, TX"
+            width="800"
+            height="533"
+            class="rounded-xl mt-6"
+            loading="lazy"
+          />
+        </div>
+        <div class="bg-bg-surface border border-border rounded-xl p-8">
+          <h3 class="text-xl font-semibold mb-4">Rio Grande City Remodeling Services</h3>
+          <ul class="space-y-3">
+            {[
+              "Kitchen remodeling — layout, cabinets, countertops",
+              "Bathroom renovations — showers, vanities, tile",
+              "Whole-home updates and modernization",
+              "Flooring replacement — tile, LVP, hardwood",
+              "Interior and exterior painting",
+              "Older home rewiring and plumbing updates",
+              "Room additions and layout changes",
+            ].map((item) => (
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-gold shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-text-muted">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Other services in Rio Grande City -->
+  <section class="py-16 md:py-20 bg-bg-surface">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-center mb-6">
+        Other Services in Rio Grande City
+      </h2>
+      <div class="grid sm:grid-cols-3 gap-4 max-w-2xl mx-auto">
+        {siblingServices.map((s) => (
+          <a
+            href={`/rio-grande-city/${s.slug}/`}
+            class="bg-bg-elevated border border-border rounded-lg px-4 py-3 text-center hover:border-gold hover:text-gold transition-colors"
+          >
+            {s.name}
+          </a>
+        ))}
+      </div>
+      <p class="text-center mt-4">
+        <a href="/rio-grande-city/" class="text-gold hover:text-gold-light text-sm">
+          ← All Rio Grande City services
+        </a>
+      </p>
+    </div>
+  </section>
+</ServiceLayout>

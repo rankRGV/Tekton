@@ -1,0 +1,175 @@
+---
+import ServiceLayout from "../../layouts/ServiceLayout.astro";
+import { services } from "../../data/services";
+
+const faqs = [
+  {
+    question: "Do you actually send crews to Penitas for remodeling jobs?",
+    answer:
+      "Yes — Penitas and western Hidalgo County are part of our primary service area. We do not charge travel fees and we do not deprioritize your project because you are 20 minutes west of McAllen. Our crews work in Penitas, La Joya, Sullivan City, and Palmview regularly. You get the same quality, timeline, and attention as any project closer to the McAllen metro.",
+  },
+  {
+    question: "What should I know about remodeling newer construction homes in Penitas?",
+    answer:
+      "Many Penitas homes were built in the last 10 to 20 years during the area's residential growth. While newer, some were built to meet minimum code — builder-grade finishes, basic cabinetry, and standard layouts. Upgrading these homes is straightforward because the bones are solid. We focus on the finishes, layouts, and features that turn a builder-grade house into the home you actually want.",
+  },
+  {
+    question: "How does caliche soil affect home additions in Penitas?",
+    answer:
+      "If your remodel involves an addition or extending the foundation, caliche soil in western Hidalgo County is a factor. Caliche is a hard calcium carbonate layer that requires specific excavation methods and foundation engineering. We assess soil conditions before quoting any project that involves ground work, so there are no surprises mid-project.",
+  },
+  {
+    question: "Does Tekton handle Hidalgo County permits for Penitas remodels?",
+    answer:
+      "Yes — we handle all Hidalgo County permits for projects involving structural, electrical, or plumbing changes. We manage the application, documentation, and inspection scheduling so you never have to visit the county offices or coordinate with inspectors yourself.",
+  },
+  {
+    question: "Can you remodel my kitchen and bathroom at the same time?",
+    answer:
+      "Absolutely — and doing both at once is usually more efficient and cost-effective. We coordinate the plumbing, electrical, and finish work across both spaces so the trades overlap instead of making separate trips. Most combined kitchen and bathroom remodels in Penitas take 6 to 10 weeks depending on scope.",
+  },
+];
+
+const painPoints = [
+  {
+    title: "\"I called three contractors and none of them wanted to come out to Penitas\"",
+    description:
+      "Western Hidalgo County is chronically underserved by quality contractors. Most are based in McAllen or Edinburg and treat anything west of La Joya as too far. We serve Penitas as a primary market — not an afterthought. Same crews, same timeline, same quality.",
+  },
+  {
+    title: "\"Our home is only 12 years old but everything feels builder-grade\"",
+    description:
+      "A lot of Penitas homes were built during the area's growth boom with basic finishes to keep prices low. The structure is solid, but the kitchens, bathrooms, and layouts feel generic. We upgrade these homes efficiently — new cabinets, countertops, open layouts, and modern finishes that match how you actually live.",
+  },
+  {
+    title: "\"The last contractor started the job and then disappeared\"",
+    description:
+      "This is the most common complaint we hear from western Valley homeowners. We assign a project manager to every remodel, keep crews on your job consistently, and give you a clear schedule with regular updates. You will never wonder where we are or when we are coming back.",
+  },
+  {
+    title: "\"I want to add a room but I'm worried about the foundation\"",
+    description:
+      "Additions on caliche soil require proper foundation engineering. We assess your property's soil conditions before design begins and engineer the addition's foundation to work with — not against — western Hidalgo County's ground conditions. No guessing, no shortcuts.",
+  },
+];
+
+const howWeWorkSteps = [
+  {
+    number: 1,
+    title: "Free In-Home Consultation",
+    description:
+      "We visit your Penitas home, assess the current condition, discuss your goals, and identify any issues specific to western Valley construction. No cost, no obligation.",
+  },
+  {
+    number: 2,
+    title: "Design & Detailed Estimate",
+    description:
+      "You get a design plan and a line-item quote. If additions are involved, we include soil assessment for caliche conditions. No vague estimates and no surprise change orders.",
+  },
+  {
+    number: 3,
+    title: "Permitted Construction",
+    description:
+      "We pull all Hidalgo County permits, manage inspections, and execute the remodel on a clear schedule with consistent crews and regular progress updates.",
+  },
+  {
+    number: 4,
+    title: "Final Walkthrough",
+    description:
+      "We walk through every detail with you, make sure everything meets your expectations, and hand over warranty documentation. Your remodeled space is ready to enjoy.",
+  },
+];
+
+const siblingServices = services.filter((s) => s.slug !== "remodeling");
+---
+
+<ServiceLayout
+  title="Remodeling in Penitas, TX | Home Renovation | Tekton Home Solutions"
+  description="Penitas remodeling contractor — kitchens, bathrooms, and whole-home renovations. Serving western Hidalgo County. Free estimates. Call (956) 862-7643."
+  headline='Penitas Remodeling — <span class="text-gold">Home Renovation</span>'
+  subheadline="A remodeling contractor who actually shows up in western Hidalgo County. Kitchen and bath upgrades, whole-home renovations, and additions. Licensed and insured in Hidalgo County."
+  serviceSlug="remodeling"
+  serviceName="Remodeling in Penitas, TX"
+  serviceDescription="Professional home remodeling services in Penitas, Texas including kitchen remodels, bathroom renovations, additions, and whole-home updates. Serving Penitas, La Joya, Sullivan City, and Palmview."
+  breadcrumbLabel="Remodeling"
+  faqs={faqs}
+  painPoints={painPoints}
+  howWeWorkSteps={howWeWorkSteps}
+  backgroundImage="/images/roofing-hero.jpg"
+  areaServed="Penitas"
+>
+  <!-- Penitas-specific remodeling content -->
+  <section class="py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            Penitas Homes Are Ready for an Upgrade
+          </h2>
+          <p class="text-text-muted text-lg mb-4">
+            Penitas has grown steadily over the past two decades as families have moved to western Hidalgo County for larger lots, newer homes, and a quieter community just 20 minutes from McAllen on Expressway 83. But much of that growth came with builder-grade construction — functional but generic kitchens, basic bathrooms, and layouts designed to hit a price point rather than fit how families actually live.
+          </p>
+          <p class="text-text-muted text-lg mb-4">
+            The problem has never been a lack of demand for quality remodeling in Penitas. The problem has been finding a contractor willing to serve this area. Most remodeling companies cluster around McAllen and Edinburg, treating anything west of the expressway interchange as too far. Homeowners in Penitas, La Joya, Sullivan City, and Palmview end up waiting weeks for callbacks — if they get one at all.
+          </p>
+          <p class="text-text-muted text-lg">
+            Tekton treats western Hidalgo County as a priority, not a favor. We bring the same crews, the same materials, and the same project management to every Penitas remodel. And because we also build custom homes from the ground up, we bring structural knowledge to every renovation. We know what is behind your walls because we build walls for a living.
+          </p>
+          <img
+            src="/images/roofing-work.jpg"
+            alt="Kitchen remodel in progress at a Penitas, TX home"
+            width="800"
+            height="533"
+            class="rounded-xl mt-6"
+            loading="lazy"
+          />
+        </div>
+        <div class="bg-bg-surface border border-border rounded-xl p-8">
+          <h3 class="text-xl font-semibold mb-4">Penitas Remodeling Services</h3>
+          <ul class="space-y-3">
+            {[
+              "Full kitchen remodels — cabinets, counters, layout",
+              "Bathroom renovations and upgrades",
+              "Open floor plan conversions",
+              "Room additions with caliche soil engineering",
+              "Flooring — tile, luxury vinyl, hardwood",
+              "Interior and exterior painting",
+              "Whole-home renovations and modernization",
+            ].map((item) => (
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-gold shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-text-muted">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Other services in Penitas -->
+  <section class="py-16 md:py-20 bg-bg-surface">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-center mb-6">
+        Other Services in Penitas
+      </h2>
+      <div class="grid sm:grid-cols-3 gap-4 max-w-2xl mx-auto">
+        {siblingServices.map((s) => (
+          <a
+            href={`/penitas/${s.slug}/`}
+            class="bg-bg-elevated border border-border rounded-lg px-4 py-3 text-center hover:border-gold hover:text-gold transition-colors"
+          >
+            {s.name}
+          </a>
+        ))}
+      </div>
+      <p class="text-center mt-4">
+        <a href="/penitas/" class="text-gold hover:text-gold-light text-sm">
+          ← All Penitas services
+        </a>
+      </p>
+    </div>
+  </section>
+</ServiceLayout>

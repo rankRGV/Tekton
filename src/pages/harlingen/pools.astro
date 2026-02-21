@@ -1,0 +1,175 @@
+---
+import ServiceLayout from "../../layouts/ServiceLayout.astro";
+import { services } from "../../data/services";
+
+const faqs = [
+  {
+    question: "Does Harlingen have different pool permitting requirements than McAllen or Brownsville?",
+    answer:
+      "Harlingen is in Cameron County, which shares some requirements with Brownsville but has its own city permitting process. You need a building permit from the City of Harlingen, engineered plans, a site survey, and compliance with barrier (fencing) requirements. If your property is in a FEMA flood zone — and parts of Harlingen near Arroyo Colorado are — you will also need floodplain approval. We handle every permit and inspection.",
+  },
+  {
+    question: "Is the water table high enough in Harlingen to affect pool construction?",
+    answer:
+      "In some areas, yes. Properties closer to the Arroyo Colorado or in lower-elevation sections of Harlingen can have a water table that affects excavation and shell installation. We test soil and water conditions on your lot before design and engineer the pool shell with hydrostatic relief valves and proper drainage to prevent floating or cracking.",
+  },
+  {
+    question: "How many months per year can you realistically use a pool in Harlingen?",
+    answer:
+      "Harlingen's mid-Valley climate gives you comfortable pool weather from March through November — roughly 9 months. Add a heat pump, which we install as part of the build, and you can swim year-round. With average highs in the 80s and 90s for most of the year, a pool in Harlingen gets more use than almost anywhere else in Texas.",
+  },
+  {
+    question: "Can you build a pool in the newer subdivisions off Ed Carey Drive?",
+    answer:
+      "Absolutely. The newer developments along Ed Carey Drive and Loop 499 typically have the lot sizes, soil conditions, and utility access that make pool construction straightforward. We verify setback requirements and HOA restrictions (if any) during the design phase so there are no surprises once construction begins.",
+  },
+  {
+    question: "Do you build pools with outdoor kitchens and covered patios as one project?",
+    answer:
+      "Yes — and that is the smartest way to do it. Building your pool, outdoor kitchen, and patio cover as a single project means shared excavation, coordinated drainage, unified electrical and gas runs, and one permit process. It costs less than doing them separately and avoids tearing up finished work later.",
+  },
+];
+
+const painPoints = [
+  {
+    title: "\"We've been wanting a pool for years but don't know where to start\"",
+    description:
+      "We make it simple. One visit to your Harlingen home to measure the yard, assess drainage and soil, and talk through your wish list and budget. You get a detailed design and a clear quote — no vague estimates, no obligation. Most families wish they had started sooner.",
+  },
+  {
+    title: "\"Our backyard floods when it rains hard — can we still build a pool?\"",
+    description:
+      "Drainage issues do not disqualify you — they just need to be solved as part of the design. We engineer grading, French drains, and proper slope around the pool to actually improve your yard's drainage. Many Harlingen homeowners find their backyard drains better after we build the pool than it did before.",
+  },
+  {
+    title: "\"The last pool quote I got had so many add-ons the price doubled\"",
+    description:
+      "We give you a complete, line-item estimate that includes everything — excavation, steel, plumbing, electrical, tile, coping, decking, and equipment. The price you approve is the price you pay. No surprise change orders, no hidden fees for things that should have been in the quote from the start.",
+  },
+  {
+    title: "\"I want something better than a basic rectangle but I'm not sure what's possible\"",
+    description:
+      "Every pool we build in Harlingen is custom-designed for your yard and your lifestyle. Freeform shapes, tanning ledges, bubblers, waterfalls, spa attachments, beach entries — we design it around how you actually want to use the space. Your pool should fit your family, not a catalog template.",
+  },
+];
+
+const howWeWorkSteps = [
+  {
+    number: 1,
+    title: "Free Design Consultation",
+    description:
+      "We visit your Harlingen home, measure the yard, assess soil and drainage conditions, and discuss your vision and budget. No cost, no pressure.",
+  },
+  {
+    number: 2,
+    title: "Engineering & Permits",
+    description:
+      "We create your custom pool design with drainage engineering and any flood zone requirements. We handle all City of Harlingen permits, inspections, and Cameron County compliance.",
+  },
+  {
+    number: 3,
+    title: "Construction",
+    description:
+      "Excavation, steel, plumbing, gunite, tile, coping, decking, and equipment installation — all managed by our project team with regular updates at every phase.",
+  },
+  {
+    number: 4,
+    title: "Startup & Walkthrough",
+    description:
+      "We fill your pool, balance the chemistry, test all equipment, and walk you through maintenance. You are swim-ready with a pool built for Harlingen's climate and soil conditions.",
+  },
+];
+
+const siblingServices = services.filter((s) => s.slug !== "pools");
+---
+
+<ServiceLayout
+  title="Pool Builder in Harlingen, TX | Custom Pools | Tekton Home Solutions"
+  description="Custom pool builder in Harlingen, TX — gunite pools engineered for mid-Valley soil and drainage, complete backyard transformations. Free design consultation. Call (956) 862-7643."
+  headline='Harlingen Pool Builder — <span class="text-gold">Custom Pools</span>'
+  subheadline="Designed for Harlingen backyards from Dixieland to Ed Carey Drive. Custom gunite pools, complete outdoor living spaces, and drainage engineering for mid-Valley soil conditions. Licensed and insured in Cameron County."
+  serviceSlug="pools"
+  serviceName="Pool Construction in Harlingen, TX"
+  serviceDescription="Custom inground pool design and construction in Harlingen, Texas. Gunite pools with proper drainage engineering, complete outdoor living spaces, and full Cameron County permitting."
+  breadcrumbLabel="Pool Construction"
+  faqs={faqs}
+  painPoints={painPoints}
+  howWeWorkSteps={howWeWorkSteps}
+  backgroundImage="/images/roofing-hero.jpg"
+  areaServed="Harlingen"
+>
+  <!-- Harlingen-specific pool content -->
+  <section class="py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            Harlingen Backyards Were Made for Pools
+          </h2>
+          <p class="text-text-muted text-lg mb-4">
+            With nine months of swim weather and some of the most generous lot sizes in the mid-Valley, Harlingen is one of the best cities in the RGV for a backyard pool. Whether you are in an established neighborhood near Dixieland with a mature yard and shade trees, or in a newer subdivision off Ed Carey Drive with a blank canvas to work with, the conditions here are ideal for year-round outdoor living.
+          </p>
+          <p class="text-text-muted text-lg mb-4">
+            Harlingen pool construction does require attention to local soil and drainage. Parts of the city near the Arroyo Colorado have higher water tables and clay-heavy soils that demand proper engineering — hydrostatic relief valves, reinforced gunite shells, and drainage systems designed for flat terrain that does not move water on its own. We address all of this in the design phase so your pool performs for decades, not just the first few years.
+          </p>
+          <p class="text-text-muted text-lg">
+            As a company that also builds custom homes and handles full remodels, we design your pool as part of your property — not in isolation. That means coordinated drainage, shared electrical runs, properly graded decking, and an outdoor space that works together instead of creating problems between the pool and your home's foundation.
+          </p>
+          <img
+            src="/images/roofing-work.jpg"
+            alt="Custom pool construction in progress at a Harlingen, TX home"
+            width="800"
+            height="533"
+            class="rounded-xl mt-6"
+            loading="lazy"
+          />
+        </div>
+        <div class="bg-bg-surface border border-border rounded-xl p-8">
+          <h3 class="text-xl font-semibold mb-4">Harlingen Pool Services</h3>
+          <ul class="space-y-3">
+            {[
+              "Custom gunite (concrete) inground pools",
+              "Drainage engineering for mid-Valley soil",
+              "Spas and hot tubs (standalone or attached)",
+              "Water features — waterfalls, bubblers, scuppers",
+              "Tanning ledges and beach entries",
+              "Pool decking, coping, and drainage systems",
+              "Outdoor kitchens and covered patios",
+            ].map((item) => (
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-gold shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-text-muted">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Other services in Harlingen -->
+  <section class="py-16 md:py-20 bg-bg-surface">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-center mb-6">
+        Other Services in Harlingen
+      </h2>
+      <div class="grid sm:grid-cols-3 gap-4 max-w-2xl mx-auto">
+        {siblingServices.map((s) => (
+          <a
+            href={`/harlingen/${s.slug}/`}
+            class="bg-bg-elevated border border-border rounded-lg px-4 py-3 text-center hover:border-gold hover:text-gold transition-colors"
+          >
+            {s.name}
+          </a>
+        ))}
+      </div>
+      <p class="text-center mt-4">
+        <a href="/harlingen/" class="text-gold hover:text-gold-light text-sm">
+          ← All Harlingen services
+        </a>
+      </p>
+    </div>
+  </section>
+</ServiceLayout>

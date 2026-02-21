@@ -1,0 +1,175 @@
+---
+import ServiceLayout from "../../layouts/ServiceLayout.astro";
+import { services } from "../../data/services";
+
+const faqs = [
+  {
+    question: "Do older Harlingen homes near Dixieland need full roof replacements or just repairs?",
+    answer:
+      "Many homes in the Dixieland and Country Club areas were built in the 1950s through 1970s and have had multiple roof layers added over the decades. If your roof has two or more layers, Cameron County code requires a full tear-off before re-roofing. We inspect your roof for free, determine what is underneath, and give you an honest recommendation — repair if it makes sense, full replacement if it does not.",
+  },
+  {
+    question: "Does Harlingen require windstorm certification for roof replacements?",
+    answer:
+      "Yes. Harlingen is in Cameron County, which falls within the Texas Windstorm Insurance Association (TWIA) catastrophe area. Every roof replacement must meet wind-resistance standards and receive a WPI-8 certificate to qualify for windstorm insurance. We handle the entire certification process — engineering specs, installation, inspection scheduling, and final documentation.",
+  },
+  {
+    question: "How do Valley hailstorms affect Harlingen roofs differently than other RGV cities?",
+    answer:
+      "Harlingen sits in the mid-Valley corridor where severe thunderstorms often track northeast from the Gulf. The mix of older roofing stock near Dixieland and newer construction along Ed Carey Drive means hail damage varies widely. Older shingles crack and lose granules faster, while newer architectural shingles hold up better. We assess both damage types and help file insurance claims when the damage qualifies.",
+  },
+  {
+    question: "Can Tekton replace a roof near Valley International Airport with FAA height restrictions?",
+    answer:
+      "Properties near Valley International Airport may have zoning overlays that affect structures. Roof replacements typically do not change building height, so they are not affected — but if your project involves adding roof pitch or a second story, we verify compliance with FAA Part 77 surfaces before starting. We are familiar with Harlingen's airport-adjacent building codes.",
+  },
+  {
+    question: "Do you offer free roof inspections in the Ed Carey Drive and Loop 499 areas?",
+    answer:
+      "Yes — we provide free roof inspections across all of Harlingen, from the historic neighborhoods near Dixieland to the newer developments along Ed Carey Drive and Loop 499. We document everything with photos, check for storm damage, ventilation issues, and material wear, and give you a straightforward assessment with no sales pressure.",
+  },
+];
+
+const painPoints = [
+  {
+    title: "\"My 1960s roof near Country Club has had three patch jobs — when is enough enough?\"",
+    description:
+      "Older Harlingen homes were built with materials that have long passed their lifespan. Layering patches on a failing roof just delays the inevitable and risks interior water damage. We inspect the full system and tell you honestly whether another repair makes sense or a replacement will save you money long-term.",
+  },
+  {
+    title: "\"The last hailstorm hit and I still haven't dealt with it\"",
+    description:
+      "Mid-Valley thunderstorms drop hail that damages shingles without obvious leaks — until months later when the underlayment fails. We document storm damage with photos your insurance company accepts and walk you through the claims process. Waiting only makes the damage worse.",
+  },
+  {
+    title: "\"I don't have my windstorm certificate and my insurance is through the roof\"",
+    description:
+      "Without a WPI-8 certificate in Cameron County, you are paying significantly more for windstorm coverage — or going without it. Every roof we install meets TWIA standards and passes inspection. We handle the certification so your insurance rates come back down to where they should be.",
+  },
+  {
+    title: "\"My attic is 140 degrees in the summer and my AC can't keep up\"",
+    description:
+      "Poor roof ventilation is epidemic in older Harlingen homes. When your attic traps heat, your AC runs nonstop and your energy bills spike. We install proper ridge and soffit ventilation with radiant barriers as part of every roof replacement — your cooling costs drop noticeably.",
+  },
+];
+
+const howWeWorkSteps = [
+  {
+    number: 1,
+    title: "Free Harlingen Inspection",
+    description:
+      "We inspect your roof, document wear and storm damage with photos, and check ventilation and underlayment condition. If there is an insurance claim to file, we flag it immediately.",
+  },
+  {
+    number: 2,
+    title: "Estimate + Windstorm Compliance",
+    description:
+      "You get a clear, line-item quote with materials spec'd to meet TWIA windstorm requirements for Cameron County. No vague ranges — every cost is documented before we start.",
+  },
+  {
+    number: 3,
+    title: "24-Hour Installation",
+    description:
+      "Our crew arrives on schedule, completes your roof in a single day with hurricane-rated materials and proper ventilation upgrades, and cleans up the property completely.",
+  },
+  {
+    number: 4,
+    title: "WPI-8 Certification & Walkthrough",
+    description:
+      "We schedule your windstorm inspection, secure your WPI-8 certificate, walk you through the finished roof, and activate your manufacturer warranty.",
+  },
+];
+
+const siblingServices = services.filter((s) => s.slug !== "roofing");
+---
+
+<ServiceLayout
+  title="Roofing in Harlingen, TX | Storm Ready | Tekton Home Solutions"
+  description="Harlingen roofing contractor — storm-rated roofs for older and newer homes, WPI-8 windstorm certification, and free inspections across Cameron County. Call (956) 862-7643."
+  headline='Harlingen Roofing — <span class="text-gold">Storm Ready</span>'
+  subheadline="Protecting mid-Valley homes from Dixieland to Loop 499. Hurricane-rated materials, full windstorm certification, and roofing built for Harlingen's storm exposure. Licensed and insured in Cameron County."
+  serviceSlug="roofing"
+  serviceName="Roofing in Harlingen, TX"
+  serviceDescription="Professional roofing services in Harlingen, Texas including storm-rated roof replacement, hail damage repair, windstorm certification, and free inspections. Serving historic and new-construction neighborhoods across the mid-Valley."
+  breadcrumbLabel="Roofing"
+  faqs={faqs}
+  painPoints={painPoints}
+  howWeWorkSteps={howWeWorkSteps}
+  backgroundImage="/images/roofing-hero.jpg"
+  areaServed="Harlingen"
+>
+  <!-- Harlingen-specific roofing content -->
+  <section class="py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            Harlingen Roofs Span Five Decades of Construction
+          </h2>
+          <p class="text-text-muted text-lg mb-4">
+            Harlingen's housing stock tells the story of the mid-Valley's growth. Drive through the Dixieland neighborhood or the Country Club area and you will find solidly built homes from the 1950s and 1960s — good bones, but roofing systems that have been patched, layered, and pushed well past their intended lifespan. Head out toward Ed Carey Drive or the newer subdivisions off Loop 499 and the construction is modern, but many of those roofs were built to minimum code with builder-grade materials that underperform in serious weather.
+          </p>
+          <p class="text-text-muted text-lg mb-4">
+            Both ends of the spectrum need roofing that accounts for what Harlingen actually faces: hailstorms that track through the mid-Valley corridor, sustained winds during hurricane season, and Cameron County's year-round humidity that accelerates material degradation. We spec materials and installation methods based on your home's age, location, and exposure — not a one-size-fits-all approach.
+          </p>
+          <p class="text-text-muted text-lg">
+            As a full home solutions company that also builds custom homes and handles remodels, we understand how your roof connects to your attic ventilation, insulation, and structural framing. That means your new roof does not just keep water out — it helps your home breathe properly and reduces the cooling load that drives up summer energy bills in Harlingen.
+          </p>
+          <img
+            src="/images/roofing-work.jpg"
+            alt="Storm-rated roof replacement on a Harlingen, TX home"
+            width="800"
+            height="533"
+            class="rounded-xl mt-6"
+            loading="lazy"
+          />
+        </div>
+        <div class="bg-bg-surface border border-border rounded-xl p-8">
+          <h3 class="text-xl font-semibold mb-4">Harlingen Roofing Services</h3>
+          <ul class="space-y-3">
+            {[
+              "Full roof replacement — done in 24 hours",
+              "Hurricane-rated wind and impact systems",
+              "Hail damage repair and insurance claim support",
+              "WPI-8 windstorm certification",
+              "Attic ventilation and radiant barrier upgrades",
+              "Free roof inspections (pre-storm and post-storm)",
+              "Metal, shingle, tile, and flat roof systems",
+            ].map((item) => (
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-gold shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-text-muted">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Other services in Harlingen -->
+  <section class="py-16 md:py-20 bg-bg-surface">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-center mb-6">
+        Other Services in Harlingen
+      </h2>
+      <div class="grid sm:grid-cols-3 gap-4 max-w-2xl mx-auto">
+        {siblingServices.map((s) => (
+          <a
+            href={`/harlingen/${s.slug}/`}
+            class="bg-bg-elevated border border-border rounded-lg px-4 py-3 text-center hover:border-gold hover:text-gold transition-colors"
+          >
+            {s.name}
+          </a>
+        ))}
+      </div>
+      <p class="text-center mt-4">
+        <a href="/harlingen/" class="text-gold hover:text-gold-light text-sm">
+          ← All Harlingen services
+        </a>
+      </p>
+    </div>
+  </section>
+</ServiceLayout>

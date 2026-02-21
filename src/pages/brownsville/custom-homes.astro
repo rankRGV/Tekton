@@ -1,0 +1,175 @@
+---
+import ServiceLayout from "../../layouts/ServiceLayout.astro";
+import { services } from "../../data/services";
+
+const faqs = [
+  {
+    question: "What wind-rating requirements apply to new homes in Brownsville?",
+    answer:
+      "Brownsville is in the Texas Windstorm Insurance Association (TWIA) territory, which means your new home must meet specific wind-resistance standards to qualify for windstorm insurance. This includes engineered roof-to-wall connections, impact-rated windows or shutters, and reinforced garage doors. We build every Brownsville home to meet or exceed TWIA requirements and handle the WPI-8 certification.",
+  },
+  {
+    question: "Can you build a custom home near the SpaceX development in Brownsville?",
+    answer:
+      "Yes — the area along Paredes Line Rd and east Brownsville is seeing significant growth driven by SpaceX Starbase activity. We're building in these developing areas and are familiar with the zoning, lot requirements, and Cameron County permitting process for new construction. If you've purchased land or are looking at lots in this corridor, we can help.",
+  },
+  {
+    question: "How do you handle coastal construction requirements in Cameron County?",
+    answer:
+      "Cameron County's coastal location means additional engineering requirements — elevated foundations in flood zones, wind-rated structural connections, corrosion-resistant materials for salt air exposure, and proper drainage engineering for the flat coastal terrain. We design every Brownsville home with these requirements built in from day one, not as afterthoughts.",
+  },
+  {
+    question: "How long does it take to build a custom home in Brownsville?",
+    answer:
+      "Most custom homes in Brownsville take 8 to 14 months from breaking ground to move-in, depending on size and complexity. Permitting in Cameron County typically takes 3 to 6 weeks. We provide a detailed construction schedule before you commit and keep you updated throughout every phase.",
+  },
+  {
+    question: "Do you build on lots the homeowner already owns in Brownsville?",
+    answer:
+      "Absolutely — build-on-your-lot is one of our most popular options in Brownsville. We evaluate your lot for soil conditions, flood zone status, utility access, and setback requirements, then design a home that maximizes your property. If you're still shopping for land, we can also advise on what to look for.",
+  },
+];
+
+const painPoints = [
+  {
+    title: "\"I bought a lot near Paredes Line Rd but can't find a builder who knows the area\"",
+    description:
+      "Brownsville's growth areas — especially near SpaceX and along Paredes Line Rd — are attracting buyers, but many builders lack experience with Cameron County's coastal codes and flood zone requirements. We build here. We know the permitting, the soil, and the wind-rating standards.",
+  },
+  {
+    title: "\"The builder I talked to didn't mention windstorm certification at all\"",
+    description:
+      "That's a red flag. Every new home in Brownsville needs to meet TWIA wind-resistance standards to qualify for windstorm insurance. We engineer for it from the foundation up and handle the WPI-8 certification so your home is fully insurable from day one.",
+  },
+  {
+    title: "\"I don't know if my lot is in a flood zone\"",
+    description:
+      "We check FEMA flood maps for every lot before design begins. If your property is in a flood zone, we engineer the foundation, drainage, and elevation to meet all requirements. You'll know exactly what your lot needs before we break ground.",
+  },
+  {
+    title: "\"Custom home quotes have been all over the place\"",
+    description:
+      "Vague bids and surprise change orders are the norm with most builders. We give you a detailed, fixed-price contract with every material, fixture, and finish specified. You know the cost before construction starts — and it doesn't change unless you change it.",
+  },
+];
+
+const howWeWorkSteps = [
+  {
+    number: 1,
+    title: "Lot Evaluation & Planning",
+    description:
+      "We assess your Brownsville lot for soil, flood zone, utilities, and wind-zone requirements. We discuss your vision, budget, and timeline — no cost, no obligation.",
+  },
+  {
+    number: 2,
+    title: "Custom Design & Engineering",
+    description:
+      "Your home is designed to your specifications with coastal construction standards built in — wind-rated connections, proper drainage, salt-resistant materials. You approve every detail before we start.",
+  },
+  {
+    number: 3,
+    title: "Permitted Construction",
+    description:
+      "We handle all Cameron County permits and build your home phase by phase with regular inspections, progress updates, and a dedicated project manager.",
+  },
+  {
+    number: 4,
+    title: "Final Inspection & Move-In",
+    description:
+      "Your home passes all inspections, receives windstorm certification, and we do a thorough walkthrough. Warranty documentation is activated and you get the keys.",
+  },
+];
+
+const siblingServices = services.filter((s) => s.slug !== "custom-homes");
+---
+
+<ServiceLayout
+  title="Custom Homes in Brownsville, TX | Build on Lot | Tekton Home Solutions"
+  description="Custom home builder in Brownsville, TX — wind-rated coastal construction, flood zone engineering, and build-on-your-lot. Cameron County experts. Call (956) 862-7643."
+  headline='Brownsville Custom Homes — <span class="text-gold">Build on Your Lot</span>'
+  subheadline="Engineered for Cameron County's coastal requirements. Wind-rated construction, flood zone compliance, and fully custom designs. Licensed, insured, and building in Brownsville."
+  serviceSlug="custom-homes"
+  serviceName="Custom Home Building in Brownsville, TX"
+  serviceDescription="Custom home design and construction in Brownsville, Texas. Wind-rated coastal construction, FEMA flood zone engineering, and build-on-your-lot services. Fully permitted and TWIA certified."
+  breadcrumbLabel="Custom Homes"
+  faqs={faqs}
+  painPoints={painPoints}
+  howWeWorkSteps={howWeWorkSteps}
+  backgroundImage="/images/roofing-hero.jpg"
+  areaServed="Brownsville"
+>
+  <!-- Brownsville-specific custom homes content -->
+  <section class="py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            Brownsville Is Growing — Build the Home You Want
+          </h2>
+          <p class="text-text-muted text-lg mb-4">
+            Between SpaceX driving development along the eastern corridor and new residential areas opening up off Paredes Line Rd, Brownsville is experiencing a construction boom. Land is available, prices are competitive compared to the upper Valley, and the opportunity to build exactly what you want on your own lot has never been better.
+          </p>
+          <p class="text-text-muted text-lg mb-4">
+            But building in Brownsville is not like building inland. Cameron County's coastal location requires wind-rated structural connections to meet TWIA standards, engineered foundations that account for flood zone elevations, corrosion-resistant materials that withstand salt air, and drainage systems designed for flat coastal terrain. Cut corners on any of these and you will pay for it — in repairs, insurance problems, or both.
+          </p>
+          <p class="text-text-muted text-lg">
+            We build homes from the ground up with every coastal requirement engineered in from the start. Your foundation, framing, roof, and finishes are all designed for Brownsville's specific conditions. That is the difference between a house that survives its first hurricane season and one that does not.
+          </p>
+          <img
+            src="/images/roofing-work.jpg"
+            alt="Custom home construction in progress in Brownsville, TX"
+            width="800"
+            height="533"
+            class="rounded-xl mt-6"
+            loading="lazy"
+          />
+        </div>
+        <div class="bg-bg-surface border border-border rounded-xl p-8">
+          <h3 class="text-xl font-semibold mb-4">Brownsville Custom Home Services</h3>
+          <ul class="space-y-3">
+            {[
+              "Fully custom home design and construction",
+              "Build-on-your-lot services",
+              "Wind-rated TWIA-compliant construction",
+              "Flood zone foundation engineering",
+              "Salt air corrosion-resistant materials",
+              "Energy-efficient building systems",
+              "Outdoor living — pools, kitchens, patios",
+            ].map((item) => (
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-gold shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-text-muted">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Other services in Brownsville -->
+  <section class="py-16 md:py-20 bg-bg-surface">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-center mb-6">
+        Other Services in Brownsville
+      </h2>
+      <div class="grid sm:grid-cols-3 gap-4 max-w-2xl mx-auto">
+        {siblingServices.map((s) => (
+          <a
+            href={`/brownsville/${s.slug}/`}
+            class="bg-bg-elevated border border-border rounded-lg px-4 py-3 text-center hover:border-gold hover:text-gold transition-colors"
+          >
+            {s.name}
+          </a>
+        ))}
+      </div>
+      <p class="text-center mt-4">
+        <a href="/brownsville/" class="text-gold hover:text-gold-light text-sm">
+          ← All Brownsville services
+        </a>
+      </p>
+    </div>
+  </section>
+</ServiceLayout>

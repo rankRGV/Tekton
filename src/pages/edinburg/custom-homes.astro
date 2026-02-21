@@ -1,0 +1,175 @@
+---
+import ServiceLayout from "../../layouts/ServiceLayout.astro";
+import { services } from "../../data/services";
+
+const faqs = [
+  {
+    question: "Where are the best areas to build a custom home in Edinburg?",
+    answer:
+      "North Edinburg is where most of the growth is happening — available lots along Trenton Road, north of Chapin, and in newer developments near the UTRGV campus. We also see families building on larger parcels in rural north Hidalgo County just outside Edinburg city limits. We help you evaluate lots for soil, drainage, and utility access before you commit.",
+  },
+  {
+    question: "How much does it cost to build a custom home in Edinburg, TX?",
+    answer:
+      "Custom homes in Edinburg typically range from $150 to $250+ per square foot depending on finishes, lot preparation, and complexity. A 2,000 sq ft home might start around $300,000, while a fully custom 3,500 sq ft home with premium finishes could be $700,000+. We provide a detailed, transparent estimate after the design phase.",
+  },
+  {
+    question: "Can you build on my own lot in Edinburg?",
+    answer:
+      "Absolutely — build-on-your-lot is one of our core services. If you already own land in or around Edinburg, we handle everything from soil testing and site prep to final walkthrough. If you're still looking for land, we can advise on lot selection based on soil conditions, drainage, and access to utilities.",
+  },
+  {
+    question: "How is UTRGV growth affecting custom home building in Edinburg?",
+    answer:
+      "UTRGV has transformed Edinburg's real estate market. Demand for quality housing — from faculty homes to family properties near campus — has driven new development north of the university. More families want to be close to the economic growth UTRGV brings while still having a custom-built home on a real lot, not a cookie-cutter tract home.",
+  },
+  {
+    question: "How long does it take to build a custom home in Edinburg?",
+    answer:
+      "Most custom homes in Edinburg take 8 to 14 months from breaking ground to move-in, depending on size and complexity. The design and permitting phase adds 4 to 8 weeks before construction starts. We give you a detailed schedule and keep you updated throughout the entire build.",
+  },
+];
+
+const painPoints = [
+  {
+    title: "\"Every builder we talked to just showed us the same cookie-cutter floor plans\"",
+    description:
+      "That's production home building, not custom home building. We start with your lifestyle — how you cook, how you entertain, where your kids do homework — and design a home around that. Your Edinburg home should be yours, not a copy of everyone else's.",
+  },
+  {
+    title: "\"We bought a lot in north Edinburg but don't know where to start\"",
+    description:
+      "That's exactly where we come in. We evaluate your lot for soil conditions, drainage, setbacks, and utility access. Then we design a home that fits the land and your budget. One company handles everything from dirt to doorknobs.",
+  },
+  {
+    title: "\"The builder kept hitting us with change orders that weren't in the original quote\"",
+    description:
+      "Change order abuse is how bad builders make their real money. Our contracts are detailed and transparent. You know exactly what's included, what things cost, and what happens if you want to make changes. No surprises on your Edinburg build.",
+  },
+  {
+    title: "\"We want quality but we're not building a mansion\"",
+    description:
+      "Custom doesn't mean extravagant. Some of our best Edinburg builds are modest homes with smart layouts, quality materials, and energy-efficient systems. A 1,800 sq ft home built right beats a 3,000 sq ft home built cheap — every time.",
+  },
+];
+
+const howWeWorkSteps = [
+  {
+    number: 1,
+    title: "Design Consultation & Lot Evaluation",
+    description:
+      "We discuss your vision, evaluate your Edinburg lot (or help you find one), and start the design process. Budget, timeline, and lifestyle drive every decision.",
+  },
+  {
+    number: 2,
+    title: "Plans, Permits & Pre-Construction",
+    description:
+      "Final plans, engineering, City of Edinburg permits, and HOA approvals if applicable. Everything is locked in before we break ground.",
+  },
+  {
+    number: 3,
+    title: "Construction",
+    description:
+      "Foundation, framing, mechanical, finishes — our project manager coordinates every trade and keeps your build on schedule. You get regular updates and site visits.",
+  },
+  {
+    number: 4,
+    title: "Final Walkthrough & Move-In",
+    description:
+      "We walk through every room together, address any punch list items, and hand you the keys to your new Edinburg home. Warranty coverage begins immediately.",
+  },
+];
+
+const siblingServices = services.filter((s) => s.slug !== "custom-homes");
+---
+
+<ServiceLayout
+  title="Custom Homes in Edinburg, TX | Build on Your Lot | Tekton Home Solutions"
+  description="Custom home builder in Edinburg, TX — build on your lot, fully custom designs. North Edinburg lots available. Licensed & insured. Call (956) 862-7643."
+  headline='Edinburg Custom Homes — <span class="text-gold">Build on Your Lot</span>'
+  subheadline="North Edinburg is booming. Build a fully custom home on your own lot — not a cookie-cutter tract house. From design to move-in, one team handles everything."
+  serviceSlug="custom-homes"
+  serviceName="Custom Home Building in Edinburg, TX"
+  serviceDescription="Custom home design and construction in Edinburg, Texas. Build on your lot with fully custom floor plans, premium materials, and transparent pricing. Serving north Edinburg and all of Hidalgo County."
+  breadcrumbLabel="Custom Homes"
+  faqs={faqs}
+  painPoints={painPoints}
+  howWeWorkSteps={howWeWorkSteps}
+  backgroundImage="/images/roofing-hero.jpg"
+  areaServed="Edinburg"
+>
+  <!-- Edinburg-specific custom homes content -->
+  <section class="py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            North Edinburg Is Where the Valley Is Building
+          </h2>
+          <p class="text-text-muted text-lg mb-4">
+            Edinburg's growth is undeniable. UTRGV has brought economic energy, new families, and demand for quality housing that the county seat hasn't seen before. Available lots along Trenton Road, north of Chapin, and in the areas surrounding the university are being snapped up by families who want something better than a production home.
+          </p>
+          <p class="text-text-muted text-lg mb-4">
+            Building custom in Edinburg means your home is designed for your family — not for the builder's profit margin. We start with how you live: open kitchen or separate? Home office or flex room? Covered patio for entertaining or low-maintenance yard? Every decision is yours, guided by our experience building homes across Hidalgo County.
+          </p>
+          <p class="text-text-muted text-lg">
+            And because Tekton also does roofing, pools, and remodeling, we think about your home as a complete property from day one. We plan for a future pool, wire for outdoor kitchens, and build roof systems rated for the hail corridor — all during initial construction, when it's cheapest and easiest to do right.
+          </p>
+          <img
+            src="/images/roofing-work.jpg"
+            alt="Custom home construction in progress in Edinburg, TX"
+            width="800"
+            height="533"
+            class="rounded-xl mt-6"
+            loading="lazy"
+          />
+        </div>
+        <div class="bg-bg-surface border border-border rounded-xl p-8">
+          <h3 class="text-xl font-semibold mb-4">Edinburg Custom Home Services</h3>
+          <ul class="space-y-3">
+            {[
+              "Fully custom floor plans — designed around your lifestyle",
+              "Build on your lot — anywhere in Edinburg or Hidalgo County",
+              "Lot evaluation and site preparation",
+              "Energy-efficient construction and insulation",
+              "Premium finishes — cabinets, countertops, flooring, fixtures",
+              "Outdoor living design — patios, pools, outdoor kitchens",
+              "Transparent pricing with no change order surprises",
+            ].map((item) => (
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-gold shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-text-muted">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Other services in Edinburg -->
+  <section class="py-16 md:py-20 bg-bg-surface">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-center mb-6">
+        Other Services in Edinburg
+      </h2>
+      <div class="grid sm:grid-cols-3 gap-4 max-w-2xl mx-auto">
+        {siblingServices.map((s) => (
+          <a
+            href={`/edinburg/${s.slug}/`}
+            class="bg-bg-elevated border border-border rounded-lg px-4 py-3 text-center hover:border-gold hover:text-gold transition-colors"
+          >
+            {s.name}
+          </a>
+        ))}
+      </div>
+      <p class="text-center mt-4">
+        <a href="/edinburg/" class="text-gold hover:text-gold-light text-sm">
+          ← All Edinburg services
+        </a>
+      </p>
+    </div>
+  </section>
+</ServiceLayout>

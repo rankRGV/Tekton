@@ -1,0 +1,175 @@
+---
+import ServiceLayout from "../../layouts/ServiceLayout.astro";
+import { services } from "../../data/services";
+
+const faqs = [
+  {
+    question: "What areas in Harlingen have available lots for custom home construction?",
+    answer:
+      "The strongest growth areas for custom home builds in Harlingen are along Ed Carey Drive heading toward San Benito, the developing subdivisions off Loop 499, and scattered infill lots throughout established neighborhoods. Some larger acreage parcels are also available on the outskirts toward La Feria. We evaluate any lot you are considering for soil conditions, flood zone status, utility access, and setback requirements before you commit.",
+  },
+  {
+    question: "Does Harlingen require windstorm certification for new home construction?",
+    answer:
+      "Yes. Harlingen is in Cameron County, which falls within the TWIA catastrophe area. Every new home must meet Texas Windstorm Insurance Association standards for wind-rated construction — engineered roof-to-wall connections, impact-rated windows or shutters, and reinforced garage doors. We build to these standards from the foundation up and handle the WPI-8 certification so your home is fully insurable from day one.",
+  },
+  {
+    question: "How long does it take to build a custom home in Harlingen?",
+    answer:
+      "Most custom homes in Harlingen take 8 to 14 months from breaking ground to move-in, depending on size and complexity. Permitting through the City of Harlingen typically takes 3 to 6 weeks. We provide a detailed construction schedule before you commit and keep you updated through every phase with regular progress reports.",
+  },
+  {
+    question: "Are there flood zone concerns for building in Harlingen?",
+    answer:
+      "Some areas of Harlingen — particularly properties near the Arroyo Colorado and in lower-lying sections of the city — fall within FEMA-designated flood zones. This does not prevent building, but it requires elevated foundations, specific drainage engineering, and compliance with floodplain regulations. We check FEMA maps for every lot before design begins and engineer accordingly.",
+  },
+  {
+    question: "Can you build a custom home on a lot I already own in Harlingen?",
+    answer:
+      "Absolutely — build-on-your-lot is one of our most popular services in Harlingen. We evaluate your lot for soil conditions, flood zone status, utility access, and setback requirements, then design a home that maximizes your property. Whether it is a half-acre lot off Loop 499 or an infill parcel in an established neighborhood, we work with what you have.",
+  },
+];
+
+const painPoints = [
+  {
+    title: "\"I've been looking at tract homes off Ed Carey but nothing fits what we actually want\"",
+    description:
+      "Production builders offer limited floor plans with limited upgrades — take it or leave it. A custom home means you choose the layout, the finishes, the lot orientation, and the outdoor living space. You are not adapting your family to a builder's template. The home is designed around how you actually live.",
+  },
+  {
+    title: "\"The builder we talked to didn't mention windstorm certification\"",
+    description:
+      "That is a serious red flag in Cameron County. Every new home in Harlingen must meet TWIA wind-resistance standards to qualify for windstorm insurance. We engineer for it from the foundation up — roof-to-wall connections, impact-rated openings, reinforced framing — and handle the WPI-8 certification. Your home is insurable from day one.",
+  },
+  {
+    title: "\"I found a lot but I'm not sure if it's buildable\"",
+    description:
+      "We evaluate lots before you break ground — soil testing, flood zone verification, utility access, setback requirements, and drainage assessment. If there are issues, we tell you before you spend money on design. If it is a good lot, we tell you exactly how to maximize it.",
+  },
+  {
+    title: "\"Custom home quotes are all over the map — I can't compare anything\"",
+    description:
+      "Vague bids make comparison impossible and lead to surprise change orders. We provide a detailed, fixed-price contract with every material, fixture, and finish specified. You know the cost before construction starts, and it does not change unless you request a change.",
+  },
+];
+
+const howWeWorkSteps = [
+  {
+    number: 1,
+    title: "Lot Evaluation & Planning",
+    description:
+      "We assess your Harlingen lot for soil, flood zone, utilities, and wind-zone requirements. We discuss your vision, budget, and timeline — no cost, no obligation.",
+  },
+  {
+    number: 2,
+    title: "Custom Design & Engineering",
+    description:
+      "Your home is designed to your specifications with Cameron County construction standards built in — wind-rated connections, proper drainage, humidity-resistant materials. You approve every detail before we start.",
+  },
+  {
+    number: 3,
+    title: "Permitted Construction",
+    description:
+      "We handle all City of Harlingen and Cameron County permits and build your home phase by phase with regular inspections, progress updates, and a dedicated project manager.",
+  },
+  {
+    number: 4,
+    title: "Final Inspection & Move-In",
+    description:
+      "Your home passes all city and county inspections, receives windstorm certification, and we do a thorough walkthrough. Warranty documentation is activated and you get the keys.",
+  },
+];
+
+const siblingServices = services.filter((s) => s.slug !== "custom-homes");
+---
+
+<ServiceLayout
+  title="Custom Homes in Harlingen, TX | Build on Lot | Tekton Home Solutions"
+  description="Custom home builder in Harlingen, TX — wind-rated construction, build-on-your-lot, and Cameron County permitting expertise. Free lot evaluation. Call (956) 862-7643."
+  headline='Harlingen Custom Homes — <span class="text-gold">Build on Your Lot</span>'
+  subheadline="Custom-designed for your lot and your life. Wind-rated construction, Cameron County code expertise, and homes built to your specifications — not a production builder's template. Licensed and insured."
+  serviceSlug="custom-homes"
+  serviceName="Custom Home Building in Harlingen, TX"
+  serviceDescription="Custom home design and construction in Harlingen, Texas. Wind-rated construction, FEMA flood zone engineering, build-on-your-lot services, and full Cameron County permitting. TWIA certified."
+  breadcrumbLabel="Custom Homes"
+  faqs={faqs}
+  painPoints={painPoints}
+  howWeWorkSteps={howWeWorkSteps}
+  backgroundImage="/images/roofing-hero.jpg"
+  areaServed="Harlingen"
+>
+  <!-- Harlingen-specific custom homes content -->
+  <section class="py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            Build the Home Harlingen's Tract Builders Cannot Offer
+          </h2>
+          <p class="text-text-muted text-lg mb-4">
+            Harlingen is growing steadily, with new subdivisions appearing along Ed Carey Drive and Loop 499 every year. But most of that growth is production homes — the same five floor plans, the same builder-grade finishes, the same compromises. If you want a home designed around your family instead of a builder's profit margin, custom construction is the answer.
+          </p>
+          <p class="text-text-muted text-lg mb-4">
+            Building custom in Harlingen means accounting for Cameron County's specific requirements. Wind-rated structural connections for TWIA certification, foundations engineered for local soil conditions, drainage systems designed for flat mid-Valley terrain, and materials that withstand the humidity that quietly destroys homes built with cheap components. We handle all of this as part of our standard build process — it is not an upgrade or an add-on.
+          </p>
+          <p class="text-text-muted text-lg">
+            Harlingen's mid-Valley position gives you access to everything the region offers — Valley International Airport five minutes away, McAllen thirty-five minutes west, the coast under an hour east — with a cost of living and lot prices that remain more affordable than the upper Valley. Your custom home investment goes further here, and we make sure the construction quality matches the opportunity.
+          </p>
+          <img
+            src="/images/roofing-work.jpg"
+            alt="Custom home construction in progress in Harlingen, TX"
+            width="800"
+            height="533"
+            class="rounded-xl mt-6"
+            loading="lazy"
+          />
+        </div>
+        <div class="bg-bg-surface border border-border rounded-xl p-8">
+          <h3 class="text-xl font-semibold mb-4">Harlingen Custom Home Services</h3>
+          <ul class="space-y-3">
+            {[
+              "Fully custom home design and construction",
+              "Build-on-your-lot services",
+              "Wind-rated TWIA-compliant construction",
+              "Flood zone foundation engineering",
+              "Humidity-resistant materials and finishes",
+              "Energy-efficient building systems",
+              "Outdoor living — pools, kitchens, patios",
+            ].map((item) => (
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-gold shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-text-muted">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Other services in Harlingen -->
+  <section class="py-16 md:py-20 bg-bg-surface">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-center mb-6">
+        Other Services in Harlingen
+      </h2>
+      <div class="grid sm:grid-cols-3 gap-4 max-w-2xl mx-auto">
+        {siblingServices.map((s) => (
+          <a
+            href={`/harlingen/${s.slug}/`}
+            class="bg-bg-elevated border border-border rounded-lg px-4 py-3 text-center hover:border-gold hover:text-gold transition-colors"
+          >
+            {s.name}
+          </a>
+        ))}
+      </div>
+      <p class="text-center mt-4">
+        <a href="/harlingen/" class="text-gold hover:text-gold-light text-sm">
+          ← All Harlingen services
+        </a>
+      </p>
+    </div>
+  </section>
+</ServiceLayout>

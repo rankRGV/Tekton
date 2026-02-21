@@ -1,0 +1,175 @@
+---
+import ServiceLayout from "../../layouts/ServiceLayout.astro";
+import { services } from "../../data/services";
+
+const faqs = [
+  {
+    question: "What challenges come with remodeling older Brownsville homes near Central Blvd?",
+    answer:
+      "Many homes in historic downtown Brownsville and the Central Blvd area were built in the 1940s through 1960s. They often have outdated electrical panels, galvanized steel plumbing that's corroding, and load-bearing walls that limit open floor plans. We assess the full scope before quoting — no surprises behind the drywall — and bring these homes up to modern Cameron County code while preserving their character.",
+  },
+  {
+    question: "Do you use humidity-resistant materials for Brownsville remodels?",
+    answer:
+      "Absolutely — it's non-negotiable in Brownsville. We use moisture-resistant drywall in bathrooms and kitchens, mold-resistant insulation, PVC or composite trim instead of wood in high-humidity areas, and properly sealed tile installations. Brownsville's average humidity is significantly higher than inland cities, so standard materials fail faster here.",
+  },
+  {
+    question: "How long does a typical kitchen remodel take in Brownsville?",
+    answer:
+      "A full kitchen remodel in Brownsville typically takes 4 to 8 weeks depending on scope. If we're moving plumbing or electrical — common in older Cameron County homes — add time for permits and inspections. We give you a realistic timeline upfront and keep you updated throughout the project.",
+  },
+  {
+    question: "Can you open up the floor plan in my older Brownsville home?",
+    answer:
+      "Usually, yes. Many older Brownsville homes have walls that appear structural but can be replaced with engineered beams. We evaluate your home's framing, determine which walls are load-bearing, and design an open layout that's structurally sound. This is one of the most-requested upgrades we do in the Central Blvd and downtown Brownsville areas.",
+  },
+  {
+    question: "Does Tekton handle permits for Brownsville remodeling projects?",
+    answer:
+      "Yes — we handle all City of Brownsville and Cameron County permits. For projects involving electrical, plumbing, or structural changes, permits are required and we manage the entire process including scheduling inspections. You never have to visit the permit office.",
+  },
+];
+
+const painPoints = [
+  {
+    title: "\"Our contractor gutted the kitchen and then disappeared for three weeks\"",
+    description:
+      "The most common remodeling horror story in Brownsville. We assign a dedicated project manager, set a clear schedule, and keep crews on your job — not bouncing between five projects across Cameron County.",
+  },
+  {
+    title: "\"The bathroom remodel already has mold after two years\"",
+    description:
+      "Brownsville's coastal humidity destroys cheap materials fast. We use moisture-resistant drywall, mold-resistant insulation, and proper ventilation in every wet area. Your remodel lasts because we build for Brownsville's climate — not some generic spec.",
+  },
+  {
+    title: "\"Every wall I open has a surprise behind it\"",
+    description:
+      "Older homes near Central Blvd and downtown Brownsville are full of hidden issues — knob-and-tube wiring, corroded galvanized pipes, termite damage. We do a thorough assessment before starting and budget for the unknowns so you're not blindsided.",
+  },
+  {
+    title: "\"I want to modernize but keep the character of my older home\"",
+    description:
+      "Many Brownsville homes have architectural details worth saving. We blend modern function — open layouts, updated kitchens, new bathrooms — with the character of your original home. You get a house that works for how you live today without losing what makes it special.",
+  },
+];
+
+const howWeWorkSteps = [
+  {
+    number: 1,
+    title: "Free In-Home Consultation",
+    description:
+      "We visit your Brownsville home, assess the current condition, discuss your goals, and identify any hidden issues. No cost, no obligation.",
+  },
+  {
+    number: 2,
+    title: "Design & Detailed Estimate",
+    description:
+      "You get a design plan and a line-item quote. We flag potential issues in older construction and build contingency into the budget so there are no surprise change orders.",
+  },
+  {
+    number: 3,
+    title: "Permitted Construction",
+    description:
+      "We pull all City of Brownsville permits, manage inspections, and execute the remodel with humidity-resistant materials rated for Cameron County's coastal climate.",
+  },
+  {
+    number: 4,
+    title: "Final Walkthrough",
+    description:
+      "We walk through every detail with you, make sure everything meets your expectations, and hand over warranty documentation. Your remodeled space is ready to enjoy.",
+  },
+];
+
+const siblingServices = services.filter((s) => s.slug !== "remodeling");
+---
+
+<ServiceLayout
+  title="Remodeling in Brownsville, TX | Kitchen & Bath | Tekton Home Solutions"
+  description="Brownsville remodeling contractor — kitchens, bathrooms, and whole-home renovations. Humidity-resistant materials for coastal homes. Free estimates. Call (956) 862-7643."
+  headline='Brownsville Remodeling — <span class="text-gold">Kitchen & Bath Experts</span>'
+  subheadline="From historic downtown homes to modern builds. Humidity-resistant materials, expert craftsmanship, and full permits handled. Licensed and insured in Cameron County."
+  serviceSlug="remodeling"
+  serviceName="Remodeling in Brownsville, TX"
+  serviceDescription="Professional home remodeling services in Brownsville, Texas including kitchen remodels, bathroom renovations, and whole-home updates. Humidity-resistant materials for coastal Cameron County homes."
+  breadcrumbLabel="Remodeling"
+  faqs={faqs}
+  painPoints={painPoints}
+  howWeWorkSteps={howWeWorkSteps}
+  backgroundImage="/images/roofing-hero.jpg"
+  areaServed="Brownsville"
+>
+  <!-- Brownsville-specific remodeling content -->
+  <section class="py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            Brownsville Homes Deserve a Modern Upgrade
+          </h2>
+          <p class="text-text-muted text-lg mb-4">
+            Brownsville has some of the most character-rich homes in the Rio Grande Valley — from the historic bungalows near Central Blvd to mid-century ranch homes throughout older Cameron County neighborhoods. But decades of Gulf coast humidity, outdated plumbing, and cramped floor plans mean these homes need more than cosmetic fixes.
+          </p>
+          <p class="text-text-muted text-lg mb-4">
+            We specialize in bringing older Brownsville homes into the present without erasing what makes them worth keeping. That means opening up closed-off floor plans with engineered beams, replacing corroded galvanized plumbing with PEX, upgrading electrical panels to handle modern loads, and installing humidity-resistant materials that actually survive Brownsville's coastal climate.
+          </p>
+          <p class="text-text-muted text-lg">
+            As a company that also builds custom homes from the ground up, we bring structural expertise to every remodel. We know what is behind your walls because we build walls for a living. That knowledge means fewer surprises, better solutions, and a remodel that lasts.
+          </p>
+          <img
+            src="/images/roofing-work.jpg"
+            alt="Kitchen remodel in progress at a Brownsville, TX home"
+            width="800"
+            height="533"
+            class="rounded-xl mt-6"
+            loading="lazy"
+          />
+        </div>
+        <div class="bg-bg-surface border border-border rounded-xl p-8">
+          <h3 class="text-xl font-semibold mb-4">Brownsville Remodeling Services</h3>
+          <ul class="space-y-3">
+            {[
+              "Full kitchen remodels — cabinets, counters, layout",
+              "Bathroom renovations with humidity-resistant materials",
+              "Open floor plan conversions",
+              "Plumbing and electrical upgrades for older homes",
+              "Flooring — tile, luxury vinyl, hardwood",
+              "Interior and exterior painting",
+              "Whole-home renovations and additions",
+            ].map((item) => (
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-gold shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-text-muted">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Other services in Brownsville -->
+  <section class="py-16 md:py-20 bg-bg-surface">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-center mb-6">
+        Other Services in Brownsville
+      </h2>
+      <div class="grid sm:grid-cols-3 gap-4 max-w-2xl mx-auto">
+        {siblingServices.map((s) => (
+          <a
+            href={`/brownsville/${s.slug}/`}
+            class="bg-bg-elevated border border-border rounded-lg px-4 py-3 text-center hover:border-gold hover:text-gold transition-colors"
+          >
+            {s.name}
+          </a>
+        ))}
+      </div>
+      <p class="text-center mt-4">
+        <a href="/brownsville/" class="text-gold hover:text-gold-light text-sm">
+          ← All Brownsville services
+        </a>
+      </p>
+    </div>
+  </section>
+</ServiceLayout>

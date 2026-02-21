@@ -1,0 +1,175 @@
+---
+import ServiceLayout from "../../layouts/ServiceLayout.astro";
+import { services } from "../../data/services";
+
+const faqs = [
+  {
+    question: "What does Edinburg's soil mean for pool construction?",
+    answer:
+      "Edinburg has expansive clay soil that swells when wet and shrinks when dry — a common issue across north Hidalgo County. A pool built without accounting for these conditions will crack. We engineer every gunite pool with reinforced steel, proper drainage, and compacted fill specifically for Edinburg's ground conditions.",
+  },
+  {
+    question: "How long does it take to build a pool in Edinburg?",
+    answer:
+      "Most custom gunite pools in Edinburg take 6 to 10 weeks from excavation to swim day. Timeline depends on size, features, and permitting. We keep you updated throughout and don't juggle your project with five other jobs — your build stays on schedule.",
+  },
+  {
+    question: "Do Edinburg subdivisions require permits or HOA approval for pools?",
+    answer:
+      "Yes — the City of Edinburg requires building permits for pool construction, and many newer subdivisions north of Trenton Road have HOA rules about pool placement, fencing, and equipment screening. We handle all permits and HOA submissions as part of the project.",
+  },
+  {
+    question: "Can you build a pool in a new Edinburg subdivision backyard?",
+    answer:
+      "Absolutely. Many of Edinburg's newer subdivisions have standard lot sizes that work perfectly for custom pools. We design pools to maximize your usable backyard space — even on tighter lots near the UTRGV area. We've fit beautiful pools into backyards other builders said were too small.",
+  },
+  {
+    question: "Do you offer pool financing in Edinburg?",
+    answer:
+      "Yes — we offer financing options so Edinburg homeowners can start enjoying their pool without paying everything upfront. Custom gunite pools typically range from $35,000 to $80,000+ depending on size and features. We walk you through options during your free design consultation.",
+  },
+];
+
+const painPoints = [
+  {
+    title: "\"The pool company took our money and kept pushing the start date back\"",
+    description:
+      "Edinburg homeowners are tired of pool builders who collect deposits and then disappear for weeks. Our crews are dedicated to your project. We give you a real timeline and stick to it — most Edinburg pools are complete in 6 to 10 weeks.",
+  },
+  {
+    title: "\"Our neighbors' pool cracked after two years\"",
+    description:
+      "That happens when builders don't engineer for Edinburg's clay soil. We reinforce every pool shell with the right steel schedule and drainage system for north Hidalgo County ground conditions. Our pools are built to last decades, not just past the warranty period.",
+  },
+  {
+    title: "\"We just moved into a new subdivision and the backyard is tiny\"",
+    description:
+      "New Edinburg subdivisions have standard lots, but that doesn't mean you can't have a pool. Gunite pools are fully custom — we design to any shape and size. A well-designed plunge pool or cocktail pool can transform even a compact backyard.",
+  },
+  {
+    title: "\"I got three quotes and none of them included the same things\"",
+    description:
+      "That's by design — vague quotes let builders hit you with change orders later. Our estimate is detailed and line-item. You know exactly what's included before we break ground at your Edinburg property. No surprises.",
+  },
+];
+
+const howWeWorkSteps = [
+  {
+    number: 1,
+    title: "Free Design Consultation",
+    description:
+      "We visit your Edinburg home, measure the yard, discuss your vision, and create a pool design that fits your property, lifestyle, and budget.",
+  },
+  {
+    number: 2,
+    title: "Permits & Approvals",
+    description:
+      "We pull all City of Edinburg permits and handle HOA paperwork if needed. You approve the final design and we lock in your build date.",
+  },
+  {
+    number: 3,
+    title: "Construction",
+    description:
+      "Excavation, steel, plumbing, gunite, tile, coping, decking, and equipment — all coordinated by our project manager. Weekly updates throughout the build.",
+  },
+  {
+    number: 4,
+    title: "Startup & Walkthrough",
+    description:
+      "We fill your pool, balance the water chemistry, test all equipment, and walk you through everything. Your Edinburg backyard is officially swim-ready.",
+  },
+];
+
+const siblingServices = services.filter((s) => s.slug !== "pools");
+---
+
+<ServiceLayout
+  title="Pool Builder in Edinburg, TX | Custom Gunite | Tekton Home Solutions"
+  description="Custom pool builder in Edinburg, TX — gunite inground pools, spas, and outdoor living. Free design consultation. Licensed & insured. Call (956) 862-7643."
+  headline='Edinburg Pool Builder — <span class="text-gold">Custom Gunite Pools</span>'
+  subheadline="Engineered for Edinburg's soil and built for year-round swimming. Custom inground pools, spas, and outdoor living spaces designed for new subdivision backyards and established neighborhoods alike."
+  serviceSlug="pools"
+  serviceName="Pool Construction in Edinburg, TX"
+  serviceDescription="Custom inground pool design and construction in Edinburg, Texas. Gunite pools, spas, water features, outdoor kitchens, and complete backyard transformations engineered for north Hidalgo County soil."
+  breadcrumbLabel="Pool Construction"
+  faqs={faqs}
+  painPoints={painPoints}
+  howWeWorkSteps={howWeWorkSteps}
+  backgroundImage="/images/roofing-hero.jpg"
+  areaServed="Edinburg"
+>
+  <!-- Edinburg-specific pool content -->
+  <section class="py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            Edinburg Is Growing — Your Backyard Should Keep Up
+          </h2>
+          <p class="text-text-muted text-lg mb-4">
+            Edinburg is one of the fastest-growing cities in the RGV. New subdivisions are going up north of Trenton Road, around the UTRGV campus, and along the Sugar Road corridor. Families are moving in — and they want backyards that actually get used. A custom pool turns a standard subdivision lot into the place your family wants to be.
+          </p>
+          <p class="text-text-muted text-lg mb-4">
+            But building a pool in Edinburg requires a builder who understands north Hidalgo County soil. The expansive clay here swells and contracts with moisture changes, putting enormous stress on a pool shell. We engineer every gunite pool with the proper steel reinforcement, drainage, and compaction to handle these conditions. Our pools don't crack because we build them for the ground they sit in.
+          </p>
+          <p class="text-text-muted text-lg">
+            And because Tekton also builds custom homes and handles full remodels, your pool project gets coordinated with everything else — electrical, gas lines, drainage grading, outdoor kitchens. One company, one point of contact, zero finger-pointing between contractors.
+          </p>
+          <img
+            src="/images/roofing-work.jpg"
+            alt="Pool construction in progress at an Edinburg, TX home"
+            width="800"
+            height="533"
+            class="rounded-xl mt-6"
+            loading="lazy"
+          />
+        </div>
+        <div class="bg-bg-surface border border-border rounded-xl p-8">
+          <h3 class="text-xl font-semibold mb-4">Edinburg Pool Services</h3>
+          <ul class="space-y-3">
+            {[
+              "Custom gunite (concrete) inground pools",
+              "Spas and hot tubs (standalone or attached)",
+              "Tanning ledges and sun shelves",
+              "Water features — waterfalls, bubblers, scuppers",
+              "Pool decking and coping",
+              "Outdoor kitchens and pergolas",
+              "LED lighting and automation systems",
+            ].map((item) => (
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-gold shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-text-muted">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Other services in Edinburg -->
+  <section class="py-16 md:py-20 bg-bg-surface">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-center mb-6">
+        Other Services in Edinburg
+      </h2>
+      <div class="grid sm:grid-cols-3 gap-4 max-w-2xl mx-auto">
+        {siblingServices.map((s) => (
+          <a
+            href={`/edinburg/${s.slug}/`}
+            class="bg-bg-elevated border border-border rounded-lg px-4 py-3 text-center hover:border-gold hover:text-gold transition-colors"
+          >
+            {s.name}
+          </a>
+        ))}
+      </div>
+      <p class="text-center mt-4">
+        <a href="/edinburg/" class="text-gold hover:text-gold-light text-sm">
+          ← All Edinburg services
+        </a>
+      </p>
+    </div>
+  </section>
+</ServiceLayout>

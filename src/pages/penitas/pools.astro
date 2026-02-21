@@ -1,0 +1,175 @@
+---
+import ServiceLayout from "../../layouts/ServiceLayout.astro";
+import { services } from "../../data/services";
+
+const faqs = [
+  {
+    question: "Is it hard to find a pool builder who will work in Penitas?",
+    answer:
+      "It has been — most pool builders in the Valley are based in McAllen or Mission and prioritize jobs closer to home. Tekton serves Penitas and the entire western Hidalgo County corridor as a primary service area. No travel surcharges, no delayed timelines because you are 20 minutes down Expressway 83. Your pool build gets the same priority as any McAllen project.",
+  },
+  {
+    question: "How does caliche soil in Penitas affect pool construction?",
+    answer:
+      "Caliche is a calcium carbonate hardpan common in western Hidalgo County. It makes excavation more difficult and expensive if your builder is not prepared for it. We test soil conditions before quoting so the price reflects reality — no surprise change orders because we 'hit caliche.' Our crews have the right equipment to excavate through it efficiently.",
+  },
+  {
+    question: "What Hidalgo County permits do I need for a pool in Penitas?",
+    answer:
+      "You need a building permit from Hidalgo County, which requires engineered pool plans, a site survey, and compliance with setback and barrier (fencing) requirements. We handle every permit, every inspection, and every piece of paperwork so you never have to visit the county offices.",
+  },
+  {
+    question: "Can I really use a pool year-round in Penitas?",
+    answer:
+      "The western Valley gets the same warm climate as the rest of the RGV — highs above 80 degrees for roughly nine months of the year. Add a heat pump, which we install as part of the build, and you can swim comfortably even in the cooler winter months. A pool in Penitas is not seasonal — it is a lifestyle upgrade you will use almost every day.",
+  },
+  {
+    question: "Do you build pools for the newer homes being built in western Hidalgo County?",
+    answer:
+      "Yes — and newer construction is actually ideal for pool builds. The lots tend to be larger, utility access is straightforward, and we can coordinate the pool design with the home's existing drainage and electrical systems. Many families moving to Penitas for the larger lots specifically want a pool as part of their property.",
+  },
+];
+
+const painPoints = [
+  {
+    title: "\"Pool builders in McAllen keep pushing my project back\"",
+    description:
+      "When you are in Penitas, you are last in line for McAllen-based pool companies. We serve western Hidalgo County as a primary market. Your build stays on schedule because we are not treating your job as a side trip between McAllen projects.",
+  },
+  {
+    title: "\"I got a quote but it didn't mention anything about the soil out here\"",
+    description:
+      "That is a problem waiting to happen. Caliche soil is common in Penitas and western Hidalgo County. It requires different excavation equipment and affects drainage planning. We test your soil before quoting so the number you see is the number you pay.",
+  },
+  {
+    title: "\"Our lot is big enough but I don't know where to start\"",
+    description:
+      "Many Penitas properties have generous lot sizes — one of the reasons people move here. We design your pool to take advantage of your space, coordinate with your home's drainage and utilities, and handle all Hidalgo County permitting. You just tell us how you want to use it.",
+  },
+  {
+    title: "\"I'm worried about the cost being all over the place\"",
+    description:
+      "We give you a detailed, line-item estimate after visiting your property. No vague ranges. No surprise change orders. We also offer financing so you can start enjoying your backyard this year instead of saving for three more summers.",
+  },
+];
+
+const howWeWorkSteps = [
+  {
+    number: 1,
+    title: "Free On-Site Consultation",
+    description:
+      "We visit your Penitas property, measure the yard, test soil conditions for caliche, and assess drainage. We talk through your vision and budget — no cost, no pressure.",
+  },
+  {
+    number: 2,
+    title: "Custom Design & Permits",
+    description:
+      "We create your pool design with proper engineering for western Hidalgo County soil conditions. We handle all county permits and inspections from start to finish.",
+  },
+  {
+    number: 3,
+    title: "Construction",
+    description:
+      "Excavation through caliche, steel, plumbing, gunite, tile, coping, decking, and equipment — all managed by our project team with regular updates throughout the build.",
+  },
+  {
+    number: 4,
+    title: "Startup & Walkthrough",
+    description:
+      "We fill your pool, balance the chemistry, test all equipment, and walk you through maintenance. You are swim-ready with a pool engineered for Penitas conditions.",
+  },
+];
+
+const siblingServices = services.filter((s) => s.slug !== "pools");
+---
+
+<ServiceLayout
+  title="Pool Builder in Penitas, TX | Custom Pools | Tekton Home Solutions"
+  description="Custom pool builder in Penitas, TX — caliche soil expertise, year-round swimming, and full Hidalgo County permits. Serving western Valley. Call (956) 862-7643."
+  headline='Penitas Pool Builder — <span class="text-gold">Custom Pools</span>'
+  subheadline="A pool builder who actually serves western Hidalgo County. Caliche soil expertise, Hidalgo County permits handled, and designs built for year-round Valley swimming. Licensed and insured."
+  serviceSlug="pools"
+  serviceName="Pool Construction in Penitas, TX"
+  serviceDescription="Custom inground pool design and construction in Penitas, Texas. Gunite pools with caliche soil engineering, complete Hidalgo County permitting, and backyard transformations for western Valley homeowners."
+  breadcrumbLabel="Pool Construction"
+  faqs={faqs}
+  painPoints={painPoints}
+  howWeWorkSteps={howWeWorkSteps}
+  backgroundImage="/images/roofing-hero.jpg"
+  areaServed="Penitas"
+>
+  <!-- Penitas-specific pool content -->
+  <section class="py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            Penitas Has the Space and the Weather for a Pool
+          </h2>
+          <p class="text-text-muted text-lg mb-4">
+            One of the biggest reasons families move to Penitas and western Hidalgo County is the space. Lots are larger, neighborhoods are quieter, and your backyard is actually big enough to build something meaningful. Combine that with the Valley's nine-plus months of warm weather, and a custom pool is not a luxury — it is the reason you have a backyard in the first place.
+          </p>
+          <p class="text-text-muted text-lg mb-4">
+            The challenge has always been finding a builder who will treat a Penitas project with the same urgency as one in McAllen. Most pool companies are 20 minutes east on Expressway 83 and treat western Valley jobs as filler between their preferred projects. Tekton is different. We serve Penitas, La Joya, Sullivan City, and Palmview as primary markets because these communities are growing fast and homeowners here deserve quality construction — not leftovers.
+          </p>
+          <p class="text-text-muted text-lg">
+            We also understand the soil. Caliche hardpan is common throughout western Hidalgo County and requires the right excavation equipment and engineering. Builders who do not plan for it end up hitting you with change orders mid-project. We test before we quote so your price reflects reality from day one.
+          </p>
+          <img
+            src="/images/roofing-work.jpg"
+            alt="Custom pool construction in progress at a Penitas, TX home"
+            width="800"
+            height="533"
+            class="rounded-xl mt-6"
+            loading="lazy"
+          />
+        </div>
+        <div class="bg-bg-surface border border-border rounded-xl p-8">
+          <h3 class="text-xl font-semibold mb-4">Penitas Pool Services</h3>
+          <ul class="space-y-3">
+            {[
+              "Custom gunite (concrete) inground pools",
+              "Caliche soil excavation and engineering",
+              "Spas and hot tubs (standalone or attached)",
+              "Water features — waterfalls, bubblers, scuppers",
+              "Pool decking, coping, and drainage systems",
+              "Outdoor kitchens and covered patios",
+              "Full Hidalgo County permitting",
+            ].map((item) => (
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-gold shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-text-muted">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Other services in Penitas -->
+  <section class="py-16 md:py-20 bg-bg-surface">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-center mb-6">
+        Other Services in Penitas
+      </h2>
+      <div class="grid sm:grid-cols-3 gap-4 max-w-2xl mx-auto">
+        {siblingServices.map((s) => (
+          <a
+            href={`/penitas/${s.slug}/`}
+            class="bg-bg-elevated border border-border rounded-lg px-4 py-3 text-center hover:border-gold hover:text-gold transition-colors"
+          >
+            {s.name}
+          </a>
+        ))}
+      </div>
+      <p class="text-center mt-4">
+        <a href="/penitas/" class="text-gold hover:text-gold-light text-sm">
+          ← All Penitas services
+        </a>
+      </p>
+    </div>
+  </section>
+</ServiceLayout>

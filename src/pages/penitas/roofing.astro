@@ -1,0 +1,175 @@
+---
+import ServiceLayout from "../../layouts/ServiceLayout.astro";
+import { services } from "../../data/services";
+
+const faqs = [
+  {
+    question: "Are there reliable roofing contractors that actually serve Penitas?",
+    answer:
+      "Most roofing companies in the Valley are based in McAllen or Edinburg and treat western Hidalgo County as an afterthought. Tekton actively serves Penitas, La Joya, Sullivan City, and Palmview. We don't charge travel fees, we show up on time, and we treat your project with the same priority as a McAllen job. Western Valley homeowners deserve contractors who actually want to be here.",
+  },
+  {
+    question: "How does Penitas's caliche soil affect my roof and foundation?",
+    answer:
+      "Caliche soil is common throughout western Hidalgo County. It expands and contracts with moisture changes, which can cause subtle foundation shifts that stress your roof structure over time — cracked flashing, lifted shingles, and broken seals around vents. We inspect for these signs during every roof evaluation and address the underlying movement, not just the surface symptoms.",
+  },
+  {
+    question: "What Hidalgo County permits are needed for a roof replacement in Penitas?",
+    answer:
+      "Roof replacements in Penitas require a building permit through Hidalgo County. We handle the entire permit process — application, documentation, and inspection scheduling. You do not need to visit the county offices or coordinate anything. We pull the permit, do the work, and make sure it passes inspection.",
+  },
+  {
+    question: "Do you offer free roof inspections in western Hidalgo County?",
+    answer:
+      "Yes — we provide free roof inspections throughout Penitas and the surrounding western Valley communities including La Joya, Sullivan City, and Palmview. We document everything with photos and give you an honest assessment. If your roof has another five years in it, we will tell you that instead of pushing a replacement you do not need.",
+  },
+  {
+    question: "How do Valley storms affect roofs in Penitas specifically?",
+    answer:
+      "Penitas sits in open western Hidalgo County terrain with fewer windbreaks than more developed areas closer to McAllen. That means storm winds hit roofs harder here. We install wind-rated underlayment, use proper nail patterns for high-wind zones, and reinforce ridge caps and edges — the areas most vulnerable to uplift during Valley thunderstorms and tropical weather.",
+  },
+];
+
+const painPoints = [
+  {
+    title: "\"Every roofer I call is in McAllen and won't come out this far\"",
+    description:
+      "Western Hidalgo County gets ignored by most contractors who cluster around McAllen and Edinburg. We serve Penitas as a primary service area — not an afterthought. Same response time, same crew quality, same warranty. No excuses about the 20-minute drive.",
+  },
+  {
+    title: "\"My roof is leaking but I can't get anyone out here for weeks\"",
+    description:
+      "When you are 20 minutes west of McAllen, you fall to the bottom of every contractor's list. We prioritize western Valley calls because we know how underserved this area is. Emergency tarps go up fast. Permanent repairs get scheduled immediately — not 'when we have an opening.'",
+  },
+  {
+    title: "\"The last guy didn't pull a permit and now I have issues\"",
+    description:
+      "Unpermitted roof work causes real problems — insurance claims get denied, home sales get delayed, and shoddy work goes uninspected. We pull Hidalgo County permits on every job and make sure your roof passes inspection. No shortcuts.",
+  },
+  {
+    title: "\"I don't know if the damage is from the storm or just old age\"",
+    description:
+      "We will tell you honestly. Our free inspection documents every issue with photos and a clear recommendation. If it is storm damage, we help you file the insurance claim. If it is wear, we give you a fair quote to fix it right.",
+  },
+];
+
+const howWeWorkSteps = [
+  {
+    number: 1,
+    title: "Free Penitas Roof Inspection",
+    description:
+      "We come to your Penitas home, inspect the roof for storm damage, wear, and caliche-related stress, and document everything with photos. If there is an insurance claim to file, we flag it immediately.",
+  },
+  {
+    number: 2,
+    title: "Clear Estimate & Permits",
+    description:
+      "You get a detailed, line-item quote — no vague ranges. We handle all Hidalgo County permitting so you never have to visit a county office.",
+  },
+  {
+    number: 3,
+    title: "24-Hour Installation",
+    description:
+      "Our crew arrives on schedule, replaces your roof in a single day using wind-rated materials and proper fastening patterns, and cleans up completely before we leave.",
+  },
+  {
+    number: 4,
+    title: "Inspection & Walkthrough",
+    description:
+      "Your new roof passes Hidalgo County inspection. We walk you through the finished work, explain your warranty, and make sure you are completely satisfied.",
+  },
+];
+
+const siblingServices = services.filter((s) => s.slug !== "roofing");
+---
+
+<ServiceLayout
+  title="Roofing in Penitas, TX | Western Valley | Tekton Home Solutions"
+  description="Penitas roofing contractor — wind-rated roof replacement, storm damage repair, and free inspections. Serving western Hidalgo County. Call (956) 862-7643."
+  headline='Penitas Roofing — <span class="text-gold">Western Valley Strong</span>'
+  subheadline="Finally, a roofing contractor that actually serves western Hidalgo County. Wind-rated materials, Hidalgo County permits handled, and honest inspections. Licensed and insured."
+  serviceSlug="roofing"
+  serviceName="Roofing in Penitas, TX"
+  serviceDescription="Professional roofing services in Penitas, Texas including roof replacement, storm damage repair, and free inspections. Serving Penitas, La Joya, Sullivan City, and Palmview in western Hidalgo County."
+  breadcrumbLabel="Roofing"
+  faqs={faqs}
+  painPoints={painPoints}
+  howWeWorkSteps={howWeWorkSteps}
+  backgroundImage="/images/roofing-hero.jpg"
+  areaServed="Penitas"
+>
+  <!-- Penitas-specific roofing content -->
+  <section class="py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            Western Hidalgo County Deserves Better Roofing
+          </h2>
+          <p class="text-text-muted text-lg mb-4">
+            Penitas is a growing community in western Hidalgo County — about 20 minutes west of McAllen on Expressway 83. New residential development is bringing families to the area for affordable land and a quieter pace of life near La Joya, Sullivan City, and Palmview. But when it comes to finding a quality roofing contractor, most homeowners hit the same wall: nobody wants to drive out here.
+          </p>
+          <p class="text-text-muted text-lg mb-4">
+            That changes with Tekton. We serve Penitas as a primary market because we see what others ignore — a community of homeowners who need and deserve the same quality of work available in McAllen or Edinburg. Our crews work on Penitas roofs regularly, and we understand the specific challenges here: caliche soil that shifts foundations and stresses roof structures, open terrain that exposes roofs to unbroken wind during storms, and newer construction that sometimes cuts corners on materials to hit price points.
+          </p>
+          <p class="text-text-muted text-lg">
+            As a full home solutions company that also builds custom homes and handles remodels, we understand how your roof connects to your entire home system. Proper ventilation, insulation, and structural integrity all matter — especially in the Valley heat. We build roofs that perform, not just roofs that pass.
+          </p>
+          <img
+            src="/images/roofing-work.jpg"
+            alt="Roof replacement on a home in Penitas, TX in western Hidalgo County"
+            width="800"
+            height="533"
+            class="rounded-xl mt-6"
+            loading="lazy"
+          />
+        </div>
+        <div class="bg-bg-surface border border-border rounded-xl p-8">
+          <h3 class="text-xl font-semibold mb-4">Penitas Roofing Services</h3>
+          <ul class="space-y-3">
+            {[
+              "Full roof replacement — done in 24 hours",
+              "Wind-rated shingle and metal systems",
+              "Storm damage repair and insurance claims",
+              "Free roof inspections (no travel fees)",
+              "Caliche soil foundation-stress assessment",
+              "Metal, shingle, tile, and flat roof systems",
+              "Hidalgo County permits handled start to finish",
+            ].map((item) => (
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-gold shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-text-muted">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Other services in Penitas -->
+  <section class="py-16 md:py-20 bg-bg-surface">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-center mb-6">
+        Other Services in Penitas
+      </h2>
+      <div class="grid sm:grid-cols-3 gap-4 max-w-2xl mx-auto">
+        {siblingServices.map((s) => (
+          <a
+            href={`/penitas/${s.slug}/`}
+            class="bg-bg-elevated border border-border rounded-lg px-4 py-3 text-center hover:border-gold hover:text-gold transition-colors"
+          >
+            {s.name}
+          </a>
+        ))}
+      </div>
+      <p class="text-center mt-4">
+        <a href="/penitas/" class="text-gold hover:text-gold-light text-sm">
+          ← All Penitas services
+        </a>
+      </p>
+    </div>
+  </section>
+</ServiceLayout>

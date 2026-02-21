@@ -1,0 +1,175 @@
+---
+import ServiceLayout from "../../layouts/ServiceLayout.astro";
+import { services } from "../../data/services";
+
+const faqs = [
+  {
+    question: "Can you build a custom home on a ranch lot in Starr County?",
+    answer:
+      "Absolutely. We've built on rural and semi-rural lots throughout the Valley. Ranch and acreage properties in Starr County often require well and septic systems, longer utility runs, and access road considerations. We handle all of that — from site prep to final walkthrough.",
+  },
+  {
+    question: "How does caliche soil affect building a custom home in Rio Grande City?",
+    answer:
+      "Caliche is a dense, calcium-rich soil layer common in Starr County. It requires specialized excavation for foundations and utility trenches. The upside is that caliche provides excellent bearing capacity once properly prepared. We engineer every foundation for the specific soil conditions on your lot — no generic plans.",
+  },
+  {
+    question: "Are there custom home builders that serve Rio Grande City?",
+    answer:
+      "Very few quality builders work in the upper Valley. Most focus on McAllen, Edinburg, and the metro area. We bring McAllen-quality construction to Rio Grande City — same materials, same crews, same standards. Your Starr County home gets the same attention as any build in the metro.",
+  },
+  {
+    question: "How much does it cost to build a custom home in Rio Grande City?",
+    answer:
+      "Custom homes in the Rio Grande City area typically range from $150 to $250+ per square foot depending on finishes, features, and lot complexity. Land is often more affordable in Starr County than the metro, which means your overall project cost can be very competitive. We provide a detailed estimate after understanding your vision and evaluating your lot.",
+  },
+  {
+    question: "How long does it take to build a custom home in Starr County?",
+    answer:
+      "Most custom homes take 8 to 14 months from groundbreaking to move-in, depending on size and complexity. Rural lots may add time for utility connections. We set a realistic timeline upfront and keep you updated with regular progress reports throughout the build.",
+  },
+];
+
+const painPoints = [
+  {
+    title: "\"I have land in Starr County but can't find a quality builder\"",
+    description:
+      "Available land is one of Rio Grande City's biggest advantages — but without a quality builder, it just sits there. We build custom homes throughout Starr County and bring the same McAllen-level craftsmanship to every lot.",
+  },
+  {
+    title: "\"Builders won't drive out here, or they charge a premium\"",
+    description:
+      "Distance surcharges are common from metro-area builders. We don't play that game. Rio Grande City is part of our service area — same pricing, same quality, no inflated quotes for the drive.",
+  },
+  {
+    title: "\"I want a nice home but I don't want to live in McAllen\"",
+    description:
+      "You shouldn't have to move to the metro to get a well-built home. We'll build you a custom home on your Starr County property that matches or exceeds the quality of any McAllen subdivision — on your land, on your terms.",
+  },
+  {
+    title: "\"I don't know where to start with building on raw land\"",
+    description:
+      "Raw land requires soil testing, surveys, utility planning, permitting, and site prep before a single wall goes up. We handle all of it. Start with a free lot evaluation and we'll walk you through every step.",
+  },
+];
+
+const howWeWorkSteps = [
+  {
+    number: 1,
+    title: "Free Lot Evaluation",
+    description:
+      "We visit your Starr County property, evaluate the soil and topography, discuss utilities and access, and help you understand what's possible on your land.",
+  },
+  {
+    number: 2,
+    title: "Custom Design & Budget",
+    description:
+      "We work with you to design a home that fits your lifestyle, your lot, and your budget. You get detailed plans and a transparent, line-item cost breakdown.",
+  },
+  {
+    number: 3,
+    title: "Permits & Construction",
+    description:
+      "We handle all Starr County permits, site prep, and construction. Our project manager keeps you informed with regular updates from foundation through finishing.",
+  },
+  {
+    number: 4,
+    title: "Final Walkthrough & Move-In",
+    description:
+      "We walk through every room, every system, every detail. Punch-list items get fixed before you get your keys. Your new Rio Grande City home is ready to live in.",
+  },
+];
+
+const siblingServices = services.filter((s) => s.slug !== "custom-homes");
+---
+
+<ServiceLayout
+  title="Custom Homes in Rio Grande City | Tekton Home Solutions"
+  description="Custom home builder in Rio Grande City, TX — build on your lot in Starr County. McAllen-quality construction. Free lot evaluation. Call (956) 862-7643."
+  headline='Rio Grande City Custom Homes — <span class="text-gold">Built on Your Land</span>'
+  subheadline="McAllen-quality custom homes built on your Starr County lot. From ranch properties to in-town builds. Licensed, insured, and engineered for the land."
+  serviceSlug="custom-homes"
+  serviceName="Custom Home Building in Rio Grande City, TX"
+  serviceDescription="Custom home design and construction in Rio Grande City, Texas. Build on your lot in Starr County with McAllen-quality materials, craftsmanship, and project management."
+  breadcrumbLabel="Custom Homes"
+  faqs={faqs}
+  painPoints={painPoints}
+  howWeWorkSteps={howWeWorkSteps}
+  backgroundImage="/images/roofing-hero.jpg"
+  areaServed="Rio Grande City"
+>
+  <!-- Rio Grande City-specific custom homes content -->
+  <section class="py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            Your Land in Starr County, Our Expertise Building On It
+          </h2>
+          <p class="text-text-muted text-lg mb-4">
+            Starr County has something the McAllen metro is running out of — affordable land. Spacious ranch lots, rural acreage, and in-town properties where you can build exactly the home you want without subdivision restrictions or postage-stamp yards. The opportunity is real.
+          </p>
+          <p class="text-text-muted text-lg mb-4">
+            The challenge has always been finding a builder willing to bring quality construction to the upper Valley. Most custom home builders stay in the metro. We don't. We build in Rio Grande City with the same materials, the same crews, and the same standards as our McAllen custom homes — engineered for Starr County's caliche soil and built to handle the extreme heat.
+          </p>
+          <p class="text-text-muted text-lg">
+            Whether you're building on a ranch property outside town or an in-town lot near the historic downtown, we handle everything — soil engineering, foundation design, utility coordination, permitting, and construction. One company, one point of contact, start to finish.
+          </p>
+          <img
+            src="/images/roofing-work.jpg"
+            alt="Custom home construction in Rio Grande City, TX"
+            width="800"
+            height="533"
+            class="rounded-xl mt-6"
+            loading="lazy"
+          />
+        </div>
+        <div class="bg-bg-surface border border-border rounded-xl p-8">
+          <h3 class="text-xl font-semibold mb-4">Rio Grande City Custom Home Services</h3>
+          <ul class="space-y-3">
+            {[
+              "Fully custom home design and construction",
+              "Build on your lot — ranch, rural, or in-town",
+              "Caliche soil engineering and foundation design",
+              "Well and septic system coordination",
+              "Energy-efficient construction for extreme heat",
+              "Outdoor living — patios, pools, outdoor kitchens",
+              "Smart home wiring and automation",
+            ].map((item) => (
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-gold shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-text-muted">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Other services in Rio Grande City -->
+  <section class="py-16 md:py-20 bg-bg-surface">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-center mb-6">
+        Other Services in Rio Grande City
+      </h2>
+      <div class="grid sm:grid-cols-3 gap-4 max-w-2xl mx-auto">
+        {siblingServices.map((s) => (
+          <a
+            href={`/rio-grande-city/${s.slug}/`}
+            class="bg-bg-elevated border border-border rounded-lg px-4 py-3 text-center hover:border-gold hover:text-gold transition-colors"
+          >
+            {s.name}
+          </a>
+        ))}
+      </div>
+      <p class="text-center mt-4">
+        <a href="/rio-grande-city/" class="text-gold hover:text-gold-light text-sm">
+          ← All Rio Grande City services
+        </a>
+      </p>
+    </div>
+  </section>
+</ServiceLayout>

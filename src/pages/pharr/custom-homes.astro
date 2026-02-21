@@ -1,0 +1,175 @@
+---
+import ServiceLayout from "../../layouts/ServiceLayout.astro";
+import { services } from "../../data/services";
+
+const faqs = [
+  {
+    question: "Where are the best lots to build a custom home in Pharr?",
+    answer:
+      "The Jackson Road corridor and areas south and east of Town Center have available lots suited for custom builds. Some families are also finding larger parcels on the edges of Pharr toward Alamo. We help evaluate lots for soil, drainage, utilities, and setbacks before you buy — so you know exactly what you're working with.",
+  },
+  {
+    question: "How much does a custom home cost in Pharr, TX?",
+    answer:
+      "Custom homes in Pharr typically range from $140 to $240+ per square foot depending on finishes, lot prep, and design complexity. A 1,800 sq ft home might start around $250,000, while a 3,000+ sq ft custom build with premium finishes could reach $600,000+. We provide transparent estimates after the design phase — no hidden costs.",
+  },
+  {
+    question: "Is Pharr a good place to build a custom home?",
+    answer:
+      "Pharr offers real advantages — lower lot costs compared to McAllen, proximity to McAllen amenities and shopping, access to international commerce, and a growing community. You get more home for your money in Pharr without sacrificing location. Property values are trending up as the city grows.",
+  },
+  {
+    question: "Can you build on a lot I already own in Pharr?",
+    answer:
+      "Yes — build-on-your-lot is a core service. We evaluate your Pharr lot for soil conditions, drainage, and utility access, then design a home that fits the land and your budget. If the lot needs prep work — grading, clearing, utility connections — we handle that too.",
+  },
+  {
+    question: "What's the timeline for building a custom home in Pharr?",
+    answer:
+      "Most custom homes in Pharr take 8 to 14 months from ground-breaking to move-in. Design and permitting add 4 to 8 weeks before construction starts. We provide a detailed schedule and keep you updated with regular site visits and progress reports throughout the build.",
+  },
+];
+
+const painPoints = [
+  {
+    title: "\"We want a custom home but can't afford McAllen lot prices\"",
+    description:
+      "Pharr gives you McAllen proximity at lower land costs. Lots near Jackson Road and in Pharr's growth corridors offer real value. Build the custom home you want without overpaying for the dirt it sits on — then enjoy being minutes from everything McAllen offers.",
+  },
+  {
+    title: "\"The production builders all showed us the same five floor plans\"",
+    description:
+      "That's not custom — that's a menu. We design your Pharr home around your family's life. How you cook, where kids do homework, whether you entertain on the patio or in the living room. Your home should reflect you, not a builder's template.",
+  },
+  {
+    title: "\"We've heard horror stories about builders going over budget\"",
+    description:
+      "Budget overruns happen when contracts are vague and change orders pile up. Our estimates are detailed, our contracts are clear, and our process includes regular budget check-ins. You always know where your Pharr build stands financially.",
+  },
+  {
+    title: "\"We want to build but the whole process feels overwhelming\"",
+    description:
+      "That's what we're here for. One company handles everything — lot evaluation, design, permitting, construction, and final walkthrough. You have one point of contact, one schedule, and one team that's accountable for the entire build.",
+  },
+];
+
+const howWeWorkSteps = [
+  {
+    number: 1,
+    title: "Consultation & Lot Evaluation",
+    description:
+      "We discuss your vision, evaluate your Pharr lot (or help you find one), and begin the design process based on your budget and lifestyle.",
+  },
+  {
+    number: 2,
+    title: "Design, Plans & Permits",
+    description:
+      "Final architectural plans, engineering, and City of Pharr permits. Everything is approved and locked in before construction begins.",
+  },
+  {
+    number: 3,
+    title: "Construction",
+    description:
+      "Foundation, framing, mechanical systems, finishes — our project manager coordinates every trade and keeps your Pharr build on schedule with regular updates.",
+  },
+  {
+    number: 4,
+    title: "Walkthrough & Keys",
+    description:
+      "We walk through every room, address punch list items, and hand you the keys. Your warranty coverage begins and you're home.",
+  },
+];
+
+const siblingServices = services.filter((s) => s.slug !== "custom-homes");
+---
+
+<ServiceLayout
+  title="Custom Homes in Pharr, TX | Build on Your Lot | Tekton Home Solutions"
+  description="Custom home builder in Pharr, TX — build on your lot, fully custom designs. McAllen proximity, lower lot costs. Licensed & insured. Call (956) 862-7643."
+  headline='Pharr Custom Homes — <span class="text-gold">Build on Your Lot</span>'
+  subheadline="McAllen amenities, Pharr value. Build a fully custom home on your own lot with transparent pricing, premium materials, and a team that handles everything from design to move-in."
+  serviceSlug="custom-homes"
+  serviceName="Custom Home Building in Pharr, TX"
+  serviceDescription="Custom home design and construction in Pharr, Texas. Build on your lot with fully custom floor plans, premium materials, and transparent pricing. Minutes from McAllen with lower lot costs."
+  breadcrumbLabel="Custom Homes"
+  faqs={faqs}
+  painPoints={painPoints}
+  howWeWorkSteps={howWeWorkSteps}
+  backgroundImage="/images/roofing-hero.jpg"
+  areaServed="Pharr"
+>
+  <!-- Pharr-specific custom homes content -->
+  <section class="py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            Pharr Gives You More Home for Your Money
+          </h2>
+          <p class="text-text-muted text-lg mb-4">
+            Pharr sits right next to McAllen — same shopping, same restaurants, same medical facilities — but with lower land costs and available lots that McAllen's running out of. The Jackson Road corridor, areas near Town Center, and Pharr's expanding growth zones offer real opportunities for families who want a custom home without McAllen's price premium.
+          </p>
+          <p class="text-text-muted text-lg mb-4">
+            Building custom in Pharr means every dollar goes into the home itself, not inflated lot prices. We design around your family — open kitchens for entertaining, home offices that actually work, covered patios that you'll use 10 months a year, and energy-efficient systems that keep your bills down in Valley heat.
+          </p>
+          <p class="text-text-muted text-lg">
+            And because Tekton also handles roofing, pools, and remodeling, we plan your Pharr home as a complete property from day one. We pre-plumb for a future pool, wire for outdoor kitchens, and install roof systems rated for Hidalgo County hail — all during initial construction when it costs a fraction of retrofitting later.
+          </p>
+          <img
+            src="/images/roofing-work.jpg"
+            alt="Custom home construction in progress in Pharr, TX"
+            width="800"
+            height="533"
+            class="rounded-xl mt-6"
+            loading="lazy"
+          />
+        </div>
+        <div class="bg-bg-surface border border-border rounded-xl p-8">
+          <h3 class="text-xl font-semibold mb-4">Pharr Custom Home Services</h3>
+          <ul class="space-y-3">
+            {[
+              "Fully custom floor plans — no templates",
+              "Build on your lot — Pharr and surrounding areas",
+              "Lot evaluation and site preparation",
+              "Energy-efficient construction and insulation",
+              "Premium finishes — cabinets, countertops, flooring",
+              "Future-ready — pre-plumbed for pools and outdoor living",
+              "Transparent, line-item pricing with no surprises",
+            ].map((item) => (
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-gold shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-text-muted">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Other services in Pharr -->
+  <section class="py-16 md:py-20 bg-bg-surface">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-center mb-6">
+        Other Services in Pharr
+      </h2>
+      <div class="grid sm:grid-cols-3 gap-4 max-w-2xl mx-auto">
+        {siblingServices.map((s) => (
+          <a
+            href={`/pharr/${s.slug}/`}
+            class="bg-bg-elevated border border-border rounded-lg px-4 py-3 text-center hover:border-gold hover:text-gold transition-colors"
+          >
+            {s.name}
+          </a>
+        ))}
+      </div>
+      <p class="text-center mt-4">
+        <a href="/pharr/" class="text-gold hover:text-gold-light text-sm">
+          ← All Pharr services
+        </a>
+      </p>
+    </div>
+  </section>
+</ServiceLayout>

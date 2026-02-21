@@ -1,0 +1,175 @@
+---
+import ServiceLayout from "../../layouts/ServiceLayout.astro";
+import { services } from "../../data/services";
+
+const faqs = [
+  {
+    question: "What roofing materials resist salt air corrosion in Brownsville?",
+    answer:
+      "Brownsville's proximity to the Gulf means salt air accelerates corrosion on metal fasteners and flashing. We use stainless steel or hot-dipped galvanized fasteners, apply marine-grade sealants, and recommend standing seam metal roofing with Kynar finishes or high-quality architectural shingles rated for coastal environments. These systems are specifically chosen to handle Brownsville's salt-heavy humidity.",
+  },
+  {
+    question: "Can Tekton replace a roof in Brownsville during hurricane season?",
+    answer:
+      "Yes — and hurricane season is actually when we're busiest. We install wind-rated roofing systems that meet the Texas Windstorm Insurance Association (TWIA) requirements for Cameron County. Every roof we install in Brownsville comes with the WPI-8 certificate you need for windstorm insurance coverage.",
+  },
+  {
+    question: "Does Brownsville require windstorm inspections for new roofs?",
+    answer:
+      "Yes. Brownsville is in a designated catastrophe area under the Texas Department of Insurance, which means your new roof must pass a windstorm inspection and receive a WPI-8 certificate. We handle the entire inspection process — scheduling, documentation, and certification — so your roof is insurable from day one.",
+  },
+  {
+    question: "How does Brownsville's higher humidity affect roof lifespan?",
+    answer:
+      "Brownsville averages over 75% relative humidity much of the year, which promotes algae and mold growth on roofing materials. We install algae-resistant shingles with copper-infused granules, ensure proper attic ventilation to reduce moisture buildup, and recommend periodic maintenance to keep your roof clean and functional for decades.",
+  },
+  {
+    question: "Do you offer free roof inspections in the Palm Blvd and Paredes Line Rd areas?",
+    answer:
+      "Absolutely. We provide free roof inspections throughout Brownsville — from Palm Blvd near the Resaca to the newer developments along Paredes Line Rd and everywhere in between. We document everything with photos and give you an honest assessment, whether you need a full replacement or just a minor repair.",
+  },
+];
+
+const painPoints = [
+  {
+    title: "\"Every hurricane season I hold my breath about my roof\"",
+    description:
+      "Brownsville sits closer to the Gulf than any other RGV city. That means higher wind loads during storms. We install hurricane-rated roofing systems with reinforced decking and wind-resistant underlayment — so you stop worrying when the weather turns.",
+  },
+  {
+    title: "\"The salt air is eating my roof alive\"",
+    description:
+      "Standard fasteners and flashing corrode fast in Brownsville's coastal humidity. We use marine-grade materials and coastal-rated systems built for salt exposure. Your roof won't rust out in five years like the last one did.",
+  },
+  {
+    title: "\"My insurance won't cover me without a windstorm certificate\"",
+    description:
+      "Cameron County requires a WPI-8 certificate for windstorm coverage. Every roof we install in Brownsville meets TWIA standards and passes inspection. We handle the certification process so your coverage stays intact.",
+  },
+  {
+    title: "\"I can't tell if the damage is from the last storm or just age\"",
+    description:
+      "We'll tell you — honestly. Our free inspection documents every issue with photos and a clear recommendation. If it's storm damage, we help you file the insurance claim. If it's wear, we give you a fair quote to fix it.",
+  },
+];
+
+const howWeWorkSteps = [
+  {
+    number: 1,
+    title: "Free Brownsville Inspection",
+    description:
+      "We inspect your Brownsville roof, document damage and wear with photos, and check for salt corrosion and storm impact. If there's an insurance claim to file, we flag it immediately.",
+  },
+  {
+    number: 2,
+    title: "Estimate + Windstorm Compliance",
+    description:
+      "You get a clear, line-item quote. We spec materials that meet TWIA windstorm requirements for Cameron County and handle the certification process.",
+  },
+  {
+    number: 3,
+    title: "24-Hour Installation",
+    description:
+      "Our crew arrives on schedule, replaces your roof in a single day using hurricane-rated materials and coastal-grade fasteners, and cleans up completely.",
+  },
+  {
+    number: 4,
+    title: "WPI-8 Certification & Walkthrough",
+    description:
+      "We schedule your windstorm inspection, secure your WPI-8 certificate, walk you through the finished roof, and activate your warranty.",
+  },
+];
+
+const siblingServices = services.filter((s) => s.slug !== "roofing");
+---
+
+<ServiceLayout
+  title="Roofing in Brownsville, TX | Hurricane Ready | Tekton Home Solutions"
+  description="Brownsville roofing contractor — hurricane-rated roofs, salt air protection, and WPI-8 windstorm certification. Free inspections. Call (956) 862-7643."
+  headline='Brownsville Roofing — <span class="text-gold">Hurricane Ready</span>'
+  subheadline="Built for Gulf coast conditions. Hurricane-rated materials, salt air corrosion protection, and full windstorm certification. Licensed, insured, and trusted in Cameron County."
+  serviceSlug="roofing"
+  serviceName="Roofing in Brownsville, TX"
+  serviceDescription="Professional roofing services in Brownsville, Texas including hurricane-rated roof replacement, storm damage repair, windstorm certification, and free inspections. Coastal-grade materials for Gulf proximity."
+  breadcrumbLabel="Roofing"
+  faqs={faqs}
+  painPoints={painPoints}
+  howWeWorkSteps={howWeWorkSteps}
+  backgroundImage="/images/roofing-hero.jpg"
+  areaServed="Brownsville"
+>
+  <!-- Brownsville-specific roofing content -->
+  <section class="py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            Brownsville Roofs Face Gulf Coast Punishment
+          </h2>
+          <p class="text-text-muted text-lg mb-4">
+            No city in the Rio Grande Valley takes more weather abuse than Brownsville. Sitting at the southern tip of Texas, just miles from the Gulf of Mexico, your roof faces hurricane-force winds, salt-laden humidity that corrodes standard materials, and UV exposure that breaks down cheap shingles in half their rated lifespan.
+          </p>
+          <p class="text-text-muted text-lg mb-4">
+            That is why every roof we install in Brownsville uses hurricane-rated systems with reinforced decking, marine-grade fasteners, and wind-resistant underlayment. From homes near Palm Blvd along the Resaca to newer neighborhoods off Paredes Line Rd, we spec materials that handle the reality of Cameron County weather — not just what looks good on a spec sheet.
+          </p>
+          <p class="text-text-muted text-lg">
+            As a full home solutions company that also builds custom homes and handles remodels, we understand how your roof connects to insulation, ventilation, and your home's structural envelope. That means better airflow, lower cooling costs, and a roof that actually lasts in Brownsville's coastal climate.
+          </p>
+          <img
+            src="/images/roofing-work.jpg"
+            alt="Hurricane-rated roof replacement on a Brownsville, TX home"
+            width="800"
+            height="533"
+            class="rounded-xl mt-6"
+            loading="lazy"
+          />
+        </div>
+        <div class="bg-bg-surface border border-border rounded-xl p-8">
+          <h3 class="text-xl font-semibold mb-4">Brownsville Roofing Services</h3>
+          <ul class="space-y-3">
+            {[
+              "Full roof replacement — done in 24 hours",
+              "Hurricane-rated wind and impact systems",
+              "Salt air corrosion-resistant materials",
+              "WPI-8 windstorm certification",
+              "Storm damage repair and insurance claims",
+              "Free roof inspections (pre-storm and post-storm)",
+              "Metal, shingle, tile, and flat roof systems",
+            ].map((item) => (
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-gold shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-text-muted">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Other services in Brownsville -->
+  <section class="py-16 md:py-20 bg-bg-surface">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-center mb-6">
+        Other Services in Brownsville
+      </h2>
+      <div class="grid sm:grid-cols-3 gap-4 max-w-2xl mx-auto">
+        {siblingServices.map((s) => (
+          <a
+            href={`/brownsville/${s.slug}/`}
+            class="bg-bg-elevated border border-border rounded-lg px-4 py-3 text-center hover:border-gold hover:text-gold transition-colors"
+          >
+            {s.name}
+          </a>
+        ))}
+      </div>
+      <p class="text-center mt-4">
+        <a href="/brownsville/" class="text-gold hover:text-gold-light text-sm">
+          ← All Brownsville services
+        </a>
+      </p>
+    </div>
+  </section>
+</ServiceLayout>

@@ -1,0 +1,175 @@
+---
+import ServiceLayout from "../../layouts/ServiceLayout.astro";
+import { services } from "../../data/services";
+
+const faqs = [
+  {
+    question: "Do you travel all the way to Rio Grande City for roofing work?",
+    answer:
+      "Yes — Rio Grande City is part of our regular service area. We're headquartered in McAllen and our crews work throughout Starr County. We've roofed homes along Highway 83 West from Sullivan City through Rio Grande City and beyond. Distance is never a factor in our quality or warranty coverage.",
+  },
+  {
+    question: "How does Rio Grande City's extreme heat affect roofing materials?",
+    answer:
+      "Rio Grande City sits in the upper Valley where summer temperatures regularly push past 105°F. That kind of heat breaks down standard shingles faster than in coastal areas. We install UV-resistant, heat-rated materials — impact-resistant shingles, reflective metal roofing, and concrete tile — all designed to handle Starr County's brutal summers.",
+  },
+  {
+    question: "Are there many roofers that actually serve Rio Grande City?",
+    answer:
+      "Honestly, no. Most Valley roofers focus on McAllen and Edinburg. Rio Grande City homeowners often get quoted higher prices or longer wait times because contractors treat it as a long drive. We don't. We price Rio Grande City jobs the same as McAllen jobs and hold the same timeline standards.",
+  },
+  {
+    question: "Can you handle insurance claims for storm-damaged roofs in Rio Grande City?",
+    answer:
+      "Absolutely. We document all damage with photos, file the claim paperwork, and meet your adjuster on-site at your Rio Grande City home. Starr County sees the same spring hailstorms as the rest of the Valley, and many homeowners don't realize their policy covers a full replacement until we inspect.",
+  },
+  {
+    question: "Does caliche soil in Starr County cause roof problems?",
+    answer:
+      "Indirectly, yes. Caliche soil expands and contracts with moisture, which can cause foundation shifting. When foundations move, roof lines shift too — leading to cracked flashing, gaps, and leaks. We inspect the full structure, not just the shingles, so we catch these issues before they become expensive.",
+  },
+];
+
+const painPoints = [
+  {
+    title: "\"Nobody out here wants to drive to Rio Grande City\"",
+    description:
+      "Most Valley contractors treat Starr County like it's out of range. We don't. Rio Grande City is part of our service territory — same pricing, same timelines, same warranty as our McAllen jobs.",
+  },
+  {
+    title: "\"The last roofer quoted me double because of the drive\"",
+    description:
+      "Inflated quotes for distance are common in the upper Valley. We charge fair, transparent pricing based on the job — not your zip code. Get a free inspection and see the difference.",
+  },
+  {
+    title: "\"My roof is baking in this heat and the shingles are curling\"",
+    description:
+      "Rio Grande City's extreme upper Valley heat destroys cheap roofing materials fast. We install heat-rated, UV-resistant systems that are engineered to handle 105°+ summers without curling, cracking, or failing early.",
+  },
+  {
+    title: "\"I got three quotes and none of them showed up on time\"",
+    description:
+      "Unreliable contractors are a real problem in underserved areas. We show up when we say we will, start on schedule, and finish on time. Our reputation depends on it — and we protect it.",
+  },
+];
+
+const howWeWorkSteps = [
+  {
+    number: 1,
+    title: "Free Rio Grande City Inspection",
+    description:
+      "We drive out to your Rio Grande City home, inspect the entire roof, and document everything with photos. If we spot storm damage, we'll flag it for insurance.",
+  },
+  {
+    number: 2,
+    title: "Clear, Honest Estimate",
+    description:
+      "You get a detailed, line-item quote — no inflated pricing for distance. We walk you through every cost so there are no surprises.",
+  },
+  {
+    number: 3,
+    title: "24-Hour Installation",
+    description:
+      "Our crew arrives with all materials, replaces your roof in a single day, and cleans up completely. Your Starr County neighbors will notice the new roof — not the mess.",
+  },
+  {
+    number: 4,
+    title: "Warranty & Final Walkthrough",
+    description:
+      "We walk you through the finished roof, activate your manufacturer warranty, and make sure you're completely satisfied before we leave.",
+  },
+];
+
+const siblingServices = services.filter((s) => s.slug !== "roofing");
+---
+
+<ServiceLayout
+  title="Roofing in Rio Grande City, TX | Tekton Home Solutions"
+  description="Rio Grande City roofing contractor — full roof replacement in 24 hours. Storm damage repair, insurance claims, free inspections. Call (956) 862-7643."
+  headline='Rio Grande City Roofing — <span class="text-gold">Replaced in 24 Hours</span>'
+  subheadline="Serving Starr County with the same quality and pricing as McAllen. Full roof replacement, storm damage repair, and free inspections. Licensed and insured."
+  serviceSlug="roofing"
+  serviceName="Roofing in Rio Grande City, TX"
+  serviceDescription="Professional roofing services in Rio Grande City, Texas including full roof replacement, storm damage repair, insurance claim assistance, and free inspections. 24-hour installation available."
+  breadcrumbLabel="Roofing"
+  faqs={faqs}
+  painPoints={painPoints}
+  howWeWorkSteps={howWeWorkSteps}
+  backgroundImage="/images/roofing-hero.jpg"
+  areaServed="Rio Grande City"
+>
+  <!-- Rio Grande City-specific roofing content -->
+  <section class="py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            Starr County Roofs Face the Worst of Valley Heat
+          </h2>
+          <p class="text-text-muted text-lg mb-4">
+            Rio Grande City sits in the upper Valley where temperatures run hotter than the coast — regularly pushing past 105°F in summer. That extreme heat, combined with UV exposure and spring hailstorms rolling up the Highway 83 West corridor, puts enormous stress on roofing materials that weren't designed for this climate.
+          </p>
+          <p class="text-text-muted text-lg mb-4">
+            Most Starr County homeowners are underserved by roofing contractors who focus on McAllen and Edinburg. That means fewer options, higher quotes, and longer wait times. We treat Rio Grande City as part of our core service area — same fair pricing, same fast timelines, same warranty that backs every job we do.
+          </p>
+          <p class="text-text-muted text-lg">
+            Because we also build custom homes and handle full remodels, we understand how roofing connects to the structure beneath it. In an area where caliche soil can shift foundations and compromise roof lines, that big-picture knowledge means a roof that actually lasts.
+          </p>
+          <img
+            src="/images/roofing-work.jpg"
+            alt="Roof replacement in progress on a Rio Grande City, TX home"
+            width="800"
+            height="533"
+            class="rounded-xl mt-6"
+            loading="lazy"
+          />
+        </div>
+        <div class="bg-bg-surface border border-border rounded-xl p-8">
+          <h3 class="text-xl font-semibold mb-4">Rio Grande City Roofing Services</h3>
+          <ul class="space-y-3">
+            {[
+              "Full roof replacement — done in 24 hours",
+              "Hail and storm damage repair",
+              "Insurance claim assistance and adjuster meetings",
+              "Free roof inspections (pre-storm and post-storm)",
+              "Heat-resistant metal, shingle, and tile systems",
+              "Flat roof repair and coating",
+              "Gutter installation and repair",
+            ].map((item) => (
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-gold shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-text-muted">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Other services in Rio Grande City -->
+  <section class="py-16 md:py-20 bg-bg-surface">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-center mb-6">
+        Other Services in Rio Grande City
+      </h2>
+      <div class="grid sm:grid-cols-3 gap-4 max-w-2xl mx-auto">
+        {siblingServices.map((s) => (
+          <a
+            href={`/rio-grande-city/${s.slug}/`}
+            class="bg-bg-elevated border border-border rounded-lg px-4 py-3 text-center hover:border-gold hover:text-gold transition-colors"
+          >
+            {s.name}
+          </a>
+        ))}
+      </div>
+      <p class="text-center mt-4">
+        <a href="/rio-grande-city/" class="text-gold hover:text-gold-light text-sm">
+          ← All Rio Grande City services
+        </a>
+      </p>
+    </div>
+  </section>
+</ServiceLayout>

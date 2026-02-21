@@ -1,0 +1,175 @@
+---
+import ServiceLayout from "../../layouts/ServiceLayout.astro";
+import { services } from "../../data/services";
+
+const faqs = [
+  {
+    question: "How long does it take to build a pool in McAllen?",
+    answer:
+      "Most custom gunite pools in McAllen take 6–10 weeks from excavation to swim day. The timeline depends on pool size, features, and permitting. We give you a realistic schedule upfront — not the 4-week fantasy some builders promise just to close the deal.",
+  },
+  {
+    question: "Does Sharyland Plantation have pool building requirements?",
+    answer:
+      "Yes — Sharyland Plantation has specific rules about pool placement, setbacks, fencing height, and equipment screening. We've built multiple pools in Sharyland and know the HOA process inside and out. We handle the architectural review submission and make sure your design is approved before breaking ground.",
+  },
+  {
+    question: "Can you build a pool in McAllen's clay soil without cracking?",
+    answer:
+      "Absolutely — but only if it's engineered properly. North McAllen in particular has heavy expansive clay that swells when wet and shrinks when dry. We reinforce every gunite shell with engineered steel rebar and install proper drainage systems around the pool to manage moisture movement. That's the difference between a pool that lasts 30 years and one that cracks in 3.",
+  },
+  {
+    question: "What does a custom pool cost in McAllen, TX?",
+    answer:
+      "Custom gunite pools in McAllen typically range from $38,000 to $85,000+ depending on size, shape, features, and decking material. Extras like spas, water features, and outdoor kitchens add to the cost. We provide a detailed, itemized estimate after visiting your property — no vague ballpark numbers.",
+  },
+  {
+    question: "Can you build a pool and outdoor kitchen together?",
+    answer:
+      "That's one of our biggest advantages. Because Tekton builds homes, does remodels, and constructs pools, we handle everything — pool, outdoor kitchen, pergola, decking, lighting, gas lines — as one coordinated project. One contract, one crew, one timeline. No finger-pointing between separate contractors.",
+  },
+];
+
+const painPoints = [
+  {
+    title: "\"The builder took our deposit and ghosted us for weeks\"",
+    description:
+      "It's the most common pool horror story in McAllen. A builder cashes your check, starts strong, then juggles five other jobs. Our McAllen-based crews are dedicated to your project with weekly progress updates and a project manager you can actually reach.",
+  },
+  {
+    title: "\"I'm worried about the clay soil cracking our pool\"",
+    description:
+      "North McAllen's expansive clay is real — and cheap builders don't account for it. We engineer every pool shell with reinforced steel and perimeter drainage specifically designed for Valley soil conditions. Our pools don't crack because we build for the ground underneath.",
+  },
+  {
+    title: "\"Our HOA makes everything complicated\"",
+    description:
+      "Sharyland Plantation, Tres Lagos, Palm View Estates — every McAllen HOA has its own pool rules. We know the requirements, handle the architectural review paperwork, and get your design approved before we break ground. Zero surprises.",
+  },
+  {
+    title: "\"We have no idea what a pool actually costs\"",
+    description:
+      "That's exactly why we give you a detailed, line-item estimate — not a vague range. You'll see every cost before you commit. We also offer financing options so your family can start swimming sooner instead of saving for another three summers.",
+  },
+];
+
+const howWeWorkSteps = [
+  {
+    number: 1,
+    title: "Free Backyard Consultation",
+    description:
+      "We visit your McAllen home, measure your yard, assess soil conditions, and talk through your vision — shape, features, budget. No cost, no pressure.",
+  },
+  {
+    number: 2,
+    title: "Custom Design & Permits",
+    description:
+      "You get a 3D pool design tailored to your property. We handle City of McAllen permits and HOA approvals so you don't have to chase paperwork.",
+  },
+  {
+    number: 3,
+    title: "Build Phase",
+    description:
+      "Excavation, steel, plumbing, gunite, tile, coping, decking, and equipment installation — all managed by our McAllen project team with weekly updates.",
+  },
+  {
+    number: 4,
+    title: "Fill, Test & Swim",
+    description:
+      "We fill the pool, balance the water chemistry, test all equipment, and walk you through everything. Your pool is swim-ready the day we hand it over.",
+  },
+];
+
+const siblingServices = services.filter((s) => s.slug !== "pools");
+---
+
+<ServiceLayout
+  title="Pool Builder in McAllen, TX | Custom Gunite | Tekton Home Solutions"
+  description="Custom gunite pool builder in McAllen, TX — inground pools, spas, and outdoor living. 8+ month swim season. Free design consultation. Call (956) 862-7643."
+  headline='McAllen Pool Builder — <span class="text-gold">Custom Gunite Pools</span>'
+  subheadline="Headquartered in McAllen. Built for Valley soil, Valley heat, and 8+ months of pool season. Custom inground pools, spas, and complete outdoor living spaces."
+  serviceSlug="pools"
+  serviceName="Pool Construction in McAllen, TX"
+  serviceDescription="Custom inground pool design and construction in McAllen, Texas. Gunite pools, spas, water features, outdoor kitchens, and complete backyard transformations. Engineered for Valley soil."
+  breadcrumbLabel="Pool Construction"
+  faqs={faqs}
+  painPoints={painPoints}
+  howWeWorkSteps={howWeWorkSteps}
+  backgroundImage="/images/roofing-hero.jpg"
+  areaServed="McAllen"
+>
+  <!-- McAllen-specific pool content -->
+  <section class="py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            McAllen Has the Longest Pool Season in Texas
+          </h2>
+          <p class="text-text-muted text-lg mb-4">
+            From March through November — sometimes even into December — McAllen temperatures make your backyard pool the center of daily life. That's over 8 months of swimming, weekend cookouts, and family time. No other investment pays off this many days per year.
+          </p>
+          <p class="text-text-muted text-lg mb-4">
+            But McAllen's geology demands respect. The clay-heavy soil in neighborhoods like Sharyland Plantation and north McAllen near Trenton Road expands and contracts with moisture cycles. Builders who skip proper soil engineering end up with cracked shells and expensive repairs. We reinforce every pool with engineered steel rebar grids and install French drain systems around the perimeter to manage groundwater movement — the same approach we use when building custom home foundations in the Valley.
+          </p>
+          <p class="text-text-muted text-lg">
+            Whether you're in Tres Lagos planning a resort-style pool with a tanning ledge and waterfall, or you have a compact backyard off Nolana that needs a smart, space-efficient design — we build pools that fit your property, your family, and your budget.
+          </p>
+          <img
+            src="/images/roofing-work.jpg"
+            alt="Custom gunite pool under construction in McAllen, TX"
+            width="800"
+            height="533"
+            class="rounded-xl mt-6"
+            loading="lazy"
+          />
+        </div>
+        <div class="bg-bg-surface border border-border rounded-xl p-8">
+          <h3 class="text-xl font-semibold mb-4">McAllen Pool Services</h3>
+          <ul class="space-y-3">
+            {[
+              "Custom gunite (concrete) inground pools",
+              "Attached and freestanding spas",
+              "Tanning ledges and sun shelves",
+              "Water features — waterfalls, bubblers, deck jets",
+              "Pool decking, coping, and tile",
+              "Outdoor kitchens and covered patios",
+              "LED lighting and smart automation",
+            ].map((item) => (
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-gold shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-text-muted">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Other services in McAllen -->
+  <section class="py-16 md:py-20 bg-bg-surface">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-center mb-6">
+        Other Services in McAllen
+      </h2>
+      <div class="grid sm:grid-cols-3 gap-4 max-w-2xl mx-auto">
+        {siblingServices.map((s) => (
+          <a
+            href={`/mcallen/${s.slug}/`}
+            class="bg-bg-elevated border border-border rounded-lg px-4 py-3 text-center hover:border-gold hover:text-gold transition-colors"
+          >
+            {s.name}
+          </a>
+        ))}
+      </div>
+      <p class="text-center mt-4">
+        <a href="/mcallen/" class="text-gold hover:text-gold-light text-sm">
+          ← All McAllen services
+        </a>
+      </p>
+    </div>
+  </section>
+</ServiceLayout>

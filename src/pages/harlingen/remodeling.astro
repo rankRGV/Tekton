@@ -1,0 +1,175 @@
+---
+import ServiceLayout from "../../layouts/ServiceLayout.astro";
+import { services } from "../../data/services";
+
+const faqs = [
+  {
+    question: "What should I expect when remodeling a 1950s or 1960s home near Dixieland in Harlingen?",
+    answer:
+      "Homes in the Dixieland and Country Club areas are well-built but come with era-specific challenges: galvanized steel plumbing that is likely corroded, original electrical panels that cannot handle modern loads, single-pane windows, and floor plans designed around smaller, closed-off rooms. We assess the full scope before quoting — plumbing, electrical, structural, and moisture — so you know exactly what you are getting into before demolition starts.",
+  },
+  {
+    question: "Does Harlingen's humidity require special materials for kitchen and bathroom remodels?",
+    answer:
+      "Yes — Harlingen's mid-Valley humidity is high enough to damage standard materials in wet areas within a few years. We use moisture-resistant drywall (not standard greenboard) in bathrooms and kitchens, mold-resistant insulation, PVC or composite trim, and properly waterproofed tile installations with kerdi membrane systems. These materials cost slightly more upfront but last dramatically longer in Harlingen's climate.",
+  },
+  {
+    question: "Can you convert a closed floor plan to open concept in an older Harlingen home?",
+    answer:
+      "In most cases, yes. Many older Harlingen homes have interior walls that appear structural but can be replaced with engineered beams to open the space. We evaluate the framing, identify true load-bearing walls, and design the beam system to support the structure while giving you the open kitchen-to-living layout most families want. This is one of our most requested upgrades in the older Harlingen neighborhoods.",
+  },
+  {
+    question: "How long does a full kitchen remodel take in Harlingen?",
+    answer:
+      "A full kitchen remodel typically takes 4 to 8 weeks depending on scope. If we are moving plumbing or upgrading electrical — which is common in older Harlingen homes near Dixieland and the Country Club area — add time for Cameron County permits and inspections. We provide a realistic timeline at the start and communicate weekly throughout the project.",
+  },
+  {
+    question: "Does Tekton handle all permits for Harlingen remodeling projects?",
+    answer:
+      "Yes. We handle all City of Harlingen building permits and Cameron County inspections. Any project involving structural changes, electrical upgrades, or plumbing modifications requires permits, and we manage the entire process from application through final sign-off. You never have to visit the permit office or coordinate with inspectors.",
+  },
+];
+
+const painPoints = [
+  {
+    title: "\"Our contractor started the kitchen, then vanished for a month\"",
+    description:
+      "The most common remodeling complaint in the Valley. We assign a dedicated project manager to your Harlingen job, set a clear schedule with milestones, and keep our crew on your project — not juggling five jobs at once. You will hear from us every week with a progress update.",
+  },
+  {
+    title: "\"The bathroom they remodeled two years ago already has mold behind the tile\"",
+    description:
+      "Standard drywall and basic waterproofing fail fast in Harlingen's humidity. We use moisture-resistant backer board, kerdi waterproofing membrane, and mold-resistant insulation in every wet area. Your remodel lasts because we build for the mid-Valley climate, not for a spec sheet.",
+  },
+  {
+    title: "\"Every time they open a wall, the estimate goes up\"",
+    description:
+      "Surprise change orders kill trust and budgets. We do a thorough pre-construction assessment of your Harlingen home — checking plumbing, electrical, and framing condition — and build contingency into the estimate upfront. The number we quote accounts for what older homes typically hide.",
+  },
+  {
+    title: "\"I love my Dixieland neighborhood but the house feels stuck in 1965\"",
+    description:
+      "That is exactly the kind of project we specialize in. We modernize kitchens, open floor plans, upgrade bathrooms, and replace failing systems — while keeping the solid bones and character that make older Harlingen homes worth owning. You get a house that works for how you live today.",
+  },
+];
+
+const howWeWorkSteps = [
+  {
+    number: 1,
+    title: "Free In-Home Consultation",
+    description:
+      "We visit your Harlingen home, assess the current condition of the spaces you want to remodel, discuss your goals and budget, and identify any hidden issues in older construction.",
+  },
+  {
+    number: 2,
+    title: "Design & Detailed Estimate",
+    description:
+      "You get a design plan and a line-item quote. We flag potential issues — old plumbing, undersized electrical, moisture concerns — and build realistic contingency into the budget.",
+  },
+  {
+    number: 3,
+    title: "Permitted Construction",
+    description:
+      "We pull all City of Harlingen permits, manage Cameron County inspections, and execute the remodel with humidity-resistant materials rated for the mid-Valley climate.",
+  },
+  {
+    number: 4,
+    title: "Final Walkthrough",
+    description:
+      "We walk through every detail with you, confirm everything meets your expectations, and hand over warranty documentation. Your remodeled space is ready to enjoy.",
+  },
+];
+
+const siblingServices = services.filter((s) => s.slug !== "remodeling");
+---
+
+<ServiceLayout
+  title="Remodeling in Harlingen, TX | Kitchen & Bath | Tekton Home Solutions"
+  description="Harlingen remodeling contractor — kitchens, bathrooms, and whole-home renovations for 1950s-era and modern homes. Humidity-resistant materials. Free estimates. Call (956) 862-7643."
+  headline='Harlingen Remodeling — <span class="text-gold">Kitchen & Bath Experts</span>'
+  subheadline="From mid-century homes near Dixieland to modern builds off Loop 499. Humidity-resistant materials, expert craftsmanship, and full permits handled. Licensed and insured in Cameron County."
+  serviceSlug="remodeling"
+  serviceName="Remodeling in Harlingen, TX"
+  serviceDescription="Professional home remodeling services in Harlingen, Texas including kitchen remodels, bathroom renovations, open floor plan conversions, and whole-home updates. Humidity-resistant materials for mid-Valley homes."
+  breadcrumbLabel="Remodeling"
+  faqs={faqs}
+  painPoints={painPoints}
+  howWeWorkSteps={howWeWorkSteps}
+  backgroundImage="/images/roofing-hero.jpg"
+  areaServed="Harlingen"
+>
+  <!-- Harlingen-specific remodeling content -->
+  <section class="py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            Harlingen Homes — From Mid-Century Character to Modern Function
+          </h2>
+          <p class="text-text-muted text-lg mb-4">
+            Harlingen has a housing mix that few RGV cities can match. The Dixieland neighborhood and Country Club area are full of solid, character-rich homes from the 1950s through 1970s — real plaster walls, hardwood under the carpet, generous room sizes. But these homes also come with galvanized plumbing that is slowly failing, electrical systems that cannot handle modern appliances, and closed-off floor plans that do not fit how families actually live today.
+          </p>
+          <p class="text-text-muted text-lg mb-4">
+            On the other end of the spectrum, newer homes along Ed Carey Drive and off Loop 499 are only 10 to 20 years old but were often built with builder-grade finishes that are already showing wear — laminate counters peeling, basic cabinets sagging, and cheap tile cracking in bathrooms where the humidity never fully dissipates. These homes need targeted upgrades more than full gut jobs.
+          </p>
+          <p class="text-text-muted text-lg">
+            We handle both. For older Harlingen homes, we modernize the systems and layout while preserving the character. For newer homes, we replace the builder-grade components with materials that actually hold up in the mid-Valley climate. Because Tekton also builds custom homes, we bring structural knowledge to every remodel — we know what is behind your walls because we build walls for a living.
+          </p>
+          <img
+            src="/images/roofing-work.jpg"
+            alt="Kitchen remodel in progress at a Harlingen, TX home near Dixieland"
+            width="800"
+            height="533"
+            class="rounded-xl mt-6"
+            loading="lazy"
+          />
+        </div>
+        <div class="bg-bg-surface border border-border rounded-xl p-8">
+          <h3 class="text-xl font-semibold mb-4">Harlingen Remodeling Services</h3>
+          <ul class="space-y-3">
+            {[
+              "Full kitchen remodels — cabinets, counters, layout",
+              "Bathroom renovations with humidity-resistant materials",
+              "Open floor plan conversions for older homes",
+              "Plumbing and electrical upgrades",
+              "Flooring — tile, luxury vinyl, hardwood",
+              "Interior and exterior painting",
+              "Whole-home renovations and additions",
+            ].map((item) => (
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-gold shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-text-muted">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Other services in Harlingen -->
+  <section class="py-16 md:py-20 bg-bg-surface">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-center mb-6">
+        Other Services in Harlingen
+      </h2>
+      <div class="grid sm:grid-cols-3 gap-4 max-w-2xl mx-auto">
+        {siblingServices.map((s) => (
+          <a
+            href={`/harlingen/${s.slug}/`}
+            class="bg-bg-elevated border border-border rounded-lg px-4 py-3 text-center hover:border-gold hover:text-gold transition-colors"
+          >
+            {s.name}
+          </a>
+        ))}
+      </div>
+      <p class="text-center mt-4">
+        <a href="/harlingen/" class="text-gold hover:text-gold-light text-sm">
+          ← All Harlingen services
+        </a>
+      </p>
+    </div>
+  </section>
+</ServiceLayout>

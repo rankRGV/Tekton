@@ -1,0 +1,175 @@
+---
+import ServiceLayout from "../../layouts/ServiceLayout.astro";
+import { services } from "../../data/services";
+
+const faqs = [
+  {
+    question: "Can you build a custom pool on a smaller Pharr lot?",
+    answer:
+      "Absolutely. Many Pharr homes — especially in the Town Center area and older neighborhoods — have compact backyards. Gunite pools are fully custom, so we design to fit any space. Cocktail pools, plunge pools, and L-shaped designs can make the most of a small yard without sacrificing quality.",
+  },
+  {
+    question: "What does a pool cost in Pharr, TX?",
+    answer:
+      "Custom gunite pools in Pharr typically range from $35,000 to $80,000+ depending on size, features, decking, and extras like spas or outdoor kitchens. We provide a detailed line-item estimate after visiting your property — no hidden costs. Financing is available.",
+  },
+  {
+    question: "How does Pharr's soil affect pool construction?",
+    answer:
+      "Pharr shares the same expansive clay soil found across central Hidalgo County. This soil swells when wet and shrinks when dry, which can crack a poorly engineered pool shell. We reinforce every pool with the correct steel schedule and drainage for Pharr's specific ground conditions.",
+  },
+  {
+    question: "Do I need a permit to build a pool in Pharr?",
+    answer:
+      "Yes — the City of Pharr requires building permits for pool construction, including fencing and electrical work. We handle all permit applications, inspections, and code compliance as part of your project. You don't need to visit city hall.",
+  },
+  {
+    question: "Can you combine a pool with an outdoor kitchen at my Pharr home?",
+    answer:
+      "That's one of our biggest advantages. Because Tekton handles pools, remodeling, and custom home construction, we build your pool and outdoor kitchen as one coordinated project — shared utilities, one timeline, one crew. It's faster, cheaper, and better than hiring separate contractors.",
+  },
+];
+
+const painPoints = [
+  {
+    title: "\"The pool builder started digging and then didn't come back for a month\"",
+    description:
+      "Pharr homeowners know this story too well. Builders who juggle too many jobs and leave yours sitting. Our crews are dedicated to your project, and we keep you updated weekly. Most Pharr pools are complete in 6 to 10 weeks.",
+  },
+  {
+    title: "\"Our backyard is small — every pool company says we don't have room\"",
+    description:
+      "They're wrong. Gunite pools can be built to any shape and size. We've designed beautiful pools for Pharr backyards that other builders turned down. A compact pool done right is better than no pool at all.",
+  },
+  {
+    title: "\"We're worried about the pool cracking in a few years\"",
+    description:
+      "That's a valid concern with Pharr's clay soil — but only if the builder cuts corners. We engineer every pool shell with proper steel reinforcement and drainage specifically for central Hidalgo County conditions. Our pools are built to last decades.",
+  },
+  {
+    title: "\"We got a quote but it didn't include equipment, fencing, or decking\"",
+    description:
+      "Incomplete quotes are how cheap builders hook you in and then pile on change orders. Our estimates are detailed and line-item — equipment, fencing, decking, electrical, plumbing, everything. What you see is what you pay.",
+  },
+];
+
+const howWeWorkSteps = [
+  {
+    number: 1,
+    title: "Free Design Consultation",
+    description:
+      "We visit your Pharr home, measure the backyard, discuss your vision and budget, and design a pool that maximizes your space.",
+  },
+  {
+    number: 2,
+    title: "Permits & Scheduling",
+    description:
+      "We pull all City of Pharr permits and lock in your build schedule. You approve the final design and we get to work.",
+  },
+  {
+    number: 3,
+    title: "Construction",
+    description:
+      "Excavation, steel, plumbing, gunite, tile, coping, decking, and equipment — all managed by our project coordinator with weekly updates.",
+  },
+  {
+    number: 4,
+    title: "Startup & Swim Day",
+    description:
+      "We fill your pool, balance the chemistry, test all systems, and walk you through maintenance. Your Pharr backyard is officially swim-ready.",
+  },
+];
+
+const siblingServices = services.filter((s) => s.slug !== "pools");
+---
+
+<ServiceLayout
+  title="Pool Builder in Pharr, TX | Custom Gunite | Tekton Home Solutions"
+  description="Custom pool builder in Pharr, TX — gunite inground pools, spas, outdoor living. Small-yard specialists. Licensed & insured. Call (956) 862-7643."
+  headline='Pharr Pool Builder — <span class="text-gold">Custom Gunite Pools</span>'
+  subheadline="Designed for Pharr backyards — from compact lots near Town Center to new builds along Jackson Road. Custom inground pools, spas, and outdoor living built for Valley soil and year-round swimming."
+  serviceSlug="pools"
+  serviceName="Pool Construction in Pharr, TX"
+  serviceDescription="Custom inground pool design and construction in Pharr, Texas. Gunite pools, spas, water features, outdoor kitchens, and complete backyard transformations engineered for Hidalgo County soil conditions."
+  breadcrumbLabel="Pool Construction"
+  faqs={faqs}
+  painPoints={painPoints}
+  howWeWorkSteps={howWeWorkSteps}
+  backgroundImage="/images/roofing-hero.jpg"
+  areaServed="Pharr"
+>
+  <!-- Pharr-specific pool content -->
+  <section class="py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            Your Pharr Backyard Has More Potential Than You Think
+          </h2>
+          <p class="text-text-muted text-lg mb-4">
+            Pharr is growing — new homes along Jackson Road, expanding neighborhoods near Town Center, and increasing property values across the city. With 8+ months of pool weather every year, a backyard pool isn't a luxury in Pharr — it's how you actually use your outdoor space. Family weekends, after-work cool-downs, and gatherings that don't require leaving the house.
+          </p>
+          <p class="text-text-muted text-lg mb-4">
+            Many Pharr homes have small-to-mid-size backyards, and other pool companies walk away from tight spaces. Not us. Gunite pools are fully custom — we design to any shape and size. A well-planned cocktail pool or geometric design can turn a compact Pharr backyard into the centerpiece of your property.
+          </p>
+          <p class="text-text-muted text-lg">
+            And because Tekton also builds custom homes and does full remodels, we coordinate your pool with the rest of your property — electrical, gas, drainage grading, even future outdoor kitchens. One company, one project manager, zero conflicts between contractors.
+          </p>
+          <img
+            src="/images/roofing-work.jpg"
+            alt="Pool construction in progress at a Pharr, TX home"
+            width="800"
+            height="533"
+            class="rounded-xl mt-6"
+            loading="lazy"
+          />
+        </div>
+        <div class="bg-bg-surface border border-border rounded-xl p-8">
+          <h3 class="text-xl font-semibold mb-4">Pharr Pool Services</h3>
+          <ul class="space-y-3">
+            {[
+              "Custom gunite (concrete) inground pools",
+              "Compact and cocktail pool designs",
+              "Spas and hot tubs (standalone or attached)",
+              "Water features — waterfalls, bubblers, scuppers",
+              "Pool decking, coping, and fencing",
+              "Outdoor kitchens and pergolas",
+              "LED lighting and automation systems",
+            ].map((item) => (
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-gold shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-text-muted">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Other services in Pharr -->
+  <section class="py-16 md:py-20 bg-bg-surface">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-center mb-6">
+        Other Services in Pharr
+      </h2>
+      <div class="grid sm:grid-cols-3 gap-4 max-w-2xl mx-auto">
+        {siblingServices.map((s) => (
+          <a
+            href={`/pharr/${s.slug}/`}
+            class="bg-bg-elevated border border-border rounded-lg px-4 py-3 text-center hover:border-gold hover:text-gold transition-colors"
+          >
+            {s.name}
+          </a>
+        ))}
+      </div>
+      <p class="text-center mt-4">
+        <a href="/pharr/" class="text-gold hover:text-gold-light text-sm">
+          ← All Pharr services
+        </a>
+      </p>
+    </div>
+  </section>
+</ServiceLayout>

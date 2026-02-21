@@ -1,0 +1,175 @@
+---
+import ServiceLayout from "../../layouts/ServiceLayout.astro";
+import { services } from "../../data/services";
+
+const faqs = [
+  {
+    question: "What types of remodeling do you do in Edinburg?",
+    answer:
+      "We handle kitchen remodels, bathroom remodels, whole-home renovations, room additions, and interior updates for Edinburg homes. Whether it's a full gut renovation of an older downtown Edinburg home or a kitchen upgrade in a newer subdivision, we do it all — design through final walkthrough.",
+  },
+  {
+    question: "How much does a kitchen remodel cost in Edinburg, TX?",
+    answer:
+      "Kitchen remodels in Edinburg typically range from $15,000 for a basic refresh to $60,000+ for a full custom renovation with new cabinetry, countertops, appliances, and layout changes. We provide detailed line-item estimates after visiting your home — no guesswork and no hidden fees.",
+  },
+  {
+    question: "Do older Edinburg homes near downtown need special renovation work?",
+    answer:
+      "Yes — homes in the older parts of Edinburg near the courthouse and along the Freddy Gonzalez corridor often have outdated electrical, plumbing that needs updating, and layouts that don't match modern living. We specialize in bringing these homes up to code while preserving their county seat character.",
+  },
+  {
+    question: "How long does a full bathroom remodel take in Edinburg?",
+    answer:
+      "A typical Edinburg bathroom remodel takes 3 to 5 weeks depending on scope. If we're moving plumbing or expanding the footprint, it can take longer. We give you a realistic timeline upfront and keep you updated throughout — no disappearing for weeks at a time.",
+  },
+  {
+    question: "Do you handle permits for Edinburg remodeling projects?",
+    answer:
+      "Yes — we pull all necessary City of Edinburg permits for structural work, electrical, and plumbing. We also coordinate inspections so everything is done to code. You don't have to deal with city hall — that's our job.",
+  },
+];
+
+const painPoints = [
+  {
+    title: "\"Our Edinburg contractor started the kitchen and then vanished for three weeks\"",
+    description:
+      "It's the most common complaint we hear from Edinburg homeowners. Contractors who juggle too many jobs and leave yours half-finished. Our crews are dedicated to your project, and our project manager keeps everything on schedule.",
+  },
+  {
+    title: "\"This house has good bones but the layout is stuck in 1985\"",
+    description:
+      "Older Edinburg homes along the Freddy Gonzalez corridor and near downtown have solid construction but outdated floor plans. We open up walls, modernize kitchens, and reconfigure bathrooms to match how families actually live today.",
+  },
+  {
+    title: "\"The last contractor's tile work was crooked and they wanted full payment anyway\"",
+    description:
+      "Bad craftsmanship is expensive to fix. Every Tekton project has a final walkthrough where we go through every detail together. We don't consider the job done — and we don't collect final payment — until you're completely satisfied.",
+  },
+  {
+    title: "\"I want to remodel but I can't move out while it happens\"",
+    description:
+      "We plan Edinburg remodels in phases so you can stay in your home. We section off the work area, control dust, and keep disruption to a minimum. We've done full kitchen remodels with families cooking dinner in the next room.",
+  },
+];
+
+const howWeWorkSteps = [
+  {
+    number: 1,
+    title: "Free In-Home Consultation",
+    description:
+      "We visit your Edinburg home, listen to what you want, evaluate the existing space, and discuss budget and timeline. No cost, no pressure.",
+  },
+  {
+    number: 2,
+    title: "Design & Detailed Estimate",
+    description:
+      "You get a full design plan and a line-item quote that covers materials, labor, permits, and timeline. Everything is transparent before we start.",
+  },
+  {
+    number: 3,
+    title: "Construction & Updates",
+    description:
+      "Our crew handles demo, framing, electrical, plumbing, tile, cabinetry, countertops, and finishes. You get regular updates and a dedicated project manager.",
+  },
+  {
+    number: 4,
+    title: "Final Walkthrough & Handoff",
+    description:
+      "We walk through every detail together. Touch-ups, adjustments, final cleaning — we handle it all before handing you the keys to your new space.",
+  },
+];
+
+const siblingServices = services.filter((s) => s.slug !== "remodeling");
+---
+
+<ServiceLayout
+  title="Remodeling in Edinburg, TX | Kitchen & Bath | Tekton Home Solutions"
+  description="Edinburg, TX home remodeling — kitchens, bathrooms, and whole-home renovations. Licensed contractor, free estimates. Call (956) 862-7643."
+  headline='Edinburg Remodeling — <span class="text-gold">Kitchen & Bath Experts</span>'
+  subheadline="From older downtown Edinburg homes to newer subdivisions along Trenton Road. Kitchen remodels, bathroom renovations, and whole-home transformations done right."
+  serviceSlug="remodeling"
+  serviceName="Remodeling in Edinburg, TX"
+  serviceDescription="Professional home remodeling services in Edinburg, Texas including kitchen remodels, bathroom renovations, whole-home updates, and room additions. Licensed and insured."
+  breadcrumbLabel="Remodeling"
+  faqs={faqs}
+  painPoints={painPoints}
+  howWeWorkSteps={howWeWorkSteps}
+  backgroundImage="/images/roofing-hero.jpg"
+  areaServed="Edinburg"
+>
+  <!-- Edinburg-specific remodeling content -->
+  <section class="py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            Edinburg Homes Have Character — Let's Bring Them Up to Date
+          </h2>
+          <p class="text-text-muted text-lg mb-4">
+            As the Hidalgo County seat, Edinburg has a mix of housing stock you won't find anywhere else in the RGV. Older homes near downtown and along the Freddy Gonzalez corridor have solid construction and real character — but kitchens from the 1980s, cramped bathrooms, and floor plans that don't work for modern families.
+          </p>
+          <p class="text-text-muted text-lg mb-4">
+            Meanwhile, newer Edinburg subdivisions north of Trenton and near the UTRGV campus often need upgrades too — builder-grade finishes that look dated after a few years, small master bathrooms, and kitchens that need more counter space and storage. Whether your Edinburg home is 5 years old or 50, we make it work better for how you live now.
+          </p>
+          <p class="text-text-muted text-lg">
+            Because Tekton also builds custom homes from the ground up, we bring a builder's perspective to every remodel. We understand structure, load-bearing walls, electrical capacity, and plumbing routing — which means we can open up walls and reconfigure layouts that other remodelers won't touch.
+          </p>
+          <img
+            src="/images/roofing-work.jpg"
+            alt="Kitchen remodel in progress at an Edinburg, TX home"
+            width="800"
+            height="533"
+            class="rounded-xl mt-6"
+            loading="lazy"
+          />
+        </div>
+        <div class="bg-bg-surface border border-border rounded-xl p-8">
+          <h3 class="text-xl font-semibold mb-4">Edinburg Remodeling Services</h3>
+          <ul class="space-y-3">
+            {[
+              "Full kitchen remodels — layout, cabinets, countertops",
+              "Bathroom renovations — tile, vanities, showers",
+              "Whole-home interior updates",
+              "Room additions and expansions",
+              "Flooring replacement (tile, LVP, hardwood)",
+              "Interior painting and trim work",
+              "Aging-in-place modifications",
+            ].map((item) => (
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-gold shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-text-muted">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Other services in Edinburg -->
+  <section class="py-16 md:py-20 bg-bg-surface">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-center mb-6">
+        Other Services in Edinburg
+      </h2>
+      <div class="grid sm:grid-cols-3 gap-4 max-w-2xl mx-auto">
+        {siblingServices.map((s) => (
+          <a
+            href={`/edinburg/${s.slug}/`}
+            class="bg-bg-elevated border border-border rounded-lg px-4 py-3 text-center hover:border-gold hover:text-gold transition-colors"
+          >
+            {s.name}
+          </a>
+        ))}
+      </div>
+      <p class="text-center mt-4">
+        <a href="/edinburg/" class="text-gold hover:text-gold-light text-sm">
+          ← All Edinburg services
+        </a>
+      </p>
+    </div>
+  </section>
+</ServiceLayout>

@@ -1,0 +1,175 @@
+---
+import ServiceLayout from "../../layouts/ServiceLayout.astro";
+import { services } from "../../data/services";
+
+const faqs = [
+  {
+    question: "Does Brownsville require special permits for pool construction near flood zones?",
+    answer:
+      "Yes — much of Brownsville falls within FEMA-designated flood zones due to its low elevation and Gulf proximity. Pool construction in these areas requires additional engineering, elevated equipment pads, and specific drainage plans approved by Cameron County. We handle all flood zone permitting and design your pool to comply with local floodplain regulations.",
+  },
+  {
+    question: "How does Brownsville's coastal drainage affect pool construction?",
+    answer:
+      "Brownsville's flat terrain and high water table mean drainage is a serious consideration for any pool build. We engineer French drains and grading plans around every pool to prevent water from pooling against your home's foundation. Poor drainage is the number one cause of pool deck failure in coastal areas — we prevent it from the start.",
+  },
+  {
+    question: "Can I use my Brownsville pool year-round?",
+    answer:
+      "Brownsville has the warmest average temperatures in the RGV, so you can realistically swim 9 to 10 months per year. Add a heat pump — which we install as part of the build — and you can swim comfortably even in January. Very few places in Texas offer this kind of return on a pool investment.",
+  },
+  {
+    question: "What Cameron County permits are needed to build a pool in Brownsville?",
+    answer:
+      "You need a building permit from the City of Brownsville, which requires engineered plans, a site survey, and approval from the floodplain administrator if your property is in a FEMA zone. You also need to meet barrier (fencing) requirements under city code. We handle every permit and inspection so you don't have to navigate the process alone.",
+  },
+  {
+    question: "How do you protect pool equipment from Brownsville's salt air?",
+    answer:
+      "Salt air corrodes standard pool equipment faster than inland locations. We install corrosion-resistant pumps, use stainless steel or coated hardware, and position equipment pads with proper drainage and ventilation. We also recommend variable-speed pumps that run more efficiently in Brownsville's year-round warm climate.",
+  },
+];
+
+const painPoints = [
+  {
+    title: "\"I was told my lot is in a flood zone — does that mean no pool?\"",
+    description:
+      "Not at all. Many Brownsville properties sit in FEMA flood zones, but pools can absolutely be built with the right engineering. We design for flood zone compliance — elevated equipment, proper drainage, engineered shells — so your pool meets every Cameron County requirement.",
+  },
+  {
+    title: "\"The last builder didn't account for drainage and our yard floods\"",
+    description:
+      "Brownsville's flat terrain and coastal water table make drainage critical. We engineer grading and French drain systems around every pool to move water away from your home and prevent deck settling. We fix the problem before it starts.",
+  },
+  {
+    title: "\"I'm worried about salt air destroying the equipment\"",
+    description:
+      "Standard pool equipment corrodes fast this close to the coast. We install corrosion-resistant pumps, coated hardware, and properly ventilated equipment pads. Your pool gear lasts longer because we spec it for Brownsville — not for some inland suburb.",
+  },
+  {
+    title: "\"We've been saving for years but don't know what it actually costs\"",
+    description:
+      "We give you a detailed, line-item estimate after visiting your property. No vague ranges. No surprise change orders. We also offer financing so you can start swimming now instead of waiting another three summers.",
+  },
+];
+
+const howWeWorkSteps = [
+  {
+    number: 1,
+    title: "Free Design Consultation",
+    description:
+      "We visit your Brownsville home, measure the yard, assess soil and drainage conditions, and check flood zone status. We talk through your vision and budget — no cost, no pressure.",
+  },
+  {
+    number: 2,
+    title: "Engineering & Permits",
+    description:
+      "We create your custom pool design with drainage and flood zone engineering. We handle all Cameron County permits, FEMA compliance, and city inspections.",
+  },
+  {
+    number: 3,
+    title: "Construction",
+    description:
+      "Excavation, steel, plumbing, gunite, tile, coping, decking, and corrosion-resistant equipment — all managed by our project team with regular updates throughout the build.",
+  },
+  {
+    number: 4,
+    title: "Startup & Walkthrough",
+    description:
+      "We fill your pool, balance the chemistry, test all equipment, and walk you through maintenance. You're swim-ready with a pool built for Brownsville's coastal conditions.",
+  },
+];
+
+const siblingServices = services.filter((s) => s.slug !== "pools");
+---
+
+<ServiceLayout
+  title="Pool Builder in Brownsville, TX | Custom Pools | Tekton Home Solutions"
+  description="Custom pool builder in Brownsville, TX — flood zone engineering, coastal-rated equipment, and year-round swimming. Free design consultation. Call (956) 862-7643."
+  headline='Brownsville Pool Builder — <span class="text-gold">Custom Pools</span>'
+  subheadline="Engineered for Brownsville's coastal conditions. Flood zone compliant, corrosion-resistant equipment, and year-round pool weather. Licensed and insured in Cameron County."
+  serviceSlug="pools"
+  serviceName="Pool Construction in Brownsville, TX"
+  serviceDescription="Custom inground pool design and construction in Brownsville, Texas. Gunite pools with flood zone engineering, coastal-rated equipment, and complete backyard transformations."
+  breadcrumbLabel="Pool Construction"
+  faqs={faqs}
+  painPoints={painPoints}
+  howWeWorkSteps={howWeWorkSteps}
+  backgroundImage="/images/roofing-hero.jpg"
+  areaServed="Brownsville"
+>
+  <!-- Brownsville-specific pool content -->
+  <section class="py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            Brownsville Has the Best Pool Weather in Texas
+          </h2>
+          <p class="text-text-muted text-lg mb-4">
+            With average highs above 80 degrees for nine months of the year, Brownsville offers more swim days than almost anywhere in the state. A backyard pool here is not a luxury — it is how you live. Weekend cookouts, after-school swims, and late-night soaks are part of daily life when the weather cooperates this much.
+          </p>
+          <p class="text-text-muted text-lg mb-4">
+            But Brownsville pool construction demands respect for the local conditions. Many properties fall within FEMA flood zones, the water table is high, and the flat coastal terrain creates drainage challenges that inland builders never face. We engineer every Brownsville pool with proper drainage systems, elevated equipment pads, and reinforced gunite shells designed for this specific environment.
+          </p>
+          <p class="text-text-muted text-lg">
+            Because Tekton also builds custom homes and handles full remodels, we coordinate your pool with your property's drainage, electrical, and gas systems as one project. No conflicts between contractors. No finger-pointing. One team handling everything from design through your first swim.
+          </p>
+          <img
+            src="/images/roofing-work.jpg"
+            alt="Custom pool construction in progress at a Brownsville, TX home"
+            width="800"
+            height="533"
+            class="rounded-xl mt-6"
+            loading="lazy"
+          />
+        </div>
+        <div class="bg-bg-surface border border-border rounded-xl p-8">
+          <h3 class="text-xl font-semibold mb-4">Brownsville Pool Services</h3>
+          <ul class="space-y-3">
+            {[
+              "Custom gunite (concrete) inground pools",
+              "Flood zone engineering and FEMA compliance",
+              "Corrosion-resistant coastal equipment",
+              "Spas and hot tubs (standalone or attached)",
+              "Water features — waterfalls, bubblers, scuppers",
+              "Pool decking, coping, and drainage systems",
+              "Outdoor kitchens and covered patios",
+            ].map((item) => (
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-gold shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-text-muted">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Other services in Brownsville -->
+  <section class="py-16 md:py-20 bg-bg-surface">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-center mb-6">
+        Other Services in Brownsville
+      </h2>
+      <div class="grid sm:grid-cols-3 gap-4 max-w-2xl mx-auto">
+        {siblingServices.map((s) => (
+          <a
+            href={`/brownsville/${s.slug}/`}
+            class="bg-bg-elevated border border-border rounded-lg px-4 py-3 text-center hover:border-gold hover:text-gold transition-colors"
+          >
+            {s.name}
+          </a>
+        ))}
+      </div>
+      <p class="text-center mt-4">
+        <a href="/brownsville/" class="text-gold hover:text-gold-light text-sm">
+          ← All Brownsville services
+        </a>
+      </p>
+    </div>
+  </section>
+</ServiceLayout>

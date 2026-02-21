@@ -1,0 +1,175 @@
+---
+import ServiceLayout from "../../layouts/ServiceLayout.astro";
+import { services } from "../../data/services";
+
+const faqs = [
+  {
+    question: "Can I build a custom home on my own lot in Penitas?",
+    answer:
+      "Absolutely — build-on-your-lot is one of our most popular options in Penitas and western Hidalgo County. Many homeowners here have purchased land specifically for the larger lot sizes available west of McAllen. We evaluate your lot for soil conditions, utility access, setbacks, and caliche depth, then design a home that maximizes your property.",
+  },
+  {
+    question: "How does caliche soil in Penitas affect new home construction?",
+    answer:
+      "Caliche is a dense calcium carbonate layer found throughout western Hidalgo County. It affects foundation design, drainage, and excavation costs. Some builders treat it as an unexpected expense and hit you with change orders. We test your lot's soil before design begins and engineer the foundation specifically for your property's conditions. The price you agree to is the price you pay.",
+  },
+  {
+    question: "What Hidalgo County permits are needed to build a home in Penitas?",
+    answer:
+      "New home construction in Penitas requires building permits through Hidalgo County, including engineered plans, site surveys, and inspections at every phase — foundation, framing, electrical, plumbing, and final. We manage the entire permitting process from application through certificate of occupancy so you never have to visit the county offices.",
+  },
+  {
+    question: "How long does it take to build a custom home in Penitas?",
+    answer:
+      "Most custom homes in Penitas take 8 to 14 months from breaking ground to move-in, depending on size and complexity. Hidalgo County permitting typically takes 3 to 6 weeks. We provide a detailed construction schedule before you commit and keep you updated throughout every phase with regular progress reports.",
+  },
+  {
+    question: "Why is Penitas a good area to build a custom home?",
+    answer:
+      "Penitas offers some of the best value for custom home construction in the Valley. Land is more affordable than McAllen or Edinburg, lot sizes are larger, and the community is growing with new infrastructure. You are still only 20 minutes from McAllen on Expressway 83, with easy access to La Joya, Palmview, and the rest of Hidalgo County. More home on more land for less money — that is the western Valley advantage.",
+  },
+];
+
+const painPoints = [
+  {
+    title: "\"I have a lot in Penitas but can't find a builder who will come out here\"",
+    description:
+      "Most custom home builders in the Valley are focused on McAllen, Mission, and Edinburg. Western Hidalgo County gets overlooked. We build in Penitas as a primary market — your project gets the same priority, the same crew quality, and the same timeline as any build closer to the McAllen metro.",
+  },
+  {
+    title: "\"The builder I talked to didn't mention anything about caliche soil\"",
+    description:
+      "That is a major red flag. Caliche is common in western Hidalgo County and directly affects foundation engineering, excavation costs, and drainage planning. If your builder is not planning for it upfront, you will pay for it in change orders later. We test soil before we quote.",
+  },
+  {
+    title: "\"Custom home quotes have been wildly different\"",
+    description:
+      "Vague bids and surprise change orders are the norm with most builders. We give you a detailed, fixed-price contract with every material, fixture, and finish specified. You know the cost before construction starts — and it does not change unless you change it.",
+  },
+  {
+    title: "\"I want to build but I'm not sure if my lot is ready\"",
+    description:
+      "We evaluate every lot before design begins — soil conditions, caliche depth, utility access, drainage, and setback requirements. If your lot needs prep work, we tell you upfront and include it in the plan. No guessing, no surprises after you have already committed.",
+  },
+];
+
+const howWeWorkSteps = [
+  {
+    number: 1,
+    title: "Lot Evaluation & Planning",
+    description:
+      "We assess your Penitas lot for caliche soil depth, utility access, drainage, and setback requirements. We discuss your vision, budget, and timeline — no cost, no obligation.",
+  },
+  {
+    number: 2,
+    title: "Custom Design & Engineering",
+    description:
+      "Your home is designed to your specifications with foundation engineering tailored to western Hidalgo County soil conditions. You approve every detail before we break ground.",
+  },
+  {
+    number: 3,
+    title: "Permitted Construction",
+    description:
+      "We handle all Hidalgo County permits and build your home phase by phase with regular inspections, progress updates, and a dedicated project manager on your job.",
+  },
+  {
+    number: 4,
+    title: "Final Inspection & Move-In",
+    description:
+      "Your home passes all Hidalgo County inspections, receives its certificate of occupancy, and we do a thorough walkthrough. Warranty documentation is activated and you get the keys.",
+  },
+];
+
+const siblingServices = services.filter((s) => s.slug !== "custom-homes");
+---
+
+<ServiceLayout
+  title="Custom Homes in Penitas, TX | Build on Lot | Tekton Home Solutions"
+  description="Custom home builder in Penitas, TX — build-on-your-lot, caliche soil engineering, and full Hidalgo County permits. Western Valley experts. Call (956) 862-7643."
+  headline='Penitas Custom Homes — <span class="text-gold">Build on Your Lot</span>'
+  subheadline="A custom home builder who serves western Hidalgo County. Caliche soil engineering, Hidalgo County permits handled, and fully custom designs on your lot. Licensed and insured."
+  serviceSlug="custom-homes"
+  serviceName="Custom Home Building in Penitas, TX"
+  serviceDescription="Custom home design and construction in Penitas, Texas. Build-on-your-lot services with caliche soil engineering, full Hidalgo County permitting, and designs tailored to western Valley living."
+  breadcrumbLabel="Custom Homes"
+  faqs={faqs}
+  painPoints={painPoints}
+  howWeWorkSteps={howWeWorkSteps}
+  backgroundImage="/images/roofing-hero.jpg"
+  areaServed="Penitas"
+>
+  <!-- Penitas-specific custom homes content -->
+  <section class="py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            Build Your Home Where Your Money Goes Further
+          </h2>
+          <p class="text-text-muted text-lg mb-4">
+            Penitas and western Hidalgo County offer something the McAllen metro cannot — larger lots at lower prices, just 20 minutes west on Expressway 83. Families are discovering that the same budget that buys a cookie-cutter tract home in north McAllen can build a fully custom home on a generous lot in Penitas. More square footage, more land, more of exactly what you want — without the McAllen price tag.
+          </p>
+          <p class="text-text-muted text-lg mb-4">
+            The challenge has been finding a builder willing to work here. Most custom home builders in the Valley concentrate on McAllen, Mission, and Edinburg where the volume is. Western Hidalgo County gets treated as too far, too small, or too much hassle. That leaves homeowners with land and a vision but no qualified builder to execute it. Tekton fills that gap because we see what is happening in Penitas — a growing community with real demand and families who deserve quality construction.
+          </p>
+          <p class="text-text-muted text-lg">
+            We also know the ground you are building on. Caliche soil is a reality throughout the western Valley. It requires specific foundation engineering, proper drainage design, and excavation equipment that generic builders do not plan for. We test every lot before we design, engineer for what we find, and give you a fixed price that accounts for the actual conditions — not a guess that turns into change orders.
+          </p>
+          <img
+            src="/images/roofing-work.jpg"
+            alt="Custom home under construction in Penitas, TX"
+            width="800"
+            height="533"
+            class="rounded-xl mt-6"
+            loading="lazy"
+          />
+        </div>
+        <div class="bg-bg-surface border border-border rounded-xl p-8">
+          <h3 class="text-xl font-semibold mb-4">Penitas Custom Home Services</h3>
+          <ul class="space-y-3">
+            {[
+              "Fully custom home design and construction",
+              "Build-on-your-lot services",
+              "Caliche soil foundation engineering",
+              "Energy-efficient building systems for Valley heat",
+              "Hidalgo County permits and inspections handled",
+              "Outdoor living — pools, kitchens, patios",
+              "Lot evaluation and site preparation",
+            ].map((item) => (
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-gold shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-text-muted">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Other services in Penitas -->
+  <section class="py-16 md:py-20 bg-bg-surface">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-center mb-6">
+        Other Services in Penitas
+      </h2>
+      <div class="grid sm:grid-cols-3 gap-4 max-w-2xl mx-auto">
+        {siblingServices.map((s) => (
+          <a
+            href={`/penitas/${s.slug}/`}
+            class="bg-bg-elevated border border-border rounded-lg px-4 py-3 text-center hover:border-gold hover:text-gold transition-colors"
+          >
+            {s.name}
+          </a>
+        ))}
+      </div>
+      <p class="text-center mt-4">
+        <a href="/penitas/" class="text-gold hover:text-gold-light text-sm">
+          ← All Penitas services
+        </a>
+      </p>
+    </div>
+  </section>
+</ServiceLayout>
