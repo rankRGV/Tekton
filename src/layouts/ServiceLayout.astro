@@ -69,9 +69,21 @@ const breadcrumbs = areaServed
       { label: breadcrumbLabel, href: Astro.url.pathname },
     ]
   : [{ label: breadcrumbLabel, href: Astro.url.pathname }];
+
+const siteUrl = "https://www.tektonhomesolutions.com";
+const breadcrumbSchema = areaServed
+  ? [
+      { name: "Home", url: `${siteUrl}/` },
+      { name: areaServed, url: `${siteUrl}/${citySlug}/` },
+      { name: breadcrumbLabel, url: `${siteUrl}${Astro.url.pathname}` },
+    ]
+  : [
+      { name: "Home", url: `${siteUrl}/` },
+      { name: breadcrumbLabel, url: `${siteUrl}${Astro.url.pathname}` },
+    ];
 ---
 
-<BaseLayout title={title} description={description}>
+<BaseLayout title={title} description={description} geoPlacename={areaServed}>
   <Breadcrumbs items={breadcrumbs} />
   <Hero
     headline={headline}
@@ -98,4 +110,6 @@ const breadcrumbs = areaServed
       ...(areaServed && { areaServed }),
     }}
   />
+  <SchemaMarkup type="faq" data={{ faqs }} />
+  <SchemaMarkup type="breadcrumb" data={{ breadcrumbs: breadcrumbSchema }} />
 </BaseLayout>

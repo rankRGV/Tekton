@@ -169,4 +169,32 @@ import { site } from "../config/site";
   </div>
 
   <SchemaMarkup type="organization" />
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "HomeAndConstructionBusiness",
+    name: "Tekton Home Solutions",
+    url: "https://www.tektonhomesolutions.com",
+    telephone: "+19568627643",
+    email: "tekton.homesolutions@gmail.com",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "1720 W Maple Ave Suite 4",
+      addressLocality: "McAllen",
+      addressRegion: "TX",
+      postalCode: "78501",
+      addressCountry: "US",
+    },
+    openingHoursSpecification: {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      opens: "09:00",
+      closes: "17:00",
+    },
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+19568627643",
+      contactType: "customer service",
+      availableLanguage: ["English", "Spanish"],
+    },
+  })} />
 </BaseLayout>

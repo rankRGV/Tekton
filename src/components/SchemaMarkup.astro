@@ -39,7 +39,7 @@ function buildSchema() {
           postalCode: site.address.zip,
           addressCountry: "US",
         },
-        sameAs: [site.social.facebook, site.social.instagram].filter(Boolean),
+        sameAs: [site.social.facebook, site.social.instagram, site.social.google].filter(Boolean),
       };
 
     case "localBusiness":
@@ -67,7 +67,7 @@ function buildSchema() {
             longitude: data.coordinates.lng,
           },
         }),
-        sameAs: [site.social.facebook, site.social.instagram].filter(Boolean),
+        sameAs: [site.social.facebook, site.social.instagram, site.social.google].filter(Boolean),
       };
 
     case "service":

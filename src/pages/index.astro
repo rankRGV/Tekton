@@ -3,13 +3,42 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Hero from "../components/Hero.astro";
 import TrustSignals from "../components/TrustSignals.astro";
 import ServiceCard from "../components/ServiceCard.astro";
+import FAQSection from "../components/FAQSection.astro";
 import CTASection from "../components/CTASection.astro";
 import SchemaMarkup from "../components/SchemaMarkup.astro";
 import { services } from "../data/services";
+
+const faqs = [
+  {
+    question: "What areas does Tekton Home Solutions serve?",
+    answer:
+      "We serve 8 cities across the Rio Grande Valley: McAllen (our headquarters), Mission, Edinburg, Pharr, Brownsville, Harlingen, Rio Grande City, and Penitas. We don't charge extra based on distance — same pricing across the entire RGV.",
+  },
+  {
+    question: "What services does Tekton offer?",
+    answer:
+      "We handle four core home services: roofing (replacement, repair, storm damage), pool construction (custom gunite pools), home remodeling (kitchens, bathrooms, whole-home), and custom home building (build on your lot). One contractor, one team, no subcontractor juggling.",
+  },
+  {
+    question: "Do you offer free estimates?",
+    answer:
+      "Yes — every project starts with a free on-site inspection and estimate. We come to your home, assess the scope of work, and give you a detailed, line-item quote with no hidden costs. Call (956) 862-7643 or use our contact form to schedule.",
+  },
+  {
+    question: "What is your price match guarantee?",
+    answer:
+      "Bring us any written estimate from a licensed, insured contractor in the RGV for the same scope of work — we'll match it. We believe quality work and fair pricing go together. You shouldn't have to choose.",
+  },
+  {
+    question: "Are you licensed and insured?",
+    answer:
+      "Yes. Tekton Home Solutions is fully licensed and insured. We carry general liability insurance, workers' compensation coverage, and pull permits for every job that requires them. We're a legitimate operation — not a truck and a handshake.",
+  },
+];
 ---
 
 <BaseLayout
-  title="RGV Roofing Contractor | Tekton Home Solutions"
+  title="RGV Home Contractor | Roofing, Pools, Remodeling | Tekton Home Solutions"
   description="Tekton Home Solutions — roofing, pools, remodeling & custom homes across the Rio Grande Valley. 24-hour roof replacement. Price match guarantee. Call (956) 862-7643."
 >
   <Hero
@@ -35,6 +64,8 @@ import { services } from "../data/services";
     </div>
   </section>
 
+  <FAQSection faqs={faqs} />
   <CTASection />
   <SchemaMarkup type="organization" />
+  <SchemaMarkup type="faq" data={{ faqs }} />
 </BaseLayout>

@@ -1,0 +1,106 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
+import SchemaMarkup from "../components/SchemaMarkup.astro";
+---
+
+<BaseLayout
+  title="Terms of Service | Tekton Home Solutions"
+  description="Tekton Home Solutions terms of service for website use and service agreements."
+  noindex={true}
+>
+  <Breadcrumbs items={[{ label: "Terms of Service", href: "/terms/" }]} />
+
+  <section class="py-16 md:py-20">
+    <div class="max-w-3xl mx-auto px-4">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Terms of Service</h1>
+      <p class="text-text-muted mb-12">Last updated: February 20, 2026</p>
+
+      <div class="prose prose-lg prose-invert max-w-none space-y-10">
+        <div>
+          <p class="text-text-muted text-lg leading-relaxed">
+            These terms govern your use of the Tekton Home Solutions website at <a href="https://www.tektonhomesolutions.com" class="text-gold hover:underline">tektonhomesolutions.com</a> and any services we provide. By using this site, you agree to these terms. If you don't agree, please don't use the site.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold mb-4">Our Services</h2>
+          <p class="text-text-muted text-lg leading-relaxed">
+            Tekton Home Solutions provides roofing, pool construction, remodeling, and custom home building services in the Rio Grande Valley, Texas. The information on this website — including service descriptions, photos, and general pricing guidance — is provided for informational purposes. It does not constitute a binding offer or contract. Every project is different, and final scope, pricing, and timelines are determined through a formal estimate and written agreement.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold mb-4">Estimates and Pricing</h2>
+          <p class="text-text-muted text-lg leading-relaxed">
+            Estimates provided by Tekton Home Solutions are based on the information available at the time of assessment. Actual costs may vary if project conditions change, additional work is discovered, or you request modifications to the original scope. We will communicate any changes in writing before proceeding. All pricing is finalized in a signed project agreement before work begins.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold mb-4">Project Agreements</h2>
+          <p class="text-text-muted text-lg leading-relaxed">
+            All construction and renovation work is governed by a separate written project agreement between you and Tekton Home Solutions. That agreement — not this webpage — defines the specific terms, scope, payment schedule, warranties, and responsibilities for your project. These website terms of service do not override or replace any signed project agreement.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold mb-4">Website Use</h2>
+          <p class="text-text-muted text-lg leading-relaxed">
+            You agree to use this website for lawful purposes only. You will not attempt to interfere with the site's operation, access areas you're not authorized to access, or use automated tools to scrape or copy content. We reserve the right to restrict access to anyone who violates these terms.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold mb-4">Intellectual Property</h2>
+          <p class="text-text-muted text-lg leading-relaxed">
+            All content on this website — including text, images, logos, design, and code — is the property of Tekton Home Solutions or its licensors and is protected by copyright and trademark laws. You may not copy, reproduce, distribute, or create derivative works from our content without written permission. Project photos on this site depict actual Tekton work and may not be used by other parties.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold mb-4">Limitation of Liability</h2>
+          <p class="text-text-muted text-lg leading-relaxed">
+            This website is provided "as is." While we make every effort to keep information accurate and up to date, we do not guarantee that all content is error-free or current. Tekton Home Solutions is not liable for any damages arising from your use of this website or reliance on information presented here. Our liability for any services performed is governed by the terms of your signed project agreement.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold mb-4">Third-Party Links</h2>
+          <p class="text-text-muted text-lg leading-relaxed">
+            Our site may contain links to third-party websites (such as review platforms or social media). We don't control those sites and are not responsible for their content or practices. Visiting them is at your own discretion.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold mb-4">Governing Law</h2>
+          <p class="text-text-muted text-lg leading-relaxed">
+            These terms are governed by the laws of the State of Texas. Any disputes arising from these terms or your use of this website will be resolved in the courts of Hidalgo County, Texas.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold mb-4">Changes to These Terms</h2>
+          <p class="text-text-muted text-lg leading-relaxed">
+            We may update these terms from time to time. Changes take effect when posted on this page. Continued use of the site after changes are posted constitutes your acceptance of the updated terms.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold mb-4">Contact Us</h2>
+          <p class="text-text-muted text-lg leading-relaxed">
+            Questions about these terms? Reach out:
+          </p>
+          <ul class="text-text-muted text-lg leading-relaxed mt-4 space-y-2">
+            <li><strong>Tekton Home Solutions</strong></li>
+            <li>1720 W Maple Ave Suite 4, McAllen, TX 78501</li>
+            <li>Phone: <a href="tel:+19568627643" class="text-gold hover:underline">(956) 862-7643</a></li>
+            <li>Email: <a href="mailto:tekton.homesolutions@gmail.com" class="text-gold hover:underline">tekton.homesolutions@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <SchemaMarkup type="organization" />
+</BaseLayout>

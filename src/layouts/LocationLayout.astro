@@ -30,7 +30,7 @@ interface Props {
 const { title, description, headline, subheadline, location, backgroundImage, faqs } = Astro.props;
 ---
 
-<BaseLayout title={title} description={description}>
+<BaseLayout title={title} description={description} geoPlacename={location.name}>
   <Breadcrumbs
     items={[
       { label: "Locations", href: "/locations/" },
@@ -71,6 +71,19 @@ const { title, description, headline, subheadline, location, backgroundImage, fa
     data={{
       cityName: location.name,
       coordinates: location.coordinates,
+    }}
+  />
+  {faqs && faqs.length > 0 && (
+    <SchemaMarkup type="faq" data={{ faqs }} />
+  )}
+  <SchemaMarkup
+    type="breadcrumb"
+    data={{
+      breadcrumbs: [
+        { name: "Home", url: "https://www.tektonhomesolutions.com/" },
+        { name: "Locations", url: "https://www.tektonhomesolutions.com/locations/" },
+        { name: location.name, url: `https://www.tektonhomesolutions.com/${location.slug}/` },
+      ],
     }}
   />
 </BaseLayout>

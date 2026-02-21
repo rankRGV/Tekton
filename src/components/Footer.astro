@@ -113,8 +113,12 @@ import { builtServices, builtLocations } from "../data/navigation";
     </div>
 
     <!-- Bottom Bar -->
-    <div class="border-t border-border mt-8 pt-8 text-center text-text-muted text-xs">
+    <div class="border-t border-border mt-8 pt-8 flex flex-col sm:flex-row items-center justify-between gap-2 text-text-muted text-xs">
       <p>&copy; {new Date().getFullYear()} {site.name}. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="/privacy-policy/" class="hover:text-gold transition-colors">Privacy Policy</a>
+        <a href="/terms/" class="hover:text-gold transition-colors">Terms of Service</a>
+      </div>
     </div>
   </div>
 </footer>

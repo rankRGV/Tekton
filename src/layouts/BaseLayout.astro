@@ -11,9 +11,10 @@ interface Props {
   canonical?: string;
   ogImage?: string;
   noindex?: boolean;
+  geoPlacename?: string;
 }
 
-const { title, description, canonical, ogImage, noindex } = Astro.props;
+const { title, description, canonical, ogImage, noindex, geoPlacename } = Astro.props;
 ---
 
 <!doctype html>
@@ -25,6 +26,7 @@ const { title, description, canonical, ogImage, noindex } = Astro.props;
       canonical={canonical}
       ogImage={ogImage}
       noindex={noindex}
+      geoPlacename={geoPlacename}
     />
 
     <!-- Analytics: GA4 (config-driven) -->

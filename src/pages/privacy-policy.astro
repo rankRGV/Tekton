@@ -1,0 +1,106 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
+import SchemaMarkup from "../components/SchemaMarkup.astro";
+---
+
+<BaseLayout
+  title="Privacy Policy | Tekton Home Solutions"
+  description="Tekton Home Solutions privacy policy. How we collect, use, and protect your information."
+  noindex={true}
+>
+  <Breadcrumbs items={[{ label: "Privacy Policy", href: "/privacy-policy/" }]} />
+
+  <section class="py-16 md:py-20">
+    <div class="max-w-3xl mx-auto px-4">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Privacy Policy</h1>
+      <p class="text-text-muted mb-12">Last updated: February 20, 2026</p>
+
+      <div class="prose prose-lg prose-invert max-w-none space-y-10">
+        <div>
+          <p class="text-text-muted text-lg leading-relaxed">
+            Tekton Home Solutions ("we," "us," or "our") respects your privacy. This policy explains what information we collect through our website at <a href="https://www.tektonhomesolutions.com" class="text-gold hover:underline">tektonhomesolutions.com</a>, how we use it, and how we protect it. No legal gymnastics — just a straightforward explanation.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold mb-4">Information We Collect</h2>
+          <p class="text-text-muted text-lg leading-relaxed mb-4">
+            We collect information in two ways:
+          </p>
+          <h3 class="text-xl font-semibold mb-2">Information You Give Us</h3>
+          <p class="text-text-muted text-lg leading-relaxed mb-4">
+            When you fill out a contact form, request an estimate, or reach out by phone or email, you may provide your name, phone number, email address, property address, and details about your project. We only collect what we need to respond to your inquiry and provide our services.
+          </p>
+          <h3 class="text-xl font-semibold mb-2">Information Collected Automatically</h3>
+          <p class="text-text-muted text-lg leading-relaxed">
+            Like most websites, ours collects some data automatically when you visit. This includes your IP address, browser type, device information, pages visited, and referring website. We use analytics tools (such as Google Analytics) to understand how people use our site so we can improve it. This data is aggregated and does not personally identify you.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold mb-4">How We Use Your Information</h2>
+          <ul class="text-text-muted text-lg leading-relaxed space-y-2 list-disc list-inside">
+            <li>To respond to your inquiries and provide estimates</li>
+            <li>To communicate with you about services, scheduling, and project updates</li>
+            <li>To improve our website and user experience</li>
+            <li>To comply with legal obligations</li>
+          </ul>
+          <p class="text-text-muted text-lg leading-relaxed mt-4">
+            That's it. We don't use your information for anything beyond serving you and running our business.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold mb-4">Third-Party Sharing</h2>
+          <p class="text-text-muted text-lg leading-relaxed">
+            <strong>We do not sell, rent, or trade your personal information.</strong> Period. We may share information with trusted service providers who help us operate our website or business (such as our hosting provider or analytics platform), but only to the extent necessary for them to perform those services. We may also disclose information if required by law.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold mb-4">Cookies</h2>
+          <p class="text-text-muted text-lg leading-relaxed">
+            Our website uses cookies — small text files stored on your device — to improve your browsing experience and help us understand site usage through analytics. Most browsers let you control or disable cookies through their settings. Disabling cookies may affect some site functionality, but the core content will still work fine.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold mb-4">Data Security</h2>
+          <p class="text-text-muted text-lg leading-relaxed">
+            We take reasonable measures to protect the information you share with us, including SSL encryption on our website and secure storage practices. No system is 100% bulletproof, but we treat your data with the same care we'd want for our own.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold mb-4">Your Rights</h2>
+          <p class="text-text-muted text-lg leading-relaxed">
+            You can request access to, correction of, or deletion of any personal information we hold about you. Just reach out using the contact information below and we'll take care of it.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold mb-4">Changes to This Policy</h2>
+          <p class="text-text-muted text-lg leading-relaxed">
+            We may update this privacy policy from time to time. Any changes will be posted on this page with an updated date. We won't make major changes without making it clear.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold mb-4">Contact Us</h2>
+          <p class="text-text-muted text-lg leading-relaxed">
+            Questions about this policy or your data? Get in touch:
+          </p>
+          <ul class="text-text-muted text-lg leading-relaxed mt-4 space-y-2">
+            <li><strong>Tekton Home Solutions</strong></li>
+            <li>1720 W Maple Ave Suite 4, McAllen, TX 78501</li>
+            <li>Phone: <a href="tel:+19568627643" class="text-gold hover:underline">(956) 862-7643</a></li>
+            <li>Email: <a href="mailto:tekton.homesolutions@gmail.com" class="text-gold hover:underline">tekton.homesolutions@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <SchemaMarkup type="organization" />
+</BaseLayout>
